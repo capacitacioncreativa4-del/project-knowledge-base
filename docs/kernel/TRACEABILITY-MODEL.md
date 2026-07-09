@@ -1,64 +1,65 @@
 ---
-id: PKB-KERNEL-TRACEMODEL-001
+id: PKB-STD-0002
 title: Traceability Model
 version: 1.0.0
 status: Approved
 owner: Architecture
 created: 2026-07-09
 updated: 2026-07-09
-type: KERNEL
+type: STD
 domain: PKB
-parent: PKB-KERNEL-MANIFEST-001
+parent: PKB-STD-0001
 tags:
-  - kernel
   - traceability
   - relationships
+  - graph
 ---
 
-# Modelo de Trazabilidad y Relaciones del Conocimiento
+# Modelo Institucional de Trazabilidad
 
 ## Propósito
-Establecer las reglas de asociación, conectividad y navegación relacional entre los distintos Objetos de Conocimiento del PKB. El fin es estructurar un tejido de información bidireccional y transparente, eliminando la documentación aislada y habilitando la generación nativa de grafos de dependencias aptos para agentes inteligentes[cite: 1].
+Definir las relaciones oficiales entre los Objetos de Conocimiento del Project Knowledge Base (PKB). La trazabilidad permite conocer cómo un objeto se relaciona con otros a lo largo de su ciclo de vida, formando una red de conocimiento navegable.
 
 ---
 
-# Reglas de Parentesco y Direccionalidad
+# Objetivos y Principios del Modelo
 
-Para asegurar la coherencia del ecosistema, las relaciones jerárquicas directas se modelan como un Grafo Acíclico Dirigido (DAG)[cite: 1]. Ninguna relación de dependencia puede generar bucles infinitos. Se normalizan los ejes de vinculación autorizados en el catálogo de objetos[cite: 1]:
+### Objetivos Fundamentales:
+- Garantizar la consistencia integral entre objetos.
+- Facilitar la navegación documental fluida.
+- Permitir análisis de impacto precisos antes de realizar cambios.
+- Soportar automatización avanzada y habilitar grafos de conocimiento.
 
-### 1. Relación Superior (Parental)
-- **Definición**: Vínculo vertical ascendente que asocia un objeto dependiente con su raíz o marco regulatorio directo[cite: 1].
-- **Sintaxis YAML**: Declarado obligatoriamente en el campo `parent` del bloque YAML utilizando su ID persistente[cite: 1].
-
-### 2. Relaciones Horizontales y de Dependencia
-- **Definición**: Vínculos simétricos o direccionales entre objetos que se complementan, implementan o sustituyen de manera conceptual[cite: 1].
-- **Tipos Permitidos**: `Depends On`, `Related To`, `Implements`, `References`, `Supersedes`, `Replaces`, `Derived From`[cite: 1].
-
----
-
-# Criterios de Integridad de Enlaces
-
-Un Objeto de Conocimiento mantendrá su trazabilidad certificada si cumple con los siguientes controles de calidad:
-* **Enlaces Relativos Robustos**: Todas las referencias internas deben expresarse utilizando rutas relativas al archivo local (Ej: `[Texto](../capa/archivo.md)`), garantizando su portabilidad en sistemas locales aislados o servidores remotos[cite: 1].
-* **Prohibición de Rutas Absolutas**: No se permite el uso de hipervínculos con rutas locales de máquina (Ej: `C:/Proyectos/...`) ni URLs estáticas de la interfaz web de GitHub para enlazar archivos internos.
-* **Consistencia Semántica**: Si un objeto declara ser derivado o dependiente de otro, se debe mantener simetría total de rastro en las secciones de relaciones físicas de ambos documentos[cite: 1].
+### Principios Rectores:
+1. **Relaciones Explícitas**: Toda relación deberá declararse de forma explícita; las dependencias implícitas no son válidas.
+2. **Relaciones Dirigidas**: Cada relación posee un origen y un destino ($\text{Origen} \rightarrow \text{Relación} \rightarrow \text{Destino}$).
+3. **Relaciones Tipificadas**: No se permiten relaciones libres; toda relación debe pertenecer al catálogo institucional.
 
 ---
 
-# Relaciones
+# Catálogo Oficial y Matriz de Relaciones
 
-## Documento superior
-- PKB-KERNEL-MANIFEST.md[cite: 1]
+El ecosistema reconoce los siguientes tipos de enlace controlados:
+* **Parent Of / Child Of**: Relaciones jerárquicas verticales e inversas.
+* **Depends On**: El objeto requiere obligatoriamente de otro para existir o completarse.
+* **Related To**: Conexión temática o de contexto sin implicar dependencia directa.
+* **Implements**: Representa la materialización de un requisito o directiva.
+* **References / Derived From**: Consultas documentales o derivaciones directas[cite: 2].
+* **Supersedes / Replaces**: Sustituciones oficiales o reemplazos operativos de activos[cite: 2].
+* **Validates / Mitigates / Produces / Uses**: Enlaces operacionales de ingeniería[cite: 2].
 
-## Documentos relacionados
-- METADATA-MODEL.md[cite: 1]
-- [KNOWLEDGE-OBJECT-MODEL.md](KNOWLEDGE-OBJECT-MODEL.md)[cite: 1]
-- [IDENTIFIER-SCHEME.md](IDENTIFIER-SCHEME.md)[cite: 1]
-- [IDENTIFIER-REGISTRY.md](IDENTIFIER-REGISTRY.md)[cite: 1]
+### Matriz de Relaciones Permitidas
+| Origen | Relación | Destino |
+|:---|:---:|:---|
+| EPIC | Parent Of | REQ[cite: 2] |
+| REQ | Implemented By | DES[cite: 2] |
+| DES | Produces | PROC[cite: 2] |
+| PROC | Produces | REG[cite: 2] |
+| ADR | References | STD[cite: 2] |
+| STD | Governs | TMP[cite: 2] |
+| TMP | Produces | DOC[cite: 2] |
+| RSK | Mitigated By | PROC[cite: 2] |
 
----
-
-# Historial de cambios
-| Versión | Fecha | Descripción |
-|----------|------------|----------------|
-| 1.0.0 | 2026-07-09 | Primera versión institucional del Modelo de Trazabilidad.[cite: 1] |
+```text
+Evolución Lógica:
+EPIC ──[Parent Of]──> REQ ──[Implemented By]──> DES ──[Produces]──> PROC ──[Produces]──> REG
