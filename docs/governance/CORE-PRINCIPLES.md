@@ -9,26 +9,26 @@ type: Governance
 parent: PKB-KERNEL-MANIFEST-001
 ---
 
-# Principios Fundamentales del Sistema
+# Principios Fundamentales del Project Knowledge Base
 
 ## Propósito
-Explicar detalladamente los principios de ingeniería y operación que rigen el comportamiento del ecosistema, sirviendo de guía mandatoria para la resolución de conflictos técnicos o de diseño documental.
+Definir los principios técnicos, documentales y operativos que regirán todas las decisiones futuras del PKB, sirviendo como criterios objetivos para evaluar cualquier cambio en la arquitectura o en la documentación del repositorio.
 
 ---
 
-# Principios Operativos Expandidos
+# Principios Técnicos y Operativos
 
-## 1. El conocimiento como activo institucional
-Los documentos representan el valor intelectual de la organización. El contenido útil, verídico y estructurado tiene estricta prioridad sobre cualquier adorno o formato estético complejo.
+## 1. Calidad sobre Formato
+El conocimiento estructurado, verídico y reutilizable es el activo institucional más valioso. Aunque se imponen estándares visuales limpios, la precisión de la información siempre tendrá prioridad sobre la ornamentación compleja.
 
-## 2. Única fuente de verdad (SSOT)
-Cada dato, política, estándar o decisión técnica debe existir en un único lugar del repositorio. Se prohíbe la duplicidad para evitar desincronizaciones de información.
+## 2. Única Fuente de Verdad (SSOT)
+Cada política, decisión, guía o definición técnica existirá en un único lugar del repositorio. Queda estrictamente prohibida la duplicidad para mitigar riesgos de desincronización informativa.
 
 ## 3. Filosofía Docs-as-Code
-La documentación se gestiona bajo el mismo estándar operativo que el software moderno: versionamiento explícito con Git, aislamiento seguro en ramas, control de cambios riguroso, revisiones por pares mediante Pull Requests y liberaciones estables (Releases).
+Toda documentación se trata con el mismo rigor operativo que el código fuente: control de versiones con Git, aislamiento seguro en ramas de trabajo, revisiones mandatorias por pares mediante Pull Requests y publicaciones mediante Releases.
 
 ## 4. Diseño AI-First e Interoperabilidad Semántica
-Toda la documentación se construye estructurada semánticamente mediante especificaciones abiertas (Markdown, YAML, JSON) para asegurar la máxima compatibilidad de lectura, indexación y procesamiento automatizado por parte de agentes inteligentes y modelos de lenguaje (LLMs).
+Los activos documentales se estructuran utilizando formatos abiertos estandarizados (Markdown, YAML) para garantizar una legibilidad simétrica y sin fricciones, optimizada tanto para la comprensión de especialistas humanos como para el procesamiento de agentes de Inteligencia Artificial.
 
 ---
 
