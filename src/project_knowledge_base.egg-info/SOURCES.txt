@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/pkb/__init__.py
+src/pkb/__main__.py
+src/pkb/cli - copia.py
+src/pkb/cli.py
+src/pkb/version.py
+src/project_knowledge_base.egg-info/PKG-INFO
+src/project_knowledge_base.egg-info/SOURCES.txt
+src/project_knowledge_base.egg-info/dependency_links.txt
+src/project_knowledge_base.egg-info/entry_points.txt
+src/project_knowledge_base.egg-info/requires.txt
+src/project_knowledge_base.egg-info/top_level.txt
+tests/test_cli.py

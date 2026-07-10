@@ -1,13 +1,22 @@
 ---
 id: PKB-CONTRIBUTING-0001
 type: governance
-status: draft
-version: 0.1.0-alpha
+status: Draft
+version: 1.0.0
 owner: Tú (Implementation)
 last_update: 2026-07-08
-references: [README.md, PKB-MANIFEST.md]
+references:
+- README.md
+- PKB-MANIFEST.md
+created: '2026-07-09'
+updated: '2026-07-09'
+title: Contributing
+domain: General
+tags:
+- pkb
+- general
+- governance
 ---
-
 # Guía de Contribución al PKB
 
 ## 1. Flujo de Trabajo (Git Flow)

@@ -1,0 +1,10 @@
+validation:
+  metadata: true
+  identifiers: true
+  markdown: true
+  links: true
+  relationships: true
+  templates: true
+reports:
+  output: tools/reports/
+fail_on_error: true

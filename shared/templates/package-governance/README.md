@@ -6,6 +6,12 @@ status: Approved
 owner: Architecture
 type: TMP
 domain: PKB
+created: '2026-07-09'
+updated: '2026-07-09'
+tags:
+- pkb
+- pkb
+- tmp
 ---
 # Governance Template Package
 

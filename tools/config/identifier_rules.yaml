@@ -1,0 +1,20 @@
+pattern: "^[A-Z]+-[A-Z]+-[0-9]{4}$"
+reserved_domains:
+  - PKB
+  - MIPSP
+  - SIMPYME
+  - CONDO
+  - SHARED
+reserved_types:
+  - ADR
+  - GOV
+  - STD
+  - TMP
+  - REQ
+  - EPIC
+  - DES
+  - PROC
+  - REG
+  - RSK
+  - MET
+  - RES

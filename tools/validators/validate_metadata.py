@@ -22,16 +22,19 @@ def load_schema():
         return yaml.safe_load(f)
 
 def extract_front_matter(file_path):
-    """Extrae el bloque Front Matter (YAML) entre los delimitadores '---'."""
+    """Extrae el bloque Front Matter (YAML) utilizando el método oficial de partición."""
     try:
         with open(file_path, encoding="utf-8") as f:
             content = f.read()
         
-        # Expresión regular para capturar el primer bloque delimitado por ---
-        match = re.match(r"^---\s*\n(.*?)\n---\s*\n", content, re.DOTALL)
-        if match:
-            return yaml.safe_load(match.group(1)), None
-        return None, "Falta el bloque Front Matter (---) al inicio del documento."
+        if not content.startswith("---"):
+            return None, "Falta el delimitador inicial (---) en la primera línea."
+            
+        parts = content.split("---", 2)
+        if len(parts) < 3:
+            return None, "Falta el delimitador de cierre (---) de los metadatos."
+            
+        return yaml.safe_load(parts[1]), None
     except yaml.YAMLError as e:
         return None, f"Sintaxis YAML inválida: {e}"
     except Exception as e:

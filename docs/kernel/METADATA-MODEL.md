@@ -7,8 +7,13 @@ owner: Architecture
 created: 2026-07-09
 type: Kernel
 parent: PKB-KERNEL-MANIFEST-001
+updated: '2026-07-09'
+domain: Kernel
+tags:
+- pkb
+- kernel
+- kernel
 ---
-
 # Modelo de Metadatos del Project Knowledge Base
 
 ## Propósito

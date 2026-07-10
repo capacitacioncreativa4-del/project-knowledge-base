@@ -1,0 +1,24 @@
+name: PKB CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar plataforma en modo editable
+        run: pip install -e .
+
+      - name: Instalar dependencias de pruebas
+        run: pip install pytest
+
+      - name: Ejecutar suite de pruebas
+        run: pytest

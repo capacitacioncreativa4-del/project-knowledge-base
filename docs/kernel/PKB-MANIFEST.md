@@ -6,8 +6,13 @@ status: Approved
 owner: Architecture
 created: 2026-07-08
 type: Manifest
+updated: '2026-07-09'
+domain: Kernel
+tags:
+- pkb
+- kernel
+- manifest
 ---
-
 # Project Knowledge Base Manifest
 
 ## Preámbulo

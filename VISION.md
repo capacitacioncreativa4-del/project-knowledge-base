@@ -1,13 +1,20 @@
 ---
 id: PKB-VISION-0001
 type: governance
-status: draft
-version: 0.1.0-alpha
-owner: ChatGPT (Architecture)
-last_update: 2026-07-08
-references: [README.md]
+status: Draft
+version: 1.0.0
+owner: Arquitecto de Conocimiento
+created: '2026-07-09'
+updated: '2026-07-09'
+title: Visión del PKB
+domain: General
+tags:
+- pkb
+- general
+- governance
+references:
+- README.md
 ---
-
 # Visión del PKB
 
 ## Declaración de la Visión

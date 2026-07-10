@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-knowledge-base"
+version = "0.1.0"
+description = "Project Knowledge Base Platform"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Miguel Angel" }
+]
+dependencies = [
+    "PyYAML>=6.0",
+    "rich>=13.0",
+    "networkx>=3.4",
+    "click>=8.1"
+]
+
+[project.scripts]
+pkb = "pkb.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

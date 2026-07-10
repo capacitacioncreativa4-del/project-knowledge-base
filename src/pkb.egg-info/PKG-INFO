@@ -1,0 +1,159 @@
+Metadata-Version: 2.4
+Name: pkb
+Version: 0.1.0a0
+Summary: Project Knowledge Base - Plataforma Institucional de Ingeniería Documental
+Author: Arquitecto de Conocimiento
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml>=6.0.1
+Dynamic: license-file
+
+---
+created: '2026-07-09'
+updated: '2026-07-09'
+status: Draft
+version: 1.0.0
+title: Readme
+owner: Arquitecto de Conocimiento
+domain: General
+type: Documentation
+tags:
+- pkb
+- general
+- documentation
+id: PKB-GENERAL-5424
+---
+# Project Knowledge Base (PKB)
+> Sistema institucional de gestión del conocimiento para proyectos, arquitectura, investigación y documentación.
+
+---
+
+## Propósito
+El **Project Knowledge Base (PKB)** es el repositorio maestro donde se administra, versiona y preserva el conocimiento generado durante el ciclo de vida de todos los proyectos.
+
+Su objetivo es proporcionar una **fuente única de verdad (Single Source of Truth)** para personas y herramientas de inteligencia artificial, asegurando que toda la información relevante sea trazable, reutilizable y mantenible.[cite: 2]
+
+El PKB no es solamente una colección de documentos. Es una plataforma de conocimiento construida bajo principios de ingeniería documental, arquitectura empresarial y documentación como código (*Docs as Code*).[cite: 2]
+
+---
+
+## Objetivos
+- Centralizar el conocimiento institucional.[cite: 2]
+- Versionar todos los activos.[cite: 2]
+- Mantener trazabilidad entre documentos.[cite: 2]
+- Reutilizar conocimiento entre proyectos.[cite: 2]
+- Facilitar la colaboración entre personas e IA.[cite: 2]
+- Conservar el historial de decisiones.[cite: 2]
+- Garantizar consistencia documental.[cite: 2]
+
+---
+
+## Alcance
+El PKB alberga:
+- Proyectos.[cite: 2]
+- Arquitectura.[cite: 2]
+- Gobierno documental.[cite: 2]
+- Plantillas.[cite: 2]
+- Decisiones arquitectónicas (ADR).[cite: 2]
+- Investigación.[cite: 2]
+- Diagramas.[cite: 2]
+- Registros.[cite: 2]
+- Automatizaciones.[cite: 2]
+- Activos compartidos.[cite: 2]
+
+---
+
+## Principios
+El PKB se fundamenta en los siguientes principios:
+- Documentation as Code[cite: 2]
+- AI First[cite: 2]
+- Single Source of Truth[cite: 2]
+- Version Everything[cite: 2]
+- Trace Everything[cite: 2]
+- Continuous Improvement[cite: 2]
+- Knowledge Reuse[cite: 2]
+- Open Standards[cite: 2]
+
+---
+
+## Arquitectura General
+```text
+PKB
+│
+├── docs/
+├── projects/
+├── knowledge/
+├── shared/
+├── registers/
+├── automation/
+├── scripts/
+├── assets/
+└── archive/
+```[cite: 2]
+
+Cada componente posee responsabilidades claramente definidas y documentadas.[cite: 2]
+
+### Organización del Repositorio
+
+* **docs/**: Documentación institucional.[cite: 2]
+* **projects/**: Cada proyecto posee su propio espacio documental.[cite: 2]
+* **knowledge/**: Conocimiento reutilizable independiente de cualquier proyecto.[cite: 2]
+* **shared/**: Recursos compartidos.[cite: 2]
+* **registers/**: Inventarios, métricas, riesgos y decisiones.[cite: 2]
+* **automation/**: Automatización documental.[cite: 2]
+* **scripts/**: Herramientas de apoyo.[cite: 2]
+
+---
+
+## Modelo de Gobierno
+El PKB se gobierna mediante:
+- Architecture Decision Records (ADR)[cite: 2]
+- Semantic Versioning[cite: 2]
+- Conventional Commits[cite: 2]
+- Pull Requests[cite: 2]
+- Revisiones documentales[cite: 2]
+- Gestión de releases[cite: 2]
+
+### Versionado
+Se adopta Semantic Versioning.[cite: 2]
+- 0.1.0-alpha[cite: 2]
+- 0.1.0-beta[cite: 2]
+- 0.1.0[cite: 2]
+- 1.0.0[cite: 2]
+
+---
+
+## Estado del Proyecto
+* **Versión actual**: v0.1.0-alpha[cite: 2]
+* **Estado**: Sprint 0[cite: 2]
+
+### Roadmap
+* **Sprint 0**: Infraestructura[cite: 2]
+* **Sprint 1**: Kernel[cite: 2]
+* **Sprint 2**: Gobierno[cite: 2]
+* **Sprint 3**: Plantillas[cite: 2]
+* **Sprint 4**: Automatización[cite: 2]
+* **Sprint 5**: Migración de proyectos[cite: 2]
+
+### Proyectos
+Inicialmente el PKB integrará:
+- MIPSP[cite: 2]
+- Kit Editorial Maestro[cite: 2]
+- Condominios[cite: 2]
+- SIM-PYME[cite: 2]
+- Manualidades[cite: 2]
+
+---
+
+## Licencia
+La licencia del proyecto se encuentra en el archivo LICENSE.[cite: 2]
+
+## Contribución
+Las reglas de colaboración se describen en CONTRIBUTING.md.[cite: 2]
+
+## Contacto
+- Repositorio privado.[cite: 2]
+- Uso institucional.[cite: 2]

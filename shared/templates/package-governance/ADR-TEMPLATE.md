@@ -1,14 +1,17 @@
 ---
-id:
-title:
+id: null
+title: null
 version: 1.0.0
 status: Draft
-owner:
-created:
-updated:
+owner: null
+created: null
+updated: null
 type: ADR
-domain:
+domain: null
 tags:
+- pkb
+- none
+- adr
 ---
 # Título
 

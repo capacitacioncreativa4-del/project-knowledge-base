@@ -1,3 +1,18 @@
+---
+created: '2026-07-09'
+updated: '2026-07-09'
+status: Draft
+version: 1.0.0
+title: Checklist
+owner: Arquitecto de Conocimiento
+domain: General
+type: Template
+tags:
+- pkb
+- general
+- template
+id: PKB-GENERAL-4387
+---
 # Governance Checklist
 
 ## Metadatos
