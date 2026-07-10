@@ -1,0 +1,22 @@
+# Python (Archivos compilados de caché)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Empaquetado e Instalación Local (Metadata de pip)
+*.egg-info/
+.eggs/
+build/
+dist/
+wheels/
+
+# Archivos temporales y copias de seguridad de editores
+* - copia.py
+*.bak
+*.tmp
+
+# Entornos virtuales (por si acaso creas uno local)
+venv/
+env/
+.venv/
