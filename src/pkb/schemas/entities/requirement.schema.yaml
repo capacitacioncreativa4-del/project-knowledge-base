@@ -1,18 +1,3 @@
 entity: Requirement
 version: 1.0.0
-required:
-  - id
-  - title
-  - description
-  - status
-  - source
-relationships:
-  derived_from:
-    - ADR
-  implemented_by:
-    - Document
-  validated_by:
-    - Standard
-metadata:
-  versioned: true
-  traceable: true
+required: [id,title,description,source]

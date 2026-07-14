@@ -1,9 +1,3 @@
 entity: EngineeringSession
 version: 1.0.0
-required:
-  - id
-  - topic
-  - parent_conversation
-relationships:
-  produces:
-    - AnyKnowledgeObject
+required: [id,name]

@@ -1,13 +1,3 @@
 entity: Conversation
 version: 1.0.0
-required:
-  - id
-  - title
-  - date
-  - source_platform
-relationships:
-  contains:
-    - EngineeringSession
-metadata:
-  versioned: false
-  traceable: true
+required: [id,title,source]
