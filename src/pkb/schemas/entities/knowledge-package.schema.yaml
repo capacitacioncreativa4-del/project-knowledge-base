@@ -1,0 +1,15 @@
+entity: KnowledgePackage
+version: 1.0.0
+required:
+  - id
+  - title
+  - status
+  - dynamic_metrics
+relationships:
+  aggregates:
+    - ADR
+    - Requirement
+    - Standard
+    - Artifact
+metadata:
+  versioned: true

@@ -1,0 +1,17 @@
+entity: ADR
+version: 1.0.0
+required:
+  - id
+  - title
+  - status
+  - rationale
+  - source
+  - created_at
+relationships:
+  originates:
+    - Requirement
+    - Standard
+metadata:
+  versioned: true
+  traceable: true
+  auditable: true

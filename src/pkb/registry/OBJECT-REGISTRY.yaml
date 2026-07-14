@@ -1,0 +1,35 @@
+version: 1.0.0
+entities:
+  CONV:
+    name: Conversation
+    description: Source interaction containing one or more engineering sessions.
+  KP:
+    name: KnowledgePackage
+    description: Logical container of extracted and certified knowledge objects.
+  SES:
+    name: EngineeringSession
+    description: Logical unit of work inside an active conversation.
+  ADR:
+    name: ArchitectureDecisionRecord
+    description: Formal record of high-level design and engineering decisions.
+  REQ:
+    name: Requirement
+    description: Functional or technical obligations derived from decisions.
+  STD:
+    name: Standard
+    description: Uniform guidelines, flows, or policies governing development.
+  ART:
+    name: Artifact
+    description: Conceptual models, maps, or frameworks of high level.
+  DOC:
+    name: EditorialDocument
+    description: Final, versioned institutional deliverables and documents.
+  SYS:
+    name: InstitutionalSystem
+    description: Organizational components with explicit identities and inputs.
+  TASK:
+    name: Task
+    description: Specific engineering actions and task assignments.
+  RSK:
+    name: Risk
+    description: Identified events capable of impacting project execution.

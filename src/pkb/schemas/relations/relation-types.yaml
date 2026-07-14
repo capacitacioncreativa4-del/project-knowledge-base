@@ -1,0 +1,29 @@
+version: 1.0.0
+relations:
+  - name: contains
+    source: Conversation
+    target: Engineering Session
+  - name: produces
+    source: Engineering Session
+    target: Knowledge Object
+  - name: originates
+    source: ADR
+    target: Requirement
+  - name: governs
+    source: Standard
+    target: Document
+  - name: implements
+    source: Document
+    target: Requirement
+  - name: organizes
+    source: Artifact
+    target: Document
+  - name: belongs_to
+    source: Document
+    target: System
+  - name: depends_on
+    source: System
+    target: System
+  - name: traces_to
+    source: Any Entity
+    target: Source
