@@ -2,6 +2,11 @@
 
 Todos los cambios notables en este proyecto serán documentados en este archivo bajo los lineamientos de [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.3.4] — 2026-07-15
+### Added
+- [cite_start]**EPIC-01 CAP-03 (Baseline S - Schema Repository):** Estructuración dual de los contratos sintácticos del sistema .
+- [cite_start]**Requirement Entity Package:** Creación coordinada de la especificación conceptual (`Specification.md`) y el contrato Json-Schema (`Schema.yaml`) para la entidad de requerimientos .
+
 ## [0.3.2] — 2026-07-15
 ### Added
 - [cite_start]**EPIC-01 CAP-01/CAP-02 (Baseline A - Architecture):** Culminación y congelación formal del modelo de arquitectura técnica bajo el estándar C4 [cite: 361-364].
