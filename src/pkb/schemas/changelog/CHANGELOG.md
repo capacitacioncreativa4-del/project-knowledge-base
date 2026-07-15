@@ -2,6 +2,13 @@
 
 Todos los cambios notables en este proyecto serán documentados en este archivo bajo los lineamientos de [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.3.0] — 2026-07-15
+### Added
+- **Constitución del PKB (I01):** Publicación del documento base `PKB-CONSTITUTION-001.md` y `DEFINITION-OF-DONE.md`.
+- **Arquitectura de Capas (I02):** Implementación de `ARCH-001-System-Context.md` y decisión de arquitectura en `ADR-000001-Adopt-Dual-Representation.md`.
+- **CLI Core (I03):** Creación del motor de comandos unificado en Python (`src/pkb/cli/main.py`).
+- **Ingesta Masiva (I04):** Integración de comandos CLI con el motor de extracción para procesar los Lotes 1 al 4 de manera masiva.
+
 ## [0.2.0] — 2026-07-14
 ### Added
 - **Pipeline Governance (I01):** Despliegue de `PKB-SPEC-003` y esquema para `System`.
