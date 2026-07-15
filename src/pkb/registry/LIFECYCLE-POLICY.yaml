@@ -1,0 +1,22 @@
+version: 1.0.0
+policy: ObjectLifecycleManagement
+states:
+  - name: DRAFT
+    description: "Objeto en etapa de extracción inicial o borrador primario."
+    allowed_transitions: [REVIEW, DEPRECATED]
+    
+  - name: REVIEW
+    description: "El objeto está siendo validado sintáctica y semánticamente contra las SPEC oficiales."
+    allowed_transitions: [APPROVED, REJECTED, DRAFT]
+    
+  - name: APPROVED
+    description: "Objeto verificado e integrado con éxito en el Knowledge Graph productivo."
+    allowed_transitions: [SUPERSEDED, DEPRECATED]
+    
+  - name: SUPERSEDED
+    description: "El objeto fue reemplazado por una versión posterior (Mantiene trazabilidad histórica)."
+    allowed_transitions: []
+    
+  - name: DEPRECATED
+    description: "Objeto obsoleto o descartado por cambios mayores en la arquitectura."
+    allowed_transitions: []

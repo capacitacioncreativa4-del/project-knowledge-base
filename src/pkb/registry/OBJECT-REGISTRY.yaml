@@ -1,13 +1,36 @@
 version: 1.0.0
-entities:
-  CONV: Conversation
-  KP: KnowledgePackage
-  SES: EngineeringSession
-  ADR: ArchitectureDecisionRecord
-  REQ: Requirement
-  STD: Standard
-  ART: Artifact
-  DOC: EditorialDocument
-  SYS: InstitutionalSystem
-  TASK: Task
-  RSK: Risk
+registry_master:
+  project: PKB-Core
+  enforce_integrity: true
+  allowed_initial_state: DRAFT
+  collections:
+    - entity: Conversation
+      prefix: CONV
+      storage_path: ingestion/sources/
+    - entity: KnowledgePackage
+      prefix: KP
+      storage_path: repository/packages/
+    - entity: ArchitectureDecisionRecord
+      prefix: ADR
+      storage_path: engineering/adr/
+    - entity: Requirement
+      prefix: REQ
+      storage_path: specifications/requirements/
+    - entity: Standard
+      prefix: STD
+      storage_path: specifications/standards/
+    - entity: ConceptualArtifact
+      prefix: ART
+      storage_path: engineering/artifacts/
+    - entity: EditorialDocument
+      prefix: DOC
+      storage_path: docs/
+    - entity: InstitutionalSystem
+      prefix: SYS
+      storage_path: engineering/systems/
+    - entity: Task
+      prefix: TSK
+      storage_path: engineering/tasks/
+    - entity: Risk
+      prefix: RSK
+      storage_path: engineering/risks/
