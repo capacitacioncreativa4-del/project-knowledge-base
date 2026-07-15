@@ -1,0 +1,25 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: Artifact
+type: object
+required:
+  - entity
+  - id
+  - name
+  - file_path
+  - type
+properties:
+  entity:
+    type: string
+    const: Artifact
+  id:
+    type: string
+    pattern: "^ART-[0-9]{6}$"
+  name:
+    type: string
+  file_path:
+    type: string
+  type:
+    type: string
+    enum: [SPECIFICATION, CODE, DATA, CONFIG]
+  version:
+    type: string
