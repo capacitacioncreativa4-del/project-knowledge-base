@@ -1,0 +1,28 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: KnowledgePackage
+type: object
+required:
+  - entity
+  - id
+  - name
+  - source_conversations
+  - extracted_entities
+properties:
+  entity:
+    type: string
+    const: KnowledgePackage
+  id:
+    type: string
+    pattern: "^KP-[0-9]{6}$"
+  name:
+    type: string
+  source_conversations:
+    type: array
+    items:
+      type: string
+  extracted_entities:
+    type: array
+    items:
+      type: string
+  metadata:
+    type: object
