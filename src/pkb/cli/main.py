@@ -18,16 +18,27 @@ def run_ingestion(lot_number):
     print(f"[CLI] ========================================================\n")
 
     base_dir = r"C:\Proyectos\project-knowledge-base"
-    lot_folder_name = f"lote-{lot_number}"
     
-    # Ruta de entrada: projects/mipsp/ingestion/sources/lote-X/
+    # Mapeo exacto de los nombres reales de tus carpetas de origen
+    lot_folders = {
+        1: "Lote_1_MIPSP-CONV-0001",
+        2: "Lote_2_MIPSP-CONV-0002",
+        3: "Lote_3_MIPSP-CONV-0003",
+        4: "Lote_4_MIPSP-CONV-0004"
+    }
+
+    lot_folder_name = lot_folders.get(lot_number)
+    if not lot_folder_name:
+        print(f"[ERROR] El número de lote {lot_number} no es válido (Debe ser 1 al 4).")
+        return
+    
+    # Ruta de entrada física real
     source_dir = os.path.join(base_dir, "projects", "mipsp", "ingestion", "sources", lot_folder_name)
     # Ruta de salida: projects/mipsp/repository/packages/
     output_dir = os.path.join(base_dir, "projects", "mipsp", "repository", "packages")
 
     if not os.path.exists(source_dir):
         print(f"[ERROR] No se encontró la carpeta del lote en: {source_dir}")
-        print("[ERROR] Por favor, verifica que las carpetas 'lote-1', 'lote-2', etc. existan.")
         return
 
     # Listar los archivos .md en el lote
@@ -42,11 +53,12 @@ def run_ingestion(lot_number):
     processor = SemanticProcessor(source_dir=source_dir, output_dir=output_dir)
     assembler = KnowledgePackageAssembler(output_base_dir=output_dir)
 
-    # Simular la extracción sistemática de los documentos leídos
+    # Simulación de la extracción sistemática de los documentos leídos
     entities_created = []
     for f in files:
         doc_id = f.replace(".md", "")
-        entity_id = f"REQ-EXT-{doc_id.split('-')[-1]}"
+        # Extraer el ID de la conversación o usar el nombre del archivo
+        entity_id = f"REQ-EXT-{doc_id.split('-')[-1]}" if '-' in doc_id else f"REQ-EXT-{doc_id}"
         
         mock_data = {
             "entity": "Requirement",
