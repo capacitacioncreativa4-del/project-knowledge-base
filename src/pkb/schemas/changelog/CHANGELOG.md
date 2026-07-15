@@ -4,6 +4,12 @@ Todos los cambios notables en este proyecto serán documentados en este archivo 
 
 ## [0.3.4] — 2026-07-15
 ### Added
+- **EPIC-01 CAP-03 (Baseline S - Schema Repository):** Estructuración dual de los contratos sintácticos del sistema[cite: 2].
+- **Requirement Entity Package:** Creación coordinada de la especificación conceptual (`Specification.md`) y el contrato Json-Schema (`Schema.yaml`)[cite: 2].
+- **Requirement Complete Assets:** Integración de `Example.yaml`, `Lifecycle.md` y `Validation.md` para cerrar la estructura pentagonal de la entidad[cite: 2].
+
+## [0.3.4] — 2026-07-15
+### Added
 - [cite_start]**EPIC-01 CAP-03 (Baseline S - Schema Repository):** Estructuración dual de los contratos sintácticos del sistema .
 - [cite_start]**Requirement Entity Package:** Creación coordinada de la especificación conceptual (`Specification.md`) y el contrato Json-Schema (`Schema.yaml`) para la entidad de requerimientos .
 
