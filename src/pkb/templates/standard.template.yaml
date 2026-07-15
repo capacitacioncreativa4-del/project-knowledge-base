@@ -1,0 +1,16 @@
+# PKB Template: Standard (STD)
+# Version: 1.0.0
+id: STD-XXXXXX # Reemplazar XXXXXX con un ID único de 6 dígitos
+title: "[Nombre del Estándar Normativo]"
+scope: "[Alcance de aplicación técnica del documento]"
+rules:
+  - id: RUL-001
+    statement: "[Declaración de la regla obligatoria 1]"
+  - id: RUL-002
+    statement: "[Declaración de la regla obligatoria 2]"
+status: DRAFT
+source: "[Referencia a la conversación u origen legal/institucional]"
+relationships:
+  governs: []
+metadata:
+  version: 1.0.0
