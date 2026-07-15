@@ -1,0 +1,17 @@
+entity: ArchitectureDecisionRecord
+id: ADR-000025
+title: "Adopción de Ciclo de Desarrollo Basado en Releases Físicas Estables"
+status: APPROVED
+context: |
+  El crecimiento acelerado del volumen de configuración y código del PKB generaba inconsistencias y pérdida de traza al enviar fragmentos aislados por la interfaz del chat.
+decision: |
+  Se detiene el flujo fragmentado y se adopta un ciclo rígido de ingeniería basado en Releases (SemVer) compuestas por incrementos funcionales empaquetados físicamente.
+consequences: |
+  Pros: Mayor estabilidad, control exhaustivo de calidad antes de commits y replicabilidad exacta.
+  Contras: Requiere mayor disciplina de comandos local por parte del operador.
+relationships:
+  documents:
+    - CONV-000003
+metadata:
+  version: 1.0.0
+  author: "Miguel Angel"

@@ -1,0 +1,13 @@
+entity: Requirement
+id: REQ-000101
+title: "Validación Sintáctica Obligatoria Binaria"
+type: TECHNICAL
+description: |
+  El motor del PKB debe rechazar de forma absoluta cualquier objeto de conocimiento que no contenga el campo 'entity' o que carezca de alguno de los atributos requeridos en su esquema oficial.
+status: APPROVED
+relationships:
+  implements: []
+  governed_by: []
+metadata:
+  priority: HIGH
+  traceable: true

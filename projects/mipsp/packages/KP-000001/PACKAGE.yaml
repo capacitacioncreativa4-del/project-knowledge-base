@@ -1,0 +1,21 @@
+id: KP-000001
+project: MIPSP
+status: InProgress
+source:
+  conversation: MIPSP-CONV-0001
+increment: MIPSP-INC-000001
+sessions:
+  - MIPSP-SES-000001
+knowledge_objects:
+  adr:
+    - MIPSP-ADR-000001
+requirements:
+  - MIPSP-REQ-000001
+  - MIPSP-REQ-000002
+  - MIPSP-REQ-000003
+standards: []
+templates: []
+risks: []
+tasks: []
+relationships: 4
+validated: true

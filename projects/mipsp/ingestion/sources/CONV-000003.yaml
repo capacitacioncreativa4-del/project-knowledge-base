@@ -1,0 +1,11 @@
+entity: Conversation
+id: CONV-000003
+title: "Sesión de Alineación de Criterios del Piloto MIPSP"
+date: "2026-07-14"
+participants:
+  - Miguel Angel
+  - Tech Lead AI
+summary: |
+  Discusión estratégica donde se acordó la transición del proyecto hacia el modelo de Releases Físicas Estables (DEC-0025) y la creación de la especificación normativa PKB-SPEC-001.
+metadata:
+  version: 1.0.0

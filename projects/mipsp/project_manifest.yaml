@@ -1,0 +1,15 @@
+id: "MIPSP"
+name: "MIPSP Editor de Procesos"
+status: "Active"
+owner: "Miguel Angel"
+version: "1.0.0"
+
+knowledge:
+  requirements: 14  # Componentes de control de tu plantilla Word de manuales
+  standards: 4      # Normativas aplicadas
+  adr: 2            # Registros de decisiones arquitectónicas del piloto
+  research: 1       # Investigación básica
+
+dependencies:
+  - "PKB Kernel"
+  - "Word Template Library"

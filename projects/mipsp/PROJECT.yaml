@@ -1,0 +1,31 @@
+id: MIPSP
+name: Modelo Integral para la Profesionalización de los Servicios de Protección
+status: Active
+pilot: true
+owner: Miguel Angel
+repository: project-knowledge-base
+pkb_version: 1.0.0
+ingestion:
+  status: metamodel_v1_consolidated
+  completion: 100
+metrics:
+  conversations: 6
+  sessions: 24
+  increments: 8
+  knowledge_objects: 81
+  relationships: 58
+  coverage: "100%"
+knowledge:
+  conversations: 6
+  requirements: 23
+  adr: 12
+  standards: 11
+  artifacts: 20
+  documents: 8
+  systems: 7
+  templates: 0
+  tasks: 0
+quality:
+  metadata: 1
+  traceability: 1
+  validation: 1
