@@ -2,6 +2,12 @@
 
 Todos los cambios notables en este proyecto serán documentados en este archivo bajo los lineamientos de [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.3.2] — 2026-07-15
+### Added
+- [cite_start]**EPIC-01 CAP-01/CAP-02 (Baseline A - Architecture):** Culminación y congelación formal del modelo de arquitectura técnica bajo el estándar C4 [cite: 361-364].
+- [cite_start]**C4 Level 3 Components:** Lanzamiento de `ARCH-003-Component.md` definiendo interacciones de procesamiento interno.
+- [cite_start]**C4 Level 4 Code Organization:** Creación de `ARCH-004-Code-Organization.md` con el mapeo estructural del repositorio físico.
+
 ## [0.3.1] — 2026-07-15
 ### Added
 - [cite_start]**EPIC-01 CAP-01 (Governance Baseline):** Despliegue del marco normativo institucional del PKB .
