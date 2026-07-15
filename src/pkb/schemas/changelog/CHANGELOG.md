@@ -2,6 +2,15 @@
 
 Todos los cambios notables en este proyecto serán documentados en este archivo bajo los lineamientos de [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.0] — 2026-07-14
+### Added
+- **Pipeline Governance (I01):** Despliegue de `PKB-SPEC-003` y esquema para `System`.
+- **Prompt Framework (I02):** Creación de `PKB-SPEC-004` y contrato de validación para `Artifact`.
+- **Core Processing (I03):** Lógica del procesador en Python (`processor.py`) y esquema para `SystemModule`.
+- **Assembler Engine (I04):** Módulo de ensamblaje en Python (`assembler.py`) y esquema de `KnowledgePackage`.
+- **Pilot Test (I05):** Script de ejecución piloto del pipeline (`test_pipeline.py`).
+- **Release Documentation (I06):** Notas de versión oficiales de la entrega `0.2.0`.
+
 ## [0.1.0] — 2026-07-14
 ### Added
 - **Core Foundation (I01):** Lanzamiento de `PKB-SPEC-001` (Especificación Normativa) y `PKB-ENGINEERING-HANDBOOK.md`.
