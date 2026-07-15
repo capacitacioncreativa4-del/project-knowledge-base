@@ -2,6 +2,14 @@
 
 Todos los cambios notables en este proyecto serán documentados en este archivo bajo los lineamientos de [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.3.1] — 2026-07-15
+### Added
+- [cite_start]**EPIC-01 CAP-01 (Governance Baseline):** Despliegue del marco normativo institucional del PKB .
+- [cite_start]**Platform Specification:** Creación de `PKB-SPEC-001-Platform-Specification.md` para delimitar las 8 capacidades del sistema[cite: 438].
+- [cite_start]**Object Lifecycle:** Implementación de `PKB-LIFECYCLE-001-Object-Lifecycle.md` y su contrato automatizado `object_lifecycle.yaml` [cite: 335-365, 439].
+- [cite_start]**Functional Catalog:** Estructuración de `PKB-CAPABILITY-CATALOG.md` para el rastreo de procesos de conocimiento [cite: 384-400, 440].
+- [cite_start]**Governance Policy:** Lanzamiento de `PKB-GOVERNANCE-POLICY.md` regulando la inmutabilidad estructural y roles de aprobación .
+
 ## [0.3.0] — 2026-07-15
 ### Added
 - **Constitución del PKB (I01):** Publicación del documento base `PKB-CONSTITUTION-001.md` y `DEFINITION-OF-DONE.md`.
