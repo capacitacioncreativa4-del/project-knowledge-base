@@ -20,3 +20,13 @@ wheels/
 venv/
 env/
 .venv/
+
+# Entorno de Ejecución Temporal (Runtime)
+runtime/
+projects/mipsp/ingestion/sources/MIPSP-CONV-0003-P01.md
+
+# Archivos de Sistema y Python
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
