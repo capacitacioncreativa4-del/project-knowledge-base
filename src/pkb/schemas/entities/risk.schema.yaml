@@ -1,0 +1,14 @@
+entity: Risk
+version: 1.0.0
+required:
+  - id
+  - impact_level
+  - probability
+  - mitigation_strategy
+  - status
+relationships:
+  impacts:
+    - InstitutionalSystem
+    - Requirement
+metadata:
+  versioned: true

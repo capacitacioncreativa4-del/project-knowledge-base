@@ -1,0 +1,13 @@
+entity: InstitutionalSystem
+version: 1.0.0
+required:
+  - id
+  - name
+  - environment_target
+  - inputs
+  - outputs
+relationships:
+  depends_on:
+    - InstitutionalSystem
+metadata:
+  traceable: true

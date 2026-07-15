@@ -1,0 +1,16 @@
+entity: EditorialDocument
+version: 1.0.0
+required:
+  - id
+  - title
+  - distribution_level
+  - status
+  - version
+relationships:
+  implements:
+    - Requirement
+  belongs_to:
+    - InstitutionalSystem
+metadata:
+  versioned: true
+  auditable: true
