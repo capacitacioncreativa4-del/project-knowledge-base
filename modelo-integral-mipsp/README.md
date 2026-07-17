@@ -26,12 +26,25 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
   su estado real de avance (contrastado contra el Proyecto 1), y la arquitectura general
   del conocimiento.
 
+- **`subsistema-1-sistema-juridico/`** — Desarrollo del Subsistema 1 (Sistema Jurídico):
+  - `IARF-v1-Capitulo-IX-Ley-Morelos.md` — Inventario Analítico de Requisitos Formativos,
+    primera versión, basado en el texto oficial de los Capítulos VII a IX (artículos 38-53)
+    de la Ley de Seguridad Privada para el Estado de Morelos. Confirma con cita legal
+    exacta que 16 de 18 obligaciones formativas analizadas ya están cubiertas por el kit de
+    21 cursos, y resuelve el criterio de decisión de los dos pendientes normativos
+    heredados del Proyecto 1 (armamento/tiro y protección a funcionarios).
+
 ## Estado actual
 
 ✅ Marco metodológico (Tomo I) consolidado en versión ejecutiva.
+✅ Subsistema 1 (Sistema Jurídico) — IARF v1 completado para Capítulo IX de la Ley
+   estatal (Arts. 38-53).
 🟢 2 de 9 subsistemas completos (heredados del Proyecto 1): Diseño Curricular y Evaluación.
-🟡 4 de 9 subsistemas parciales, con base aprovechable: Jurídico, Procesos Operativos,
-   Gestión del Riesgo Formativo, Gobernanza y Mejora Continua.
+🟡 4 de 9 subsistemas parciales, con base aprovechable: **Jurídico (actualizado)**,
+   Procesos Operativos, Gestión del Riesgo Formativo, Gobernanza y Mejora Continua.
 🔴 3 de 9 subsistemas sin iniciar: Competencias, Madurez Competencial, Inteligencia
    Operativa.
-⏳ Pendiente: decidir cuál subsistema parcial o pendiente se retoma a continuación.
+⏳ Pendiente: ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060 (fases
+   futuras, no incluidas en la v1).
+⏳ Pendiente: decidir si se desarrolla el "Curso 22 — Especialización en Modalidades
+   Armadas" (opcional, condicionado), identificado en el IARF v1.
