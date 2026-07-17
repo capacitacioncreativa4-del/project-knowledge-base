@@ -1,0 +1,3 @@
+entity: ADR
+version: 1.0.0
+required: [id,title,rationale,source]

@@ -2,12 +2,18 @@
 id: PKB-ADR-0001
 title: Adoptar un Project Knowledge Base como Sistema Central de Gestión del Conocimiento
 version: 1.0.0
-status: Accepted
+status: Draft
 owner: Architecture
 date: 2026-07-08
 type: ADR
+created: '2026-07-09'
+updated: '2026-07-09'
+domain: Architecture
+tags:
+- pkb
+- architecture
+- adr
 ---
-
 # ADR-0001
 
 ## Título

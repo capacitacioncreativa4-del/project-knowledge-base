@@ -1,0 +1,138 @@
+"""
+PKB Metadata Self-Healing Fixer - Edición Avanzada
+Version: 1.1.1
+Corrige automáticamente desviaciones inyectando valores basados en la topología del repositorio.
+"""
+import sys
+import re
+import hashlib  # <- Corrección: Cambiado para generar IDs deterministas
+from datetime import datetime
+from pathlib import Path
+import yaml
+
+ROOT = Path(__file__).resolve().parents[2]
+SCHEMA_PATH = ROOT / "tools" / "config" / "metadata_schema.yaml"
+
+def load_schema():
+    if not SCHEMA_PATH.exists():
+        print(f"❌ Error: No se encontró el esquema en {SCHEMA_PATH}")
+        sys.exit(1)
+    with open(SCHEMA_PATH, encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+def split_document(file_path):
+    with open(file_path, encoding="utf-8") as f:
+        content = f.read()
+    match = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)", content, re.DOTALL)
+    if match:
+        try:
+            return yaml.safe_load(match.group(1)), match.group(2), True
+        except yaml.YAMLError:
+            return None, content, False
+    return None, content, False
+
+def save_document(file_path, metadata, markdown_body):
+    yaml_string = yaml.dump(metadata, default_flow_style=False, allow_unicode=True, sort_keys=False)
+    new_content = f"---\n{yaml_string}---\n{markdown_body}"
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(new_content)
+
+def heal_metadata(metadata, schema, file_path):
+    fixed = False
+    today_str = "2026-07-09"
+    parts = file_path.parts
+    file_name = file_path.stem
+    
+    if metadata is None:
+        metadata = {}
+        fixed = True
+
+    # 1. Fechas, dueños y estados básicos
+    if "created" not in metadata:
+        metadata["created"] = today_str
+        fixed = True
+    if "updated" not in metadata:
+        metadata["updated"] = today_str
+        fixed = True
+    if "status" not in metadata:
+        metadata["status"] = "Draft"
+        fixed = True
+    if "version" not in metadata:
+        metadata["version"] = "1.0.0"
+        fixed = True
+    if "title" not in metadata:
+        metadata["title"] = str(file_name.replace("-", " ").replace("_", " ").title())
+        fixed = True
+    if "owner" not in metadata:
+        metadata["owner"] = "Arquitecto de Conocimiento"
+        fixed = True
+
+    # 2. Deducir DOMAIN dinámicamente según la carpeta
+    if "domain" not in metadata:
+        if "kernel" in parts:
+            metadata["domain"] = "Kernel"
+        elif "governance" in parts:
+            metadata["domain"] = "Governance"
+        elif "architecture" in parts:
+            metadata["domain"] = "Architecture"
+        else:
+            metadata["domain"] = "General"
+        fixed = True
+        print(f"   ↳ 🌐 Dominio deducido para {file_name}: {metadata['domain']}")
+
+    # 3. Deducir TYPE dinámicamente
+    if "type" not in metadata:
+        if "templates" in parts:
+            metadata["type"] = "Template"
+        elif "standards" in parts or "kernel" in parts:
+            metadata["type"] = "Standard"
+        else:
+            metadata["type"] = "Documentation"
+        fixed = True
+        print(f"   ↳ 🏷️ Tipo deducido para {file_name}: {metadata['type']}")
+
+    # 4. Deducir TAGS por defecto (Fuerza conversión estricta a texto)
+    if "tags" not in metadata or not metadata["tags"]:
+        domain_tag = str(metadata.get("domain", "general")).lower()
+        type_tag = str(metadata.get("type", "documentation")).lower()
+        metadata["tags"] = ["pkb", domain_tag, type_tag]
+        fixed = True
+        print(f"   ↳ 🏷️ Tags generados para {file_name}: {metadata['tags']}")
+
+    # 5. Generar un ID temporal unívoco y DETERMINISTA si falta por completo
+    if "id" not in metadata:
+        prefix = f"PKB-{str(metadata['domain']).upper()}"
+        hash_object = hashlib.md5(file_name.encode('utf-8'))
+        hash_id = str(int(hash_object.hexdigest(), 16) % 10000).zfill(4)
+        metadata["id"] = f"{prefix}-{hash_id}"
+        fixed = True
+        print(f"   ↳ 🆔 ID unívoco generado para {file_name}: {metadata['id']}")
+
+    return metadata, fixed
+
+def main():
+    print("🩹 Iniciando Asistente de Corrección Avanzada (Self-Healing Fixer)...")
+    schema = load_schema()
+    total_fixed = 0
+    
+    for path in ROOT.rglob("*.md"):
+        if "tools" in path.parts or ".git" in path.parts:
+            continue
+            
+        try:
+            metadata, markdown_body, has_yaml = split_document(path)
+            metadata, is_fixed = heal_metadata(metadata, schema, path)
+            
+            if is_fixed:
+                save_document(path, metadata, markdown_body)
+                total_fixed += 1
+        except Exception as e:
+            print(f"❌ Error crítico procesando el archivo {path.name}: {e}")
+            continue
+
+    print("=" * 60)
+    print(f"🔧 Proceso de Auto-curación Concluido. Documentos reparados: {total_fixed}")
+    print("=" * 60)
+
+if __name__ == "__main__":
+    main()

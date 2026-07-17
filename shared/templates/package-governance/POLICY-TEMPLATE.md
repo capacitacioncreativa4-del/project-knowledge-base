@@ -1,11 +1,17 @@
 ---
-id:
-title:
-version:
-status:
-owner:
+id: null
+title: null
+version: 1.0.0
+status: Draft
+owner: null
 type: POLICY
-domain:
+domain: null
+created: '2026-07-09'
+updated: '2026-07-09'
+tags:
+- pkb
+- none
+- policy
 ---
 # Política
 

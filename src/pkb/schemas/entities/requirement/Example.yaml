@@ -1,0 +1,10 @@
+entity: Requirement
+id: REQ-EXT-0001
+title: Sincronización Automática de Registros de Copropietarios
+type: FUNCTIONAL
+status: DRAFT
+relationships:
+  implements:
+    - SYS-MIPSP-CORE
+  governed_by:
+    - STD-CONDOMINIUM-LAW-MORELOS

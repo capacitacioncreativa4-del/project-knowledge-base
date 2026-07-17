@@ -1,3 +1,18 @@
+---
+created: '2026-07-09'
+updated: '2026-07-09'
+status: Draft
+version: 1.0.0
+title: Readme
+owner: Arquitecto de Conocimiento
+domain: General
+type: Documentation
+tags:
+- pkb
+- general
+- documentation
+id: PKB-GENERAL-5424
+---
 # Project Knowledge Base (PKB)
 > Sistema institucional de gestión del conocimiento para proyectos, arquitectura, investigación y documentación.
 

@@ -1,0 +1,13 @@
+entity: Artifact
+version: 1.0.0
+required:
+  - id
+  - title
+  - type
+  - representation_format
+  - location_path
+relationships:
+  organizes:
+    - EditorialDocument
+metadata:
+  versioned: true

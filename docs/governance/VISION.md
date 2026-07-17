@@ -7,8 +7,13 @@ owner: Architecture
 created: 2026-07-08
 type: Governance
 parent: PKB-KERNEL-MANIFEST-001
+updated: '2026-07-09'
+domain: Governance
+tags:
+- pkb
+- governance
+- governance
 ---
-
 # Visión del Project Knowledge Base
 
 ## Propósito

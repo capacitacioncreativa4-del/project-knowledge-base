@@ -1,0 +1,3 @@
+entity: Conversation
+version: 1.0.0
+required: [id,title,source]

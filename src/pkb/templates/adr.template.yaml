@@ -1,0 +1,18 @@
+# PKB Template: Architecture Decision Record (ADR)
+# Version: 1.0.0
+id: ADR-XXXXXX # Reemplazar XXXXXX con un ID único de 6 dígitos
+title: "[Título claro y conciso de la decisión]"
+status: DRAFT  # Opciones: DRAFT, REVIEW, APPROVED, SUPERSEDED, DEPRECATED
+context: |
+  [Descripción detallada del contexto, las fuerzas tecnológicas y el problema detectado]
+decision: |
+  [Declaración explícita de la alternativa elegida y la justificación técnica de la arquitectura]
+consequences: |
+  [Impacto de la decisión: pros, contras, deuda técnica adquirida o mitigada]
+relationships:
+  documents:
+    - CONV-XXXXXX # ID de la conversación fuente
+  governs: []
+metadata:
+  version: 1.0.0
+  author: ""

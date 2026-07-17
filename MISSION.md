@@ -1,13 +1,21 @@
 ---
 id: PKB-MISSION-0001
 type: governance
-status: draft
-version: 0.1.0-alpha
+status: Draft
+version: 1.0.0
 owner: ChatGPT (Architecture)
 last_update: 2026-07-08
-references: [README.md]
+references:
+- README.md
+created: '2026-07-09'
+updated: '2026-07-09'
+title: Mission
+domain: General
+tags:
+- pkb
+- general
+- governance
 ---
-
 # Misión del PKB
 
 ## Declaración de la Misión

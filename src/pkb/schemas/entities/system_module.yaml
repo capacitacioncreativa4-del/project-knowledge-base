@@ -1,0 +1,22 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: SystemModule
+type: object
+required:
+  - entity
+  - id
+  - name
+  - system_id
+properties:
+  entity:
+    type: string
+    const: SystemModule
+  id:
+    type: string
+    pattern: "^MOD-[0-9]{6}$"
+  name:
+    type: string
+  system_id:
+    type: string
+    pattern: "^SYS-[0-9]{6}$"
+  version:
+    type: string

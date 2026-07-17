@@ -1,3 +1,18 @@
+---
+created: '2026-07-09'
+updated: '2026-07-09'
+status: Draft
+version: 1.0.0
+title: Changelog
+owner: Arquitecto de Conocimiento
+domain: General
+type: Documentation
+tags:
+- pkb
+- general
+- documentation
+id: PKB-GENERAL-4676
+---
 # Registro de Cambios - PKB
 
 ## [0.1.0-alpha] - 2026-07-08

@@ -1,0 +1,18 @@
+entity: Standard
+version: 1.0.0
+required:
+  - id
+  - title
+  - scope
+  - rules
+  - status
+  - source
+relationships:
+  governs:
+    - EditorialDocument
+    - InstitutionalSystem
+  validates:
+    - Requirement
+metadata:
+  versioned: true
+  traceable: true

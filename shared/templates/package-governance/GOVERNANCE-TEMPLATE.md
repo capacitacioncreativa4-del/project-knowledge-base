@@ -1,14 +1,17 @@
 ---
-id:
-title:
-version:
-status:
-owner:
-created:
-updated:
+id: null
+title: null
+version: 1.0.0
+status: Draft
+owner: null
+created: null
+updated: null
 type: GOV
-domain:
+domain: null
 tags:
+- pkb
+- none
+- gov
 ---
 # Propósito
 ...[cite: 4]

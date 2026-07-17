@@ -1,0 +1,14 @@
+# PKB Template: Requirement (REQ)
+# Version: 1.0.0
+id: REQ-XXXXXX # Reemplazar XXXXXX con un ID único de 6 dígitos
+title: "[Nombre formal del requerimiento]"
+type: FUNCTIONAL # FUNCTIONAL, TECHNICAL, QUALITY
+description: |
+  [Declaración clara, atómica y medible de la obligación o requerimiento del sistema]
+status: DRAFT
+relationships:
+  implements: []
+  governed_by: []
+metadata:
+  priority: HIGH # HIGH, MEDIUM, LOW
+  traceable: true

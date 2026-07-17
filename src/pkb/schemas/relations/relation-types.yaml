@@ -1,0 +1,31 @@
+version: 1.0.0
+relations:
+  - name: governs
+    allowed_source: Standard
+    allowed_target: [Requirement, EditorialDocument, InstitutionalSystem]
+    bidirectional: false
+    description: "Establece directrices o normativas de cumplimiento obligatorio."
+
+  - name: implements
+    allowed_source: [Requirement, EditorialDocument, InstitutionalSystem]
+    allowed_target: Requirement
+    bidirectional: false
+    description: "Lleva a la práctica física un requerimiento u obligación de diseño."
+
+  - name: resolves
+    allowed_source: Task
+    allowed_target: [Risk, Requirement]
+    bidirectional: false
+    description: "Acción de ingeniería que mitiga un riesgo o solventa un requerimiento."
+
+  - name: documents
+    allowed_source: [Conversation, EngineeringSession]
+    allowed_target: [KnowledgePackage, ADR, Requirement, Standard]
+    bidirectional: false
+    description: "Provee la traza y el sustento primario del conocimiento extraído."
+
+  - name: depends_on
+    allowed_source: InstitutionalSystem
+    allowed_target: InstitutionalSystem
+    bidirectional: true
+    description: "Relación de acoplamiento de software o infraestructura técnica."
