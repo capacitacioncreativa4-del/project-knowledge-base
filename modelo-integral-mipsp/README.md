@@ -44,29 +44,35 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
   matriz multicriterio (riesgo operativo, jurídico, reputacional) completa para los 21
   cursos. Hallazgo principal: 8 de 21 cursos cambian de categoría de riesgo frente a la
   clasificación informal usada originalmente; en particular, Derechos Humanos, Uso de la
-  Fuerza y Perspectiva de Género se reclasifican como "Muy Alta", lo que abre una decisión
-  pendiente sobre ampliar el alcance del Curso 20 (Actualización Anual).
+  Fuerza y Perspectiva de Género se reclasifican como "Muy Alta", lo que abrió una
+  decisión (ya tomada: ampliar el Curso 20 a 12 horas anuales).
+
+- **`Catalogo-Maestro-Competencias-v1.md`** — Subsistema 2 (Sistema de Competencias):
+  27 competencias nucleares (una o dos por cada uno de los 21 cursos), clasificadas en las
+  9 familias del diseño original (Jurídicas, Operativas, Técnicas, Tecnológicas,
+  Comunicación, Atención al usuario, Seguridad y emergencias, Gestión documental,
+  Desarrollo profesional). Resuelve 14 de las 18 filas "Pendiente" del IARF v1.
 
 ## Estado actual
 
 ✅ Marco metodológico (Tomo I) consolidado en versión ejecutiva.
 ✅ Subsistema 1 (Sistema Jurídico) — IARF v1 completado para Capítulo IX de la Ley
    estatal (Arts. 38-53).
+✅ Subsistema 2 (Sistema de Competencias) — Catálogo Maestro v1 completado, 27
+   competencias nucleares.
 ✅ Subsistema 3 (Procesos Operativos) — Manual Maestro de PNO v1 completado, compilando
    los 21 procedimientos existentes.
 ✅ Subsistema 6 (Gestión del Riesgo Formativo) — Matriz de Riesgo Formativo completa para
-   los 21 cursos, con reclasificación de 8 de ellos.
-🟢 5 de 9 subsistemas completos: Diseño Curricular, Evaluación, Sistema Jurídico,
-   Procesos Operativos, **Gestión del Riesgo Formativo**.
+   los 21 cursos, con reclasificación de 8 de ellos (decisión ya tomada: Curso 20 ampliado).
+🟢 6 de 9 subsistemas completos: Diseño Curricular, Evaluación, Sistema Jurídico,
+   **Sistema de Competencias**, Procesos Operativos, Gestión del Riesgo Formativo.
 🟡 1 de 9 subsistemas parcial, con base aprovechable: Gobernanza y Mejora Continua.
-🔴 3 de 9 subsistemas sin iniciar: Competencias, Madurez Competencial, Inteligencia
-   Operativa.
+🔴 2 de 9 subsistemas sin iniciar: Madurez Competencial, Inteligencia Operativa.
 ⏳ Pendiente: ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060 (fases
    futuras, no incluidas en la v1).
 ⏳ Pendiente: decidir si se desarrolla el "Curso 22 — Especialización en Modalidades
    Armadas" (opcional, condicionado), identificado en el IARF v1.
 ⏳ Pendiente: personalizar el Manual Maestro de PNO con los procedimientos específicos de
    un sitio/cliente real (misma tarea pendiente ya señalada para el Curso 16).
-⏳ Pendiente (decisión, no técnica): si se amplía el Curso 20 para incorporar los 3 cursos
-   recién reclasificados como "Muy Alta" (Derechos Humanos, Uso de la Fuerza, Perspectiva
-   de Género), identificado en la Matriz de Riesgo Formativo.
+⏳ Pendiente: actualizar formalmente el archivo del IARF v1 con la correspondencia de
+   competencias derivadas (ajuste menor, documentado en el Catálogo de Competencias).
