@@ -53,6 +53,13 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
   Comunicación, Atención al usuario, Seguridad y emergencias, Gestión documental,
   Desarrollo profesional). Resuelve 14 de las 18 filas "Pendiente" del IARF v1.
 
+- **`Programa-Gobernanza-Mejora-Continua-v1.md`** — Subsistema 9 (Gobernanza y Mejora
+  Continua): formaliza el control de cambios (flujo de Git/GitHub ya en uso), el
+  versionado de documentos, un ciclo anual de revisión alineado con el Curso 20,
+  indicadores ágiles y la bitácora de decisiones estructurales del proyecto. Reemplaza
+  deliberadamente el diseño original (SIGD-MIPSP, 4 niveles jerárquicos y RACI completo),
+  pensado para una institución con muchos colaboradores, no para un operador único.
+
 ## Estado actual
 
 ✅ Marco metodológico (Tomo I) consolidado en versión ejecutiva.
@@ -64,9 +71,11 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
    los 21 procedimientos existentes.
 ✅ Subsistema 6 (Gestión del Riesgo Formativo) — Matriz de Riesgo Formativo completa para
    los 21 cursos, con reclasificación de 8 de ellos (decisión ya tomada: Curso 20 ampliado).
-🟢 6 de 9 subsistemas completos: Diseño Curricular, Evaluación, Sistema Jurídico,
-   **Sistema de Competencias**, Procesos Operativos, Gestión del Riesgo Formativo.
-🟡 1 de 9 subsistemas parcial, con base aprovechable: Gobernanza y Mejora Continua.
+✅ Subsistema 9 (Gobernanza y Mejora Continua) — Programa v1 completado, en versión ágil
+   para operador único.
+🟢 7 de 9 subsistemas completos: Diseño Curricular, Evaluación, Sistema Jurídico,
+   Sistema de Competencias, Procesos Operativos, Gestión del Riesgo Formativo,
+   **Gobernanza y Mejora Continua**.
 🔴 2 de 9 subsistemas sin iniciar: Madurez Competencial, Inteligencia Operativa.
 ⏳ Pendiente: ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060 (fases
    futuras, no incluidas en la v1).
@@ -76,3 +85,4 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
    un sitio/cliente real (misma tarea pendiente ya señalada para el Curso 16).
 ⏳ Pendiente: actualizar formalmente el archivo del IARF v1 con la correspondencia de
    competencias derivadas (ajuste menor, documentado en el Catálogo de Competencias).
+⏳ Pendiente: realizar el primer ciclo anual de revisión formal del Subsistema 9.
