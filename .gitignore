@@ -30,3 +30,8 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Evitar subir artefactos de ejecución locales
+runtime/workspace/
+runtime/packages/
+*.zip
