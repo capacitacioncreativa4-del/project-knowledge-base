@@ -60,6 +60,12 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
   deliberadamente el diseño original (SIGD-MIPSP, 4 niveles jerárquicos y RACI completo),
   pensado para una institución con muchos colaboradores, no para un operador único.
 
+- **`MMC-SP-Modelo-Madurez-Competencial-v1.md`** — Subsistema 7 (Madurez Competencial):
+  modelo de 4 niveles (Inducido, Operativo Básico, Operativo Consolidado, Senior/Mentor),
+  diseñado desde cero (el original nunca se desarrolló más allá del nombre), apoyado en la
+  infraestructura ya existente del kit (constancias, evaluaciones de desempeño, refrendo
+  anual). Incluye reglas explícitas de regresión de nivel, no solo de progresión.
+
 ## Estado actual
 
 ✅ Marco metodológico (Tomo I) consolidado en versión ejecutiva.
@@ -71,12 +77,13 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
    los 21 procedimientos existentes.
 ✅ Subsistema 6 (Gestión del Riesgo Formativo) — Matriz de Riesgo Formativo completa para
    los 21 cursos, con reclasificación de 8 de ellos (decisión ya tomada: Curso 20 ampliado).
+✅ Subsistema 7 (Madurez Competencial) — Modelo MMC-SP v1 diseñado desde cero.
 ✅ Subsistema 9 (Gobernanza y Mejora Continua) — Programa v1 completado, en versión ágil
    para operador único.
-🟢 7 de 9 subsistemas completos: Diseño Curricular, Evaluación, Sistema Jurídico,
+🟢 8 de 9 subsistemas completos: Diseño Curricular, Evaluación, Sistema Jurídico,
    Sistema de Competencias, Procesos Operativos, Gestión del Riesgo Formativo,
-   **Gobernanza y Mejora Continua**.
-🔴 2 de 9 subsistemas sin iniciar: Madurez Competencial, Inteligencia Operativa.
+   **Madurez Competencial**, Gobernanza y Mejora Continua.
+🔴 1 de 9 subsistemas sin iniciar: Inteligencia Operativa.
 ⏳ Pendiente: ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060 (fases
    futuras, no incluidas en la v1).
 ⏳ Pendiente: decidir si se desarrolla el "Curso 22 — Especialización en Modalidades
@@ -86,3 +93,4 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
 ⏳ Pendiente: actualizar formalmente el archivo del IARF v1 con la correspondencia de
    competencias derivadas (ajuste menor, documentado en el Catálogo de Competencias).
 ⏳ Pendiente: realizar el primer ciclo anual de revisión formal del Subsistema 9.
+⏳ Pendiente: aplicar el MMC-SP con un grupo piloto real.
