@@ -66,31 +66,34 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
   infraestructura ya existente del kit (constancias, evaluaciones de desempeño, refrendo
   anual). Incluye reglas explícitas de regresión de nivel, no solo de progresión.
 
-## Estado actual
+## Estado actual — MODELO INTEGRAL COMPLETO (versión ágil)
 
-✅ Marco metodológico (Tomo I) consolidado en versión ejecutiva.
-✅ Subsistema 1 (Sistema Jurídico) — IARF v1 completado para Capítulo IX de la Ley
-   estatal (Arts. 38-53).
-✅ Subsistema 2 (Sistema de Competencias) — Catálogo Maestro v1 completado, 27
-   competencias nucleares.
-✅ Subsistema 3 (Procesos Operativos) — Manual Maestro de PNO v1 completado, compilando
-   los 21 procedimientos existentes.
-✅ Subsistema 6 (Gestión del Riesgo Formativo) — Matriz de Riesgo Formativo completa para
-   los 21 cursos, con reclasificación de 8 de ellos (decisión ya tomada: Curso 20 ampliado).
-✅ Subsistema 7 (Madurez Competencial) — Modelo MMC-SP v1 diseñado desde cero.
-✅ Subsistema 9 (Gobernanza y Mejora Continua) — Programa v1 completado, en versión ágil
-   para operador único.
-🟢 8 de 9 subsistemas completos: Diseño Curricular, Evaluación, Sistema Jurídico,
-   Sistema de Competencias, Procesos Operativos, Gestión del Riesgo Formativo,
-   **Madurez Competencial**, Gobernanza y Mejora Continua.
-🔴 1 de 9 subsistemas sin iniciar: Inteligencia Operativa.
-⏳ Pendiente: ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060 (fases
-   futuras, no incluidas en la v1).
-⏳ Pendiente: decidir si se desarrolla el "Curso 22 — Especialización en Modalidades
-   Armadas" (opcional, condicionado), identificado en el IARF v1.
-⏳ Pendiente: personalizar el Manual Maestro de PNO con los procedimientos específicos de
-   un sitio/cliente real (misma tarea pendiente ya señalada para el Curso 16).
-⏳ Pendiente: actualizar formalmente el archivo del IARF v1 con la correspondencia de
-   competencias derivadas (ajuste menor, documentado en el Catálogo de Competencias).
-⏳ Pendiente: realizar el primer ciclo anual de revisión formal del Subsistema 9.
-⏳ Pendiente: aplicar el MMC-SP con un grupo piloto real.
+Los 9 subsistemas del Modelo Integral están desarrollados:
+
+| # | Subsistema | Documento | Estado |
+|---|---|---|---|
+| 1 | Sistema Jurídico | `subsistema-1-sistema-juridico/IARF-v1-Capitulo-IX-Ley-Morelos.md` | ✅ |
+| 2 | Sistema de Competencias | `Catalogo-Maestro-Competencias-v1.md` | ✅ |
+| 3 | Procesos Operativos | `Manual-Maestro-PNO-v1.md` | ✅ |
+| 4 | Diseño Curricular | Kit de 21 cursos (`capacitacion-guardias-seguridad-privada/`) | ✅ |
+| 5 | Evaluación | Incluido en cada uno de los 21 paquetes | ✅ |
+| 6 | Gestión del Riesgo Formativo | `Matriz-Riesgo-Formativo-MRF-v1.md` | ✅ |
+| 7 | Madurez Competencial | `MMC-SP-Modelo-Madurez-Competencial-v1.md` | ✅ |
+| 8 | Inteligencia Operativa | `Sistema-Inteligencia-Operativa-v1.md` | ✅ |
+| 9 | Gobernanza y Mejora Continua | `Programa-Gobernanza-Mejora-Continua-v1.md` | ✅ |
+
+**El desarrollo conceptual del Modelo Integral, en su versión ágil, está terminado.**
+
+## Pendientes generales (fases de profundización y validación, no diseño)
+
+⏳ Ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060.
+⏳ Decidir si se desarrolla el "Curso 22 — Especialización en Modalidades Armadas".
+⏳ Personalizar el Manual Maestro de PNO con los procedimientos de un sitio/cliente real.
+⏳ Actualizar el IARF v1 con la correspondencia de competencias derivadas (ajuste menor).
+⏳ Realizar el primer ciclo anual de revisión formal del Subsistema 9.
+⏳ Aplicar el MMC-SP con un grupo piloto real.
+⏳ Llenar el Tablero de Control del Subsistema 8 con datos reales del piloto.
+
+Todos estos pendientes comparten una misma condición: **requieren la validación práctica
+del kit con personal real**, un pendiente que se identificó desde el cierre del Proyecto 1
+y que aún no se ha abordado.
