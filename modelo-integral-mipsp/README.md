@@ -40,6 +40,13 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
   conducta/situaciones sensibles, documentación y gestión), con mapa de referencias
   cruzadas entre ellos.
 
+- **`Matriz-Riesgo-Formativo-MRF-v1.md`** — Subsistema 6 (Gestión del Riesgo Formativo):
+  matriz multicriterio (riesgo operativo, jurídico, reputacional) completa para los 21
+  cursos. Hallazgo principal: 8 de 21 cursos cambian de categoría de riesgo frente a la
+  clasificación informal usada originalmente; en particular, Derechos Humanos, Uso de la
+  Fuerza y Perspectiva de Género se reclasifican como "Muy Alta", lo que abre una decisión
+  pendiente sobre ampliar el alcance del Curso 20 (Actualización Anual).
+
 ## Estado actual
 
 ✅ Marco metodológico (Tomo I) consolidado en versión ejecutiva.
@@ -47,10 +54,11 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
    estatal (Arts. 38-53).
 ✅ Subsistema 3 (Procesos Operativos) — Manual Maestro de PNO v1 completado, compilando
    los 21 procedimientos existentes.
-🟢 4 de 9 subsistemas completos (heredados o consolidados): Diseño Curricular, Evaluación,
-   **Sistema Jurídico, Procesos Operativos**.
-🟡 2 de 9 subsistemas parciales, con base aprovechable: Gestión del Riesgo Formativo,
-   Gobernanza y Mejora Continua.
+✅ Subsistema 6 (Gestión del Riesgo Formativo) — Matriz de Riesgo Formativo completa para
+   los 21 cursos, con reclasificación de 8 de ellos.
+🟢 5 de 9 subsistemas completos: Diseño Curricular, Evaluación, Sistema Jurídico,
+   Procesos Operativos, **Gestión del Riesgo Formativo**.
+🟡 1 de 9 subsistemas parcial, con base aprovechable: Gobernanza y Mejora Continua.
 🔴 3 de 9 subsistemas sin iniciar: Competencias, Madurez Competencial, Inteligencia
    Operativa.
 ⏳ Pendiente: ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060 (fases
@@ -59,3 +67,6 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
    Armadas" (opcional, condicionado), identificado en el IARF v1.
 ⏳ Pendiente: personalizar el Manual Maestro de PNO con los procedimientos específicos de
    un sitio/cliente real (misma tarea pendiente ya señalada para el Curso 16).
+⏳ Pendiente (decisión, no técnica): si se amplía el Curso 20 para incorporar los 3 cursos
+   recién reclasificados como "Muy Alta" (Derechos Humanos, Uso de la Fuerza, Perspectiva
+   de Género), identificado en la Matriz de Riesgo Formativo.
