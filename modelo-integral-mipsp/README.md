@@ -34,17 +34,28 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
     21 cursos, y resuelve el criterio de decisión de los dos pendientes normativos
     heredados del Proyecto 1 (armamento/tiro y protección a funcionarios).
 
+- **`Manual-Maestro-PNO-v1.md`** — Subsistema 3 (Sistema de Procesos Operativos):
+  compilación de los 21 Procedimientos Normalizados de Operación que ya existían en el kit
+  de capacitación, organizados por bloque temático (operación diaria, emergencias,
+  conducta/situaciones sensibles, documentación y gestión), con mapa de referencias
+  cruzadas entre ellos.
+
 ## Estado actual
 
 ✅ Marco metodológico (Tomo I) consolidado en versión ejecutiva.
 ✅ Subsistema 1 (Sistema Jurídico) — IARF v1 completado para Capítulo IX de la Ley
    estatal (Arts. 38-53).
-🟢 2 de 9 subsistemas completos (heredados del Proyecto 1): Diseño Curricular y Evaluación.
-🟡 4 de 9 subsistemas parciales, con base aprovechable: **Jurídico (actualizado)**,
-   Procesos Operativos, Gestión del Riesgo Formativo, Gobernanza y Mejora Continua.
+✅ Subsistema 3 (Procesos Operativos) — Manual Maestro de PNO v1 completado, compilando
+   los 21 procedimientos existentes.
+🟢 4 de 9 subsistemas completos (heredados o consolidados): Diseño Curricular, Evaluación,
+   **Sistema Jurídico, Procesos Operativos**.
+🟡 2 de 9 subsistemas parciales, con base aprovechable: Gestión del Riesgo Formativo,
+   Gobernanza y Mejora Continua.
 🔴 3 de 9 subsistemas sin iniciar: Competencias, Madurez Competencial, Inteligencia
    Operativa.
 ⏳ Pendiente: ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060 (fases
    futuras, no incluidas en la v1).
 ⏳ Pendiente: decidir si se desarrolla el "Curso 22 — Especialización en Modalidades
    Armadas" (opcional, condicionado), identificado en el IARF v1.
+⏳ Pendiente: personalizar el Manual Maestro de PNO con los procedimientos específicos de
+   un sitio/cliente real (misma tarea pendiente ya señalada para el Curso 16).
