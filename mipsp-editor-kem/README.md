@@ -43,7 +43,20 @@ conversores automáticos usados para la vista previa no actualizan estos campos.
 ## Estado actual
 
 ✅ Fase 1 (Kit Editorial Maestro) completa: 7 archivos, 16 componentes originales cubiertos.
-⏳ Pendiente (decisión, no técnica): si se inician las Fases 2 y 3 (producción de todos los
-documentos existentes en formato institucional completo).
-⏳ Recomendación: priorizar la validación práctica del kit de capacitación con personal real
-antes de invertir tiempo en la producción editorial completa de todos los documentos.
+✅ Fase 2 (producción documental) — **caso piloto completo**: los 17 documentos del
+   Curso 1 (Inducción) producidos en formato institucional real (16 en Word, 1 en
+   PowerPoint), usando las plantillas de la Fase 1. Carpeta:
+   `fase-2-produccion-documental/curso-01-induccion/`.
+⏳ Pendiente (decisión, no técnica): si se continúa la Fase 2 con los 20 cursos restantes,
+   o se prioriza primero la validación práctica del piloto con personal real.
+⏳ Pendiente: Fase 3 (repetir la Fase 2 para el resto de la colección), aún no iniciada.
+
+## Nota sobre el alcance del piloto
+
+Para no repetir cada documento con una portada y aparato editorial completo de varias
+páginas (excesivo para documentos de trabajo de una sola tabla o lista), cada uno de los
+17 documentos del Curso 1 usa una versión condensada de una página de la identidad
+institucional (portada breve + control documental esencial), en vez de replicar la portada
+completa de 2 páginas y las 3 páginas de índices de la Plantilla Maestra en cada archivo.
+La identidad visual (colores, tipografía, encabezados, pies, numeración) es la misma en
+todos los casos.
