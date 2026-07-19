@@ -43,14 +43,14 @@ conversores automáticos usados para la vista previa no actualizan estos campos.
 ## Estado actual
 
 ✅ Fase 1 (Kit Editorial Maestro) completa: 7 archivos, 16 componentes originales cubiertos.
-✅ Fase 2 (producción documental) — 2 de 21 cursos completos, en formato institucional real
+✅ Fase 2 (producción documental) — 3 de 21 cursos completos, en formato institucional real
    (16 en Word, 1 en PowerPoint cada uno):
    - `fase-2-produccion-documental/curso-01-induccion/`
    - `fase-2-produccion-documental/curso-04-control-accesos/`
-⏳ En curso: continuar con los 3 cursos restantes de criticidad "Muy Alta" (Primeros
-   Auxilios, Derechos Humanos, Uso de la Fuerza, Perspectiva de Género — 4 en total,
-   incluyendo los ya mencionados).
-⏳ Pendiente: los 17 cursos restantes del catálogo (lo que originalmente era la "Fase 3").
+   - `fase-2-produccion-documental/curso-08-primeros-auxilios/`
+⏳ En curso: continuar con los 2 cursos restantes de criticidad "Muy Alta" (Derechos
+   Humanos, Uso de la Fuerza, Perspectiva de Género).
+⏳ Pendiente: los 16 cursos restantes del catálogo (lo que originalmente era la "Fase 3").
 
 ## Nota sobre el alcance del piloto
 
