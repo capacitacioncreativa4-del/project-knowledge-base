@@ -43,16 +43,23 @@ conversores automáticos usados para la vista previa no actualizan estos campos.
 ## Estado actual
 
 ✅ Fase 1 (Kit Editorial Maestro) completa: 7 archivos, 16 componentes originales cubiertos.
-✅ Fase 2 (producción documental) — 5 de 21 cursos completos, en formato institucional real
+✅ Fase 2 (producción documental) — 6 de 21 cursos completos, en formato institucional real
    (16 en Word, 1 en PowerPoint cada uno):
    - `fase-2-produccion-documental/curso-01-induccion/`
    - `fase-2-produccion-documental/curso-04-control-accesos/`
    - `fase-2-produccion-documental/curso-08-primeros-auxilios/`
    - `fase-2-produccion-documental/curso-03-derechos-humanos/`
    - `fase-2-produccion-documental/curso-12-uso-de-la-fuerza/`
-⏳ En curso: continuar con el último curso de criticidad "Muy Alta" (Perspectiva de
-   Género), para completar los 5 identificados en la Matriz de Riesgo Formativo.
-⏳ Pendiente: los 15 cursos restantes del catálogo (lo que originalmente era la "Fase 3").
+   - `fase-2-produccion-documental/curso-14-perspectiva-de-genero/`
+
+**🏁 Hito alcanzado:** con el Curso 14, quedan completos los 5 cursos de criticidad
+"Muy Alta" identificados en la Matriz de Riesgo Formativo (Control de Accesos, Primeros
+Auxilios, Derechos Humanos, Uso de la Fuerza y Perspectiva de Género), además del Curso 1
+como caso piloto original.
+
+⏳ Pendiente: decidir si se continúa con los 15 cursos restantes del catálogo (lo que
+originalmente era la "Fase 3"), o se prioriza primero la validación práctica con personal
+real, usando ya el material de los cursos más críticos como punto de partida.
 
 ## Nota sobre el alcance del piloto
 
