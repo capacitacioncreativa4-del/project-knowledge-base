@@ -43,7 +43,7 @@ conversores automáticos usados para la vista previa no actualizan estos campos.
 ## Estado actual
 
 ✅ Fase 1 (Kit Editorial Maestro) completa: 7 archivos, 16 componentes originales cubiertos.
-✅ Fase 2 (producción documental) — 7 de 21 cursos completos, en formato institucional real
+✅ Fase 2 (producción documental) — 8 de 21 cursos completos, en formato institucional real
    (16 en Word, 1 en PowerPoint cada uno):
    - `fase-2-produccion-documental/curso-01-induccion/`
    - `fase-2-produccion-documental/curso-04-control-accesos/`
@@ -52,13 +52,14 @@ conversores automáticos usados para la vista previa no actualizan estos campos.
    - `fase-2-produccion-documental/curso-12-uso-de-la-fuerza/`
    - `fase-2-produccion-documental/curso-14-perspectiva-de-genero/`
    - `fase-2-produccion-documental/curso-06-manejo-de-conflictos/`
+   - `fase-2-produccion-documental/curso-07-prevencion-combate-incendios/`
 
 **🏁 Hito alcanzado:** los 5 cursos de criticidad "Muy Alta" completos, más el Curso 1
-(piloto original), más el primero de los 6 cursos "Alta" (Manejo de Conflictos).
+(piloto original), más 2 de los 6 cursos "Alta" (Manejo de Conflictos, Incendios).
 
-⏳ En curso: continuar con los 5 cursos "Alta" restantes (Incendios, Protección de
-Instalaciones, Redacción de Informes, Emergencias, Ética Profesional).
-⏳ Pendiente: los 14 cursos restantes del catálogo (lo que originalmente era la "Fase 3").
+⏳ En curso: continuar con los 4 cursos "Alta" restantes (Protección de Instalaciones,
+Redacción de Informes, Emergencias, Ética Profesional).
+⏳ Pendiente: los 13 cursos restantes del catálogo (lo que originalmente era la "Fase 3").
 
 ## Nota sobre el alcance del piloto
 
