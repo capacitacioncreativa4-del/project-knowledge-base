@@ -40,22 +40,60 @@ colección de 6 tomos de 250-350 páginas que pausó el proyecto originalmente.
   conducta/situaciones sensibles, documentación y gestión), con mapa de referencias
   cruzadas entre ellos.
 
-## Estado actual
+- **`Matriz-Riesgo-Formativo-MRF-v1.md`** — Subsistema 6 (Gestión del Riesgo Formativo):
+  matriz multicriterio (riesgo operativo, jurídico, reputacional) completa para los 21
+  cursos. Hallazgo principal: 8 de 21 cursos cambian de categoría de riesgo frente a la
+  clasificación informal usada originalmente; en particular, Derechos Humanos, Uso de la
+  Fuerza y Perspectiva de Género se reclasifican como "Muy Alta", lo que abrió una
+  decisión (ya tomada: ampliar el Curso 20 a 12 horas anuales).
 
-✅ Marco metodológico (Tomo I) consolidado en versión ejecutiva.
-✅ Subsistema 1 (Sistema Jurídico) — IARF v1 completado para Capítulo IX de la Ley
-   estatal (Arts. 38-53).
-✅ Subsistema 3 (Procesos Operativos) — Manual Maestro de PNO v1 completado, compilando
-   los 21 procedimientos existentes.
-🟢 4 de 9 subsistemas completos (heredados o consolidados): Diseño Curricular, Evaluación,
-   **Sistema Jurídico, Procesos Operativos**.
-🟡 2 de 9 subsistemas parciales, con base aprovechable: Gestión del Riesgo Formativo,
-   Gobernanza y Mejora Continua.
-🔴 3 de 9 subsistemas sin iniciar: Competencias, Madurez Competencial, Inteligencia
-   Operativa.
-⏳ Pendiente: ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060 (fases
-   futuras, no incluidas en la v1).
-⏳ Pendiente: decidir si se desarrolla el "Curso 22 — Especialización en Modalidades
-   Armadas" (opcional, condicionado), identificado en el IARF v1.
-⏳ Pendiente: personalizar el Manual Maestro de PNO con los procedimientos específicos de
-   un sitio/cliente real (misma tarea pendiente ya señalada para el Curso 16).
+- **`Catalogo-Maestro-Competencias-v1.md`** — Subsistema 2 (Sistema de Competencias):
+  27 competencias nucleares (una o dos por cada uno de los 21 cursos), clasificadas en las
+  9 familias del diseño original (Jurídicas, Operativas, Técnicas, Tecnológicas,
+  Comunicación, Atención al usuario, Seguridad y emergencias, Gestión documental,
+  Desarrollo profesional). Resuelve 14 de las 18 filas "Pendiente" del IARF v1.
+
+- **`Programa-Gobernanza-Mejora-Continua-v1.md`** — Subsistema 9 (Gobernanza y Mejora
+  Continua): formaliza el control de cambios (flujo de Git/GitHub ya en uso), el
+  versionado de documentos, un ciclo anual de revisión alineado con el Curso 20,
+  indicadores ágiles y la bitácora de decisiones estructurales del proyecto. Reemplaza
+  deliberadamente el diseño original (SIGD-MIPSP, 4 niveles jerárquicos y RACI completo),
+  pensado para una institución con muchos colaboradores, no para un operador único.
+
+- **`MMC-SP-Modelo-Madurez-Competencial-v1.md`** — Subsistema 7 (Madurez Competencial):
+  modelo de 4 niveles (Inducido, Operativo Básico, Operativo Consolidado, Senior/Mentor),
+  diseñado desde cero (el original nunca se desarrolló más allá del nombre), apoyado en la
+  infraestructura ya existente del kit (constancias, evaluaciones de desempeño, refrendo
+  anual). Incluye reglas explícitas de regresión de nivel, no solo de progresión.
+
+## Estado actual — MODELO INTEGRAL COMPLETO (versión ágil)
+
+Los 9 subsistemas del Modelo Integral están desarrollados:
+
+| # | Subsistema | Documento | Estado |
+|---|---|---|---|
+| 1 | Sistema Jurídico | `subsistema-1-sistema-juridico/IARF-v1-Capitulo-IX-Ley-Morelos.md` | ✅ |
+| 2 | Sistema de Competencias | `Catalogo-Maestro-Competencias-v1.md` | ✅ |
+| 3 | Procesos Operativos | `Manual-Maestro-PNO-v1.md` | ✅ |
+| 4 | Diseño Curricular | Kit de 21 cursos (`capacitacion-guardias-seguridad-privada/`) | ✅ |
+| 5 | Evaluación | Incluido en cada uno de los 21 paquetes | ✅ |
+| 6 | Gestión del Riesgo Formativo | `Matriz-Riesgo-Formativo-MRF-v1.md` | ✅ |
+| 7 | Madurez Competencial | `MMC-SP-Modelo-Madurez-Competencial-v1.md` | ✅ |
+| 8 | Inteligencia Operativa | `Sistema-Inteligencia-Operativa-v1.md` | ✅ |
+| 9 | Gobernanza y Mejora Continua | `Programa-Gobernanza-Mejora-Continua-v1.md` | ✅ |
+
+**El desarrollo conceptual del Modelo Integral, en su versión ágil, está terminado.**
+
+## Pendientes generales (fases de profundización y validación, no diseño)
+
+⏳ Ampliar el IARF al Reglamento estatal, Ley/Reglamento Federal y EC0060.
+⏳ Decidir si se desarrolla el "Curso 22 — Especialización en Modalidades Armadas".
+⏳ Personalizar el Manual Maestro de PNO con los procedimientos de un sitio/cliente real.
+⏳ Actualizar el IARF v1 con la correspondencia de competencias derivadas (ajuste menor).
+⏳ Realizar el primer ciclo anual de revisión formal del Subsistema 9.
+⏳ Aplicar el MMC-SP con un grupo piloto real.
+⏳ Llenar el Tablero de Control del Subsistema 8 con datos reales del piloto.
+
+Todos estos pendientes comparten una misma condición: **requieren la validación práctica
+del kit con personal real**, un pendiente que se identificó desde el cierre del Proyecto 1
+y que aún no se ha abordado.
