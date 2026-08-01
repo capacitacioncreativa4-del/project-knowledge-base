@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Instalar PKB",
+            "type": "shell",
+            "command": "pip install -e .",
+            "group": "build"
+        },
+        {
+            "label": "Ejecutar pruebas",
+            "type": "shell",
+            "command": "pytest",
+            "group": "test"
+        },
+        {
+            "label": "Estado Git",
+            "type": "shell",
+            "command": "git status"
+        }
+    ]
+}
