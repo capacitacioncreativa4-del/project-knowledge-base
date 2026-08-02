@@ -61,7 +61,7 @@ class ManifestBuilder:
             raise FileNotFoundError(f"El archivo fuente no existe: {self.source_filepath}")
 
         print(f"[PARSER] Procesando archivo origen: {self.source_filepath}")
-        
+
         with open(self.source_filepath, 'r', encoding='utf-8') as file:
             content = file.read()
 
@@ -85,7 +85,7 @@ class ManifestBuilder:
         self.metadata["sessions"] = sorted(list(set(
             f"SES-{m.zfill(6)}" for m in REGEX_PATTERNS["sessions"].findall(content)
         )))
-        
+
         self.metadata["objects"]["adr"] = sorted(list(set(
             f"ADR-{m.zfill(6)}" for m in REGEX_PATTERNS["adr"].findall(content)
         )))
@@ -120,7 +120,7 @@ class ManifestBuilder:
             f"knowledge_package: {self.metadata['knowledge_package']}",
             "sessions:"
         ]
-        
+
         if self.metadata["sessions"]:
             for session in self.metadata["sessions"]:
                 yaml_lines.append(f"  - {session}")
@@ -128,7 +128,7 @@ class ManifestBuilder:
             yaml_lines.append("  []")
 
         yaml_lines.append("objects:")
-        
+
         for obj_type, items in self.metadata["objects"].items():
             yaml_lines.append(f"  {obj_type}:")
             if items:
@@ -140,7 +140,7 @@ class ManifestBuilder:
         with open(output_filepath, 'w', encoding='utf-8') as out_file:
             out_file.write("\n".join(yaml_lines) + "\n")
 
-        print(f"[SUCCESS] Manifiesto guardado correctamente.\n")
+        print("[SUCCESS] Manifiesto guardado correctamente.\n")
         return output_filepath
 
 
@@ -148,7 +148,7 @@ def create_demo_conversation():
     """Genera una conversación de prueba si el usuario no tiene una a mano."""
     demo_path = "projects/mipsp/ingestion/sources/MIPSP-CONV-0003-P01.md"
     os.makedirs(os.path.dirname(demo_path), exist_ok=True)
-    
+
     demo_content = """# Minuta de Alineación MIPSP - Sesión 20 y 21
 Este documento recopila las decisiones de la sesión SES-20 y SES-21 para el paquete KP-3.
 Durante la sesión se acordó implementar el requerimiento REQ-EXT-0001 (Sincronización de Copropietarios)

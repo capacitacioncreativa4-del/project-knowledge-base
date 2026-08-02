@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 @dataclass(slots=True)
 class Relationship:
     """Representa una relación semántica dirigida entre dos objetos de conocimiento."""

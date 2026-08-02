@@ -3,11 +3,11 @@ PKB Metadata Self-Healing Fixer - Edición Avanzada
 Version: 1.1.1
 Corrige automáticamente desviaciones inyectando valores basados en la topología del repositorio.
 """
-import sys
-import re
 import hashlib  # <- Corrección: Cambiado para generar IDs deterministas
-from datetime import datetime
+import re
+import sys
 from pathlib import Path
+
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -42,7 +42,7 @@ def heal_metadata(metadata, schema, file_path):
     today_str = "2026-07-09"
     parts = file_path.parts
     file_name = file_path.stem
-    
+
     if metadata is None:
         metadata = {}
         fixed = True
@@ -114,15 +114,15 @@ def main():
     print("🩹 Iniciando Asistente de Corrección Avanzada (Self-Healing Fixer)...")
     schema = load_schema()
     total_fixed = 0
-    
+
     for path in ROOT.rglob("*.md"):
         if "tools" in path.parts or ".git" in path.parts:
             continue
-            
+
         try:
             metadata, markdown_body, has_yaml = split_document(path)
             metadata, is_fixed = heal_metadata(metadata, schema, path)
-            
+
             if is_fixed:
                 save_document(path, metadata, markdown_body)
                 total_fixed += 1

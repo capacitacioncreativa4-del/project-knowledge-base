@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List
 
+
 @dataclass(slots=True)
 class KnowledgeObject:
     """Representa un objeto de conocimiento formal dentro del dominio de la plataforma PKB."""

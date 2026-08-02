@@ -1,5 +1,7 @@
 from collections import Counter
+
 from pkb.knowledge.registry import KnowledgeRegistry
+
 
 class KnowledgeCatalog:
     """Provee capacidades analíticas y de indexación estadística sobre el registro SSoT."""

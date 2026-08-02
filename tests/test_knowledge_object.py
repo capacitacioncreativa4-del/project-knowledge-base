@@ -8,6 +8,7 @@ if SRC_PATH not in sys.path:
 
 from pkb.knowledge.object import KnowledgeObject
 
+
 def test_knowledge_object_instantiation():
     """Verifica que el modelo de dominio guarde correctamente sus atributos."""
     ruta_dummy = Path("docs/dummy.md")
@@ -22,7 +23,7 @@ def test_knowledge_object_instantiation():
         source=ruta_dummy,
         tags=["planning", "core"]
     )
-    
+
     assert obj.identifier == "PKB-PLAN-0001"
     assert obj.object_type == "PLAN"
     assert "planning" in obj.tags

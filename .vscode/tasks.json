@@ -2,19 +2,31 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Instalar PKB",
+            "label": "Install PKB",
             "type": "shell",
-            "command": "pip install -e .",
+            "command": "python -m pip install -e .",
             "group": "build"
         },
         {
-            "label": "Ejecutar pruebas",
+            "label": "Run Tests",
             "type": "shell",
             "command": "pytest",
             "group": "test"
         },
         {
-            "label": "Estado Git",
+            "label": "Ruff Check",
+            "type": "shell",
+            "command": "ruff check .",
+            "group": "test"
+        },
+        {
+            "label": "Ruff Format",
+            "type": "shell",
+            "command": "ruff format .",
+            "group": "build"
+        },
+        {
+            "label": "Git Status",
             "type": "shell",
             "command": "git status"
         }

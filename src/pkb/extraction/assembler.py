@@ -1,5 +1,7 @@
 import os
+
 import yaml
+
 
 class KnowledgePackageAssembler:
     def __init__(self, output_base_dir):

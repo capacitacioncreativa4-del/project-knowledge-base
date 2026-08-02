@@ -7,8 +7,10 @@ if SRC_PATH not in sys.path:
     sys.path.insert(0, SRC_PATH)
 
 import pytest
-from pkb.repository.scanner import RepositoryScanner
+
 from pkb.core.exceptions import RepositoryError
+from pkb.repository.scanner import RepositoryScanner
+
 
 def test_scanner_returns_list():
     """Verifica que el escáner devuelva una lista al pasar la raíz."""

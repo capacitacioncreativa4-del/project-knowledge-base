@@ -3,9 +3,10 @@ PKB Metadata Validator
 Version: 1.0.0
 Valida los encabezados YAML de todos los documentos Markdown del repositorio.
 """
-import sys
 import re
+import sys
 from pathlib import Path
+
 import yaml
 
 # Configuración de rutas relativas basadas en la arquitectura del repositorio
@@ -26,14 +27,14 @@ def extract_front_matter(file_path):
     try:
         with open(file_path, encoding="utf-8") as f:
             content = f.read()
-        
+
         if not content.startswith("---"):
             return None, "Falta el delimitador inicial (---) en la primera línea."
-            
+
         parts = content.split("---", 2)
         if len(parts) < 3:
             return None, "Falta el delimitador de cierre (---) de los metadatos."
-            
+
         return yaml.safe_load(parts[1]), None
     except yaml.YAMLError as e:
         return None, f"Sintaxis YAML inválida: {e}"
@@ -68,12 +69,12 @@ def generate_markdown_report(results):
     """Genera un reporte analítico estructurado en la carpeta de reportes."""
     total_files = len(results)
     failed_files = [r for r in results if r["errors"]]
-    
+
     markdown = "# Reporte de Validación de Metadatos (QA)\n\n"
     markdown += f"- **Estado general:** {'❌ RECHAZADO' if failed_files else '✅ APROBADO'}\n"
     markdown += f"- **Archivos evaluados:** {total_files}\n"
     markdown += f"- **Archivos con defectos:** {len(failed_files)}\n\n"
-    
+
     if not failed_files:
         markdown += "## ✅ Conclusiones\nTodos los documentos analizados cumplen estrictamente las directrices del esquema de metadatos institucional.\n"
     else:
@@ -83,7 +84,7 @@ def generate_markdown_report(results):
             for err in item["errors"]:
                 markdown += f"- {err}\n"
             markdown += "\n"
-            
+
     with open(REPORT_PATH, "w", encoding="utf-8") as f:
         f.write(markdown)
     return len(failed_files) > 0
@@ -92,26 +93,26 @@ def main():
     print("🚀 Ejecutando el Motor de Validación de Metadatos del PKB...")
     schema = load_schema()
     results = []
-    
+
     # Escaneo recursivo del repositorio excluyendo directorios técnicos
     for path in ROOT.rglob("*.md"):
         # Ignorar herramientas de validación, reportes y directorios ocultos de Git
         if "tools" in path.parts or ".git" in path.parts:
             continue
-            
+
         relative_path = path.relative_to(ROOT)
         metadata, err = extract_front_matter(path)
-        
+
         if err:
             results.append({"relative_path": relative_path, "errors": [err]})
         else:
             errors = validate_document(metadata, schema)
             results.append({"relative_path": relative_path, "errors": errors})
-            
+
     # Generar el reporte físico
     has_errors = generate_markdown_report(results)
     print(f"📊 Análisis finalizado. Reporte guardado en: {REPORT_PATH.relative_to(ROOT)}")
-    
+
     # Código de salida dinámico: 1 si hay fallos (rompe la build de CI), 0 si todo está limpio
     if has_errors:
         print("❌ Control de calidad rechazado. Se encontraron defectos documentales.")

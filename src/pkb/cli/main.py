@@ -1,24 +1,25 @@
+import argparse
 import os
 import sys
-import argparse
 
 # Asegurar que el path reconozca la estructura de paquetes internos
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pkb.extraction.processor import SemanticProcessor
 from pkb.extraction.assembler import KnowledgePackageAssembler
+from pkb.extraction.processor import SemanticProcessor
+
 
 def run_validation():
     print("\n[CLI] Iniciando proceso de validación del repositorio...")
     print("[SUCCESS] Análisis sintáctico completado. Todos los esquemas YAML son válidos.")
 
 def run_ingestion(lot_number):
-    print(f"\n[CLI] ========================================================")
+    print("\n[CLI] ========================================================")
     print(f"[CLI] Iniciando Pipeline de Ingestión Automatizada para Lote {lot_number}")
-    print(f"[CLI] ========================================================\n")
+    print("[CLI] ========================================================\n")
 
     base_dir = r"C:\Proyectos\project-knowledge-base"
-    
+
     # Mapeo exacto de los nombres reales de tus carpetas de origen
     lot_folders = {
         1: "Lote_1_MIPSP-CONV-0001",
@@ -31,7 +32,7 @@ def run_ingestion(lot_number):
     if not lot_folder_name:
         print(f"[ERROR] El número de lote {lot_number} no es válido (Debe ser 1 al 4).")
         return
-    
+
     # Ruta de entrada física real
     source_dir = os.path.join(base_dir, "projects", "mipsp", "ingestion", "sources", lot_folder_name)
     # Ruta de salida: projects/mipsp/repository/packages/
@@ -59,7 +60,7 @@ def run_ingestion(lot_number):
         doc_id = f.replace(".md", "")
         # Extraer el ID de la conversación o usar el nombre del archivo
         entity_id = f"REQ-EXT-{doc_id.split('-')[-1]}" if '-' in doc_id else f"REQ-EXT-{doc_id}"
-        
+
         mock_data = {
             "entity": "Requirement",
             "id": entity_id,
@@ -76,7 +77,7 @@ def run_ingestion(lot_number):
                 "lot": lot_number
             }
         }
-        
+
         # Guardar archivo YAML individual
         processor.save_extracted_entity(entity_id, mock_data, "specifications/requirements")
         entities_created.append(entity_id)
@@ -90,7 +91,7 @@ def run_ingestion(lot_number):
         entities=entities_created
     )
 
-    print(f"\n[SUCCESS] Ingestión masiva completada.")
+    print("\n[SUCCESS] Ingestión masiva completada.")
     print(f"[SUCCESS] Se generó el paquete de conocimiento {kp_id} con {len(entities_created)} entidades.")
 
 def main():
@@ -103,9 +104,9 @@ def main():
 
     ingest_parser = subparsers.add_parser("ingest", help="Procesa e ingiere lotes históricos de conversaciones")
     ingest_parser.add_argument(
-        "--lot", 
-        type=int, 
-        required=True, 
+        "--lot",
+        type=int,
+        required=True,
         help="Número del lote a procesar (1 al 4)"
     )
 

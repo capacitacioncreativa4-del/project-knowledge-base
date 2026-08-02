@@ -1,9 +1,12 @@
 import re
-import yaml
 from pathlib import Path
 from typing import Tuple
+
+import yaml
+
 from pkb.core.exceptions import MetadataError
 from pkb.knowledge.object import KnowledgeObject
+
 
 class MetadataParser:
     @staticmethod
@@ -17,12 +20,12 @@ class MetadataParser:
             ruta = Path(file_path).resolve()
             if not ruta.exists():
                 raise MetadataError(f"El archivo no existe: {file_path}")
-                
+
             contenido_completo = ruta.read_text(encoding="utf-8")
-            
+
             # Expresión regular para capturar el bloque entre los primeros dos '---'
             match = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", contenido_completo, re.DOTALL)
-            
+
             # Si no contiene Front Matter, inicializamos con campos vacíos de seguridad
             if not match:
                 obj_vacio = KnowledgeObject(
@@ -30,16 +33,16 @@ class MetadataParser:
                     version="", status="", owner="", source=ruta
                 )
                 return obj_vacio, contenido_completo
-                
+
             bloque_yaml = match.group(1)
             contenido_plano = match.group(2)
-            
+
             # Parsear el bloque extraído usando PyYAML
             metadatos = yaml.safe_load(bloque_yaml) or {}
-            
+
             if not isinstance(metadatos, dict):
                 raise MetadataError(f"El formato del Front Matter en {file_path} no es un objeto YAML válido.")
-                
+
             # Construcción del Modelo de Dominio Explícito con extracción segura (.get)
             knowledge_object = KnowledgeObject(
                 identifier=str(metadatos.get("id", "") or ""),
@@ -53,9 +56,9 @@ class MetadataParser:
                 tags=list(metadatos.get("tags", []) or []),
                 relationships=list(metadatos.get("relationships", []) or [])
             )
-            
+
             return knowledge_object, contenido_plano
-            
+
         except yaml.YAMLError as ye:
             raise MetadataError(f"Error de sintaxis YAML en {file_path}: {str(ye)}")
         except Exception as e:
