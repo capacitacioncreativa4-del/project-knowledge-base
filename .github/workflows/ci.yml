@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - main
-      - epic-*
-      - feature-*
+      - "epic-*"
+      - "feature-*"
+      - "fix-*"
 
   pull_request:
     branches:
@@ -13,11 +14,9 @@ on:
 
 jobs:
   quality:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -27,12 +26,10 @@ jobs:
           python-version: "3.13"
 
       - name: Upgrade pip
-        run: |
-          python -m pip install --upgrade pip
+        run: python -m pip install --upgrade pip
 
       - name: Install PKB
-        run: |
-          python -m pip install -e .
+        run: python -m pip install -e .
 
       - name: Install QA Tools
         run: |
@@ -40,9 +37,7 @@ jobs:
           python -m pip install ruff
 
       - name: Ruff
-        run: |
-          python -m ruff check .
+        run: python -m ruff check .
 
       - name: Tests
-        run: |
-          python -m pytest
+        run: python -m pytest

@@ -36,6 +36,17 @@
                 "scripts/check.ps1"
             ],
             "group": "test"
+        },
+        {
+            "label": "PKB Clean",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "scripts/clean.ps1"
+            ]
         }
     ]
 }
