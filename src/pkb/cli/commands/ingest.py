@@ -1,13 +1,7 @@
-import argparse
 import os
-import sys
 
-# Asegurar que el path reconozca la estructura de paquetes internos
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from pkb.cli.commands.ingest import run_ingestion
-from pkb.cli.commands.validate import run as run_validation
-from pkb.cli.commands.validate import run as run_validation
+from pkb.extraction.assembler import KnowledgePackageAssembler
+from pkb.extraction.processor import SemanticProcessor
 
 
 def run_ingestion(lot_number):
@@ -92,35 +86,3 @@ def run_ingestion(lot_number):
     print(
         f"[SUCCESS] Se generó el paquete de conocimiento {kp_id} con {len(entities_created)} entidades."
     )
-
-
-def main():
-    parser = argparse.ArgumentParser(
-        description="PKB Command Line Interface — Sistema de Control y Automatización"
-    )
-    subparsers = parser.add_subparsers(dest="command", help="Comandos disponibles")
-
-    subparsers.add_parser(
-        "validate",
-        help="Valida la estructura sintáctica de los esquemas y archivos YAML",
-    )
-
-    ingest_parser = subparsers.add_parser(
-        "ingest", help="Procesa e ingiere lotes históricos de conversaciones"
-    )
-    ingest_parser.add_argument(
-        "--lot", type=int, required=True, help="Número del lote a procesar (1 al 4)"
-    )
-
-    args = parser.parse_args()
-
-    if args.command == "validate":
-        run_validation()
-    elif args.command == "ingest":
-        run_ingestion(args.lot)
-    else:
-        parser.print_help()
-
-
-if __name__ == "__main__":
-    main()
