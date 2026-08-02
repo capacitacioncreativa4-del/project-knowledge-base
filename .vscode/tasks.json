@@ -2,33 +2,40 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Install PKB",
+            "label": "PKB Install",
             "type": "shell",
-            "command": "python -m pip install -e .",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "scripts/dev.ps1"
+            ],
             "group": "build"
         },
         {
-            "label": "Run Tests",
+            "label": "PKB Test",
             "type": "shell",
-            "command": "pytest",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "scripts/test.ps1"
+            ],
             "group": "test"
         },
         {
-            "label": "Ruff Check",
+            "label": "PKB Ruff",
             "type": "shell",
-            "command": "ruff check .",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "scripts/check.ps1"
+            ],
             "group": "test"
-        },
-        {
-            "label": "Ruff Format",
-            "type": "shell",
-            "command": "ruff format .",
-            "group": "build"
-        },
-        {
-            "label": "Git Status",
-            "type": "shell",
-            "command": "git status"
         }
     ]
 }

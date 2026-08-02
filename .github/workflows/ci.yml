@@ -1,24 +1,48 @@
-name: PKB CI
+name: PKB Continuous Integration
 
 on:
   push:
+    branches:
+      - main
+      - epic-*
+      - feature-*
+
   pull_request:
+    branches:
+      - main
 
 jobs:
-  test:
+  quality:
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
-      - name: Instalar plataforma en modo editable
-        run: pip install -e .
+      - name: Upgrade pip
+        run: |
+          python -m pip install --upgrade pip
 
-      - name: Instalar dependencias de pruebas
-        run: pip install pytest
+      - name: Install PKB
+        run: |
+          python -m pip install -e .
 
-      - name: Ejecutar suite de pruebas
-        run: pytest
+      - name: Install QA Tools
+        run: |
+          python -m pip install pytest
+          python -m pip install ruff
+
+      - name: Ruff
+        run: |
+          python -m ruff check .
+
+      - name: Tests
+        run: |
+          python -m pytest
