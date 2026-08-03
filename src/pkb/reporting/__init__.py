@@ -1,3 +1,7 @@
-from .markdown_report import MarkdownInventoryReport
+from .console import ConsoleReporter
+from .report import ValidationReport
 
-__all__ = ["MarkdownInventoryReport"]
+__all__ = [
+    "ConsoleReporter",
+    "ValidationReport",
+]

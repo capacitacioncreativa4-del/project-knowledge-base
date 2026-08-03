@@ -1,23 +1,40 @@
+from dataclasses import dataclass, field
 from typing import Any
 
 
+@dataclass(slots=True)
 class ValidationResult:
-    """Representa el resultado de una validación."""
+    """
+    Representa el resultado de una regla de validación sobre
+    un objeto del repositorio.
+    """
 
-    def __init__(
-        self,
-        file_path: str = "",
-        success: bool = False,
-        errors: list[str] | None = None,
-    ):
-        self.file_path = file_path
-        self.success = success
-        self.is_valid = success  # Compatibilidad con código existente
-        self.errors = errors or []
+    success: bool
+
+    rule: str = ""
+
+    identifier: str = ""
+
+    file_path: str = ""
+
+    field_name: str = ""
+
+    value: str = ""
+
+    errors: list[str] = field(default_factory=list)
+
+    @property
+    def is_valid(self) -> bool:
+        """Compatibilidad con versiones anteriores."""
+        return self.success
 
     def to_dict(self) -> dict[str, Any]:
         return {
-            "file": self.file_path,
             "status": "PASS" if self.success else "FAIL",
+            "rule": self.rule,
+            "identifier": self.identifier,
+            "file": self.file_path,
+            "field": self.field_name,
+            "value": self.value,
             "errors": self.errors,
         }

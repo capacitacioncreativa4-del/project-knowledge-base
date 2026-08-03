@@ -1,8 +1,5 @@
-"""Comando de validación del repositorio."""
+from pkb.services.validation_service import ValidationService
 
 
 def run() -> None:
-    print("\n[CLI] Iniciando proceso de validación del repositorio...")
-    print(
-        "[SUCCESS] Análisis sintáctico completado. Todos los esquemas YAML son válidos."
-    )
+    ValidationService.run()

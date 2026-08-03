@@ -1,104 +1,146 @@
 from abc import ABC, abstractmethod
 from collections import Counter
-
 from pkb.validation.result import ValidationResult
+from pkb.catalogs.domains import VALID_DOMAINS
 
 
 class ValidationRule(ABC):
-    """Clase base abstracta para todas las reglas de validación modulares."""
+    """Clase base para todas las reglas de validación."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.name = self.__class__.__name__
 
     @abstractmethod
     def validate(self, registry) -> list[ValidationResult]:
-        """Ejecuta la lógica de auditoría sobre el registro SSoT en memoria."""
-        pass
+        """Ejecuta la regla sobre el registro."""
+        raise NotImplementedError
 
 
 class DuplicateIdentifierRule(ValidationRule):
-    """Audita el SSoT para garantizar que no existan identificadores ('id') duplicados."""
+    """Detecta identificadores duplicados."""
 
     def validate(self, registry) -> list[ValidationResult]:
-        resultados = []
-        identifiers = [obj.identifier for obj in registry.all() if obj.identifier]
+        resultados: list[ValidationResult] = []
+
+        identifiers = [
+            obj.identifier for obj in registry.all() if getattr(obj, "identifier", None)
+        ]
+
         conteos = Counter(identifiers)
-        duplicados = [ident for ident, count in conteos.items() if count > 1]
+        duplicados = [
+            identifier for identifier, cantidad in conteos.items() if cantidad > 1
+        ]
 
         if duplicados:
             errores = [
-                f"Identificador duplicado encontrado en el repositorio: '{id_duplicado}'"
-                for id_duplicado in duplicados
+                f"Identificador duplicado encontrado: '{identifier}'"
+                for identifier in duplicados
             ]
-            resultados.append(ValidationResult(False, errores))
+
+            resultados.append(
+                ValidationResult(
+                    success=False,
+                    rule=self.name,
+                    field_name="identifier",
+                    value=", ".join(duplicados),
+                    errors=errores,
+                )
+            )
         else:
-            resultados.append(ValidationResult(True, []))
+            resultados.append(
+                ValidationResult(
+                    success=True,
+                    rule=self.name,
+                )
+            )
 
         return resultados
 
 
 class BrokenReferenceRule(ValidationRule):
-    """Audita las relaciones cruzadas para detectar referencias rotas hacia IDs inexistentes."""
+    """Detecta referencias hacia objetos inexistentes."""
+
+    def validate(self, registry) -> list[ValidationResult]:
+        resultados: list[ValidationResult] = []
+        errores: list[str] = []
+
+        ids_validos = {
+            obj.identifier for obj in registry.all() if getattr(obj, "identifier", None)
+        }
+
+        for obj in registry.all():
+            relaciones = getattr(obj, "relationships", None)
+
+            if not relaciones:
+                continue
+
+            for ref_id in relaciones:
+                if ref_id not in ids_validos:
+                    errores.append(
+                        f"Referencia rota en '{obj.identifier}': '{ref_id}' no existe."
+                    )
+
+        if errores:
+            resultados.append(
+                ValidationResult(
+                    success=False,
+                    rule=self.name,
+                    field_name="relationships",
+                    errors=errores,
+                )
+            )
+        else:
+            resultados.append(
+                ValidationResult(
+                    success=True,
+                    rule=self.name,
+                )
+            )
+
+        return resultados
+
+
+class DomainRule(ValidationRule):
+    """Valida que el dominio pertenezca al catálogo institucional."""
 
     def validate(self, registry) -> list[ValidationResult]:
         resultados = []
         errores = []
 
-        # Mapeamos un set con todos los IDs válidos existentes en el SSoT para búsquedas eficientes
-        id_validos = {obj.identifier for obj in registry.all() if obj.identifier}
-
-        # Analizamos las referencias cruzadas de cada objeto
         for obj in registry.all():
-            if hasattr(obj, "relationships") and obj.relationships:
-                for ref_id in obj.relationships:
-                    if ref_id not in id_validos:
-                        errores.append(
-                            f"Referencia rota en '{obj.identifier}': apunta al objeto inexistente '{ref_id}'"
-                        )
+            dominio = (obj.domain or "").upper().strip()
 
-        if errores:
-            resultados.append(ValidationResult(False, errores))
-        else:
-            resultados.append(ValidationResult(True, []))
+            if dominio not in VALID_DOMAINS:
+                errores.append(
+                    f"Dominio inválido en '{obj.identifier}': '{obj.domain}'"
+                )
+
+        resultados.append(
+            ValidationResult(
+                success=(len(errores) == 0),
+                rule=self.name,
+                field_name="domain",
+                errors=errores,
+            )
+        )
 
         return resultados
 
 
 class ValidationEngine:
-    """Motor encargado de orquestar y ejecutar el pipeline de reglas modulares."""
-
-    def __init__(self):
-        self.rules = []
-
-    def add_rule(self, rule: ValidationRule):
-        """Agrega una nueva regla de validación al pipeline activo."""
-        self.rules.append(rule)
-
-    def validate(self, registry) -> list[ValidationResult]:
-        """Somete el repositorio completo a todas las reglas del pipeline."""
-        results = []
-        for rule in self.rules:
-            results.extend(rule.validate(registry))
-        return results
+    """Compatibilidad con la API existente."""
 
     @staticmethod
     def validate_metadata(metadata) -> ValidationResult:
-        """
-        Valida tanto diccionarios de metadatos como instancias de
-        KnowledgeObject.
-        """
-
         errors = []
 
         if metadata is None:
             return ValidationResult(
-                "",
-                False,
-                [
-                    "El archivo no contiene metadatos válidos o el front-matter está vacío."
-                ],
+                success=False,
+                rule="MetadataValidation",
+                errors=["El archivo no contiene metadatos válidos."],
             )
-        # Compatibilidad con KnowledgeObject
+
         if hasattr(metadata, "identifier"):
             valores = {
                 "id": metadata.identifier,
@@ -107,24 +149,15 @@ class ValidationEngine:
                 "domain": metadata.domain,
                 "status": metadata.status,
             }
-
-        # Compatibilidad con dict
         else:
             valores = metadata
 
-        campos_obligatorios = [
-            "id",
-            "title",
-            "type",
-            "domain",
-        ]
-
-        for campo in campos_obligatorios:
+        for campo in ("id", "title", "type", "domain"):
             if not valores.get(campo):
                 errors.append(f"Falta el campo obligatorio: '{campo}'")
 
         return ValidationResult(
-            file_path="",
             success=(len(errors) == 0),
+            rule="MetadataValidation",
             errors=errors,
         )
