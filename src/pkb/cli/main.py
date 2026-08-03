@@ -57,6 +57,13 @@ def main():
         help="Filtra por propietario",
     )
 
+    query_parser.add_argument(
+        "--format",
+        choices=["table", "json", "yaml"],
+        default="table",
+        help="Formato de salida",
+    )
+
     ingest_parser = subparsers.add_parser(
         "ingest",
         help="Procesa e ingiere lotes históricos de conversaciones",

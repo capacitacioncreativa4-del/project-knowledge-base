@@ -1,6 +1,7 @@
 from pkb.config import PKB_ROOT
 from pkb.query import QueryEngine
 from pkb.repository.loader import KnowledgeLoader
+from pkb.reporting import QueryExporter
 
 
 def run(args) -> None:
@@ -9,6 +10,7 @@ def run(args) -> None:
     registry = KnowledgeLoader.load_repository(str(PKB_ROOT))
     engine = QueryEngine(registry)
 
+    if args.format == "table":
     print(f"\nObjetos cargados: {registry.count()}")
 
     if args.domain:
@@ -26,5 +28,11 @@ def run(args) -> None:
     else:
         objetos = engine.all()
 
-    for obj in objetos:
-        print(f"{obj.identifier:30}{obj.object_type:18}{obj.domain:18}{obj.status}")
+    if args.format == "table":
+        QueryExporter.table(objetos)
+
+    elif args.format == "json":
+        QueryExporter.json(objetos)
+
+    elif args.format == "yaml":
+        QueryExporter.yaml(objetos)
