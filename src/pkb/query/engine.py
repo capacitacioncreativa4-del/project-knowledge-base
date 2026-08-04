@@ -37,45 +37,72 @@ class QueryEngine:
         """Devuelve los objetos que referencian directamente al objeto indicado."""
         return [obj for obj in self._registry.all() if identifier in obj.relationships]
 
+    def filter(
+        self,
+        *,
+        domain: str | None = None,
+        object_type: str | None = None,
+        status: str | None = None,
+        owner: str | None = None,
+    ) -> list[KnowledgeObject]:
+        """
+        Devuelve objetos que cumplen todos los filtros proporcionados.
+
+        Los valores de texto se comparan sin distinguir mayúsculas/minúsculas
+        y eliminando espacios exteriores.
+        """
+
+        normalized_domain = domain.upper().strip() if domain is not None else None
+        normalized_type = (
+            object_type.upper().strip() if object_type is not None else None
+        )
+        normalized_status = status.upper().strip() if status is not None else None
+        normalized_owner = owner.upper().strip() if owner is not None else None
+
+        def matches(obj: KnowledgeObject) -> bool:
+            if (
+                normalized_domain is not None
+                and (obj.domain or "").upper().strip() != normalized_domain
+            ):
+                return False
+
+            if (
+                normalized_type is not None
+                and (obj.object_type or "").upper().strip() != normalized_type
+            ):
+                return False
+
+            if (
+                normalized_status is not None
+                and (obj.status or "").upper().strip() != normalized_status
+            ):
+                return False
+
+            if (
+                normalized_owner is not None
+                and (obj.owner or "").upper().strip() != normalized_owner
+            ):
+                return False
+
+            return True
+
+        return self.where(matches)
+
     def by_domain(self, domain: str) -> list[KnowledgeObject]:
         """Devuelve todos los objetos de un dominio."""
-        domain = domain.upper().strip()
-
-        return [
-            obj
-            for obj in self._registry.all()
-            if (obj.domain or "").upper().strip() == domain
-        ]
+        return self.filter(domain=domain)
 
     def by_type(self, object_type: str) -> list[KnowledgeObject]:
         """Devuelve todos los objetos de un tipo."""
-        object_type = object_type.upper().strip()
-
-        return [
-            obj
-            for obj in self._registry.all()
-            if (obj.object_type or "").upper().strip() == object_type
-        ]
+        return self.filter(object_type=object_type)
 
     def by_status(self, status: str) -> list[KnowledgeObject]:
         """Devuelve todos los objetos con un determinado estado."""
-        status = status.upper().strip()
-
-        return [
-            obj
-            for obj in self._registry.all()
-            if (obj.status or "").upper().strip() == status
-        ]
+        return self.filter(status=status)
 
     def by_owner(self, owner: str) -> list[KnowledgeObject]:
         """Devuelve todos los objetos pertenecientes a un propietario."""
-        owner = owner.upper().strip()
-
-        return [
-            obj
-            for obj in self._registry.all()
-            if (obj.owner or "").upper().strip() == owner
-        ]
+        return self.filter(owner=owner)
 
     def where(
         self,
