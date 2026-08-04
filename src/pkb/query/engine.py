@@ -20,9 +20,27 @@ class QueryEngine:
         """Busca un objeto por identificador."""
         return self._registry.get(identifier)
 
+    def related(self, identifier: str) -> list[KnowledgeObject]:
+        """Devuelve los objetos relacionados directamente con un objeto."""
+        obj = self._registry.get(identifier)
+
+        if obj is None:
+            return []
+
+        return [
+            related
+            for related_id in obj.relationships
+            if (related := self._registry.get(related_id)) is not None
+        ]
+
+    def referenced_by(self, identifier: str) -> list[KnowledgeObject]:
+        """Devuelve los objetos que referencian directamente al objeto indicado."""
+        return [obj for obj in self._registry.all() if identifier in obj.relationships]
+
     def by_domain(self, domain: str) -> list[KnowledgeObject]:
         """Devuelve todos los objetos de un dominio."""
         domain = domain.upper().strip()
+
         return [
             obj
             for obj in self._registry.all()
@@ -32,6 +50,7 @@ class QueryEngine:
     def by_type(self, object_type: str) -> list[KnowledgeObject]:
         """Devuelve todos los objetos de un tipo."""
         object_type = object_type.upper().strip()
+
         return [
             obj
             for obj in self._registry.all()
@@ -41,6 +60,7 @@ class QueryEngine:
     def by_status(self, status: str) -> list[KnowledgeObject]:
         """Devuelve todos los objetos con un determinado estado."""
         status = status.upper().strip()
+
         return [
             obj
             for obj in self._registry.all()
@@ -50,6 +70,7 @@ class QueryEngine:
     def by_owner(self, owner: str) -> list[KnowledgeObject]:
         """Devuelve todos los objetos pertenecientes a un propietario."""
         owner = owner.upper().strip()
+
         return [
             obj
             for obj in self._registry.all()

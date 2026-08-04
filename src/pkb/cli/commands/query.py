@@ -10,9 +10,6 @@ def run(args) -> None:
     registry = KnowledgeLoader.load_repository(str(PKB_ROOT))
     engine = QueryEngine(registry)
 
-    if args.format == "table":
-    print(f"\nObjetos cargados: {registry.count()}")
-
     if args.domain:
         objetos = engine.by_domain(args.domain)
 
@@ -29,6 +26,7 @@ def run(args) -> None:
         objetos = engine.all()
 
     if args.format == "table":
+        print(f"\nObjetos cargados: {registry.count()}")
         QueryExporter.table(objetos)
 
     elif args.format == "json":

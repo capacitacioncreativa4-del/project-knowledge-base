@@ -69,3 +69,45 @@ def test_query_where():
     resultados = engine.where(lambda o: o.owner == "PKB")
 
     assert len(resultados) == 2
+
+
+def test_query_related():
+    registry = build_registry()
+
+    registry.get("REQ-001").relationships = ["ADR-001"]
+
+    engine = QueryEngine(registry)
+
+    resultados = engine.related("REQ-001")
+
+    assert len(resultados) == 1
+    assert resultados[0].identifier == "ADR-001"
+
+
+def test_query_referenced_by():
+    registry = build_registry()
+
+    registry.get("REQ-001").relationships = ["ADR-001"]
+
+    engine = QueryEngine(registry)
+
+    resultados = engine.referenced_by("ADR-001")
+
+    assert len(resultados) == 1
+    assert resultados[0].identifier == "REQ-001"
+
+
+def test_query_related_unknown_identifier():
+    engine = QueryEngine(build_registry())
+
+    resultados = engine.related("NO-EXISTE")
+
+    assert resultados == []
+
+
+def test_query_referenced_by_unknown_identifier():
+    engine = QueryEngine(build_registry())
+
+    resultados = engine.referenced_by("NO-EXISTE")
+
+    assert resultados == []

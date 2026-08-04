@@ -35,3 +35,5 @@ Thumbs.db
 runtime/workspace/
 runtime/packages/
 *.zip
+
+.pytest-temp/
