@@ -1,38 +1,70 @@
 from pkb.knowledge.registry import KnowledgeRegistry
 from pkb.metadata.parser import MetadataParser
+from pkb.repository.diagnostics import LoadDiagnostics
 from pkb.repository.scanner import RepositoryScanner
 
 
 class KnowledgeLoader:
-    """Orquestador encargado de escanear, parsear y cargar el repositorio completo en el SSoT."""
+    """Orquestador encargado de escanear, parsear y cargar el repositorio completo."""
 
     @staticmethod
     def load_repository(ruta_raiz: str = ".") -> KnowledgeRegistry:
-        """Escanéa el directorio, convierte la metadata y puebla un registro centralizado."""
+        """
+        Carga el repositorio y devuelve únicamente el KnowledgeRegistry.
+
+        Mantiene la API histórica del Loader para evitar regresiones.
+        """
+        registry, _ = KnowledgeLoader.load_repository_with_diagnostics(ruta_raiz)
+        return registry
+
+    @staticmethod
+    def load_repository_with_diagnostics(
+        ruta_raiz: str = ".",
+    ) -> tuple[KnowledgeRegistry, LoadDiagnostics]:
+        """
+        Carga el repositorio y devuelve el Registry junto con sus diagnósticos.
+        """
         registry = KnowledgeRegistry()
+        diagnostics = LoadDiagnostics()
 
-        # 1. Localizar todos los archivos Markdown
         archivos = RepositoryScanner.markdown_files(ruta_raiz)
+        diagnostics.scanned_files = len(archivos)
 
-        # 2. Procesar y registrar cada archivo individualmente
         for archivo in archivos:
             try:
-                # El parser lee el archivo y devuelve un KnowledgeObject ya construido
                 knowledge_object, _ = MetadataParser.parse_file(str(archivo))
+                diagnostics.parsed_files += 1
 
-                if knowledge_object:
-                    # NORMALIZACIÓN CRUCIAL: Forzamos mayúsculas y removemos espacios en las propiedades de análisis
-                    if hasattr(knowledge_object, "object_type") and knowledge_object.object_type:
-                        knowledge_object.object_type = str(knowledge_object.object_type).upper().strip()
+                if not knowledge_object.identifier:
+                    diagnostics.objects_without_identifier += 1
+                    continue
 
-                    if hasattr(knowledge_object, "domain") and knowledge_object.domain:
-                        knowledge_object.domain = str(knowledge_object.domain).upper().strip()
+                if knowledge_object.object_type:
+                    knowledge_object.object_type = (
+                        str(knowledge_object.object_type).upper().strip()
+                    )
 
-                    # Registrar de forma segura en la Fuente Única de Verdad (SSoT)
-                    registry.add(knowledge_object)
+                if knowledge_object.domain:
+                    knowledge_object.domain = (
+                        str(knowledge_object.domain).upper().strip()
+                    )
+
+                if knowledge_object.relationships:
+                    diagnostics.objects_with_relationships += 1
+                    diagnostics.declared_relationships += len(
+                        knowledge_object.relationships
+                    )
+
+                registry.add(knowledge_object)
+                diagnostics.registered_objects += 1
 
             except Exception:
-                # Omitimos archivos que no tengan front-matter estructural válido
+                diagnostics.rejected_files += 1
                 continue
 
-        return registry
+        for obj in registry.all():
+            for related_id in obj.relationships:
+                if registry.get(related_id) is None:
+                    diagnostics.unresolved_relationships.append(related_id)
+
+        return registry, diagnostics

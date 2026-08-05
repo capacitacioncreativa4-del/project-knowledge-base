@@ -1,12 +1,13 @@
 import argparse
 import sys
 from pathlib import Path
-from pkb.cli.commands.query import run as run_query
 
 # Asegurar que el path reconozca la estructura de paquetes internos
 sys.path.append(str(Path(__file__).resolve().parents[2]))
 
+from pkb.cli.commands.diagnostics import run as run_diagnostics
 from pkb.cli.commands.ingest import run as run_ingestion
+from pkb.cli.commands.query import run as run_query
 from pkb.cli.commands.validate import run as run_validation
 from pkb.cli.commands.version import run as run_version
 
@@ -29,6 +30,11 @@ def main():
     subparsers.add_parser(
         "version",
         help="Muestra la versión instalada del PKB",
+    )
+
+    subparsers.add_parser(
+        "diagnostics",
+        help="Muestra diagnósticos de carga del Knowledge Registry",
     )
 
     query_parser = subparsers.add_parser(
@@ -94,6 +100,9 @@ def main():
 
     elif args.command == "version":
         run_version()
+
+    elif args.command == "diagnostics":
+        run_diagnostics()
 
     elif args.command == "ingest":
         run_ingestion(args.lot)
