@@ -58,6 +58,17 @@ def main():
     )
 
     query_parser.add_argument(
+        "--related",
+        help="Consulta los objetos relacionados directamente con un identificador",
+    )
+
+    query_parser.add_argument(
+        "--referenced-by",
+        dest="referenced_by",
+        help="Consulta los objetos que referencian directamente a un identificador",
+    )
+
+    query_parser.add_argument(
         "--format",
         choices=["table", "json", "yaml"],
         default="table",
