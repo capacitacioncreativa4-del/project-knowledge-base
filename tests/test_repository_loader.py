@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from pkb.repository.loader import KnowledgeLoader
 
 
@@ -20,6 +18,14 @@ def test_load_repository_diagnostics_relationship_counts():
 
     assert diagnostics.objects_with_relationships == objects_with_relationships
     assert diagnostics.declared_relationships == declared_relationships
+
+
+def test_load_repository_diagnostics_typed_relationship_counts():
+    registry, diagnostics = KnowledgeLoader.load_repository_with_diagnostics(".")
+
+    typed_relationships = sum(len(obj.typed_relationships) for obj in registry.all())
+
+    assert diagnostics.typed_relationships == typed_relationships
 
 
 def test_load_repository_diagnostics_unresolved_relationships():

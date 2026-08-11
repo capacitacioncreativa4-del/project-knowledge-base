@@ -55,6 +55,10 @@ class KnowledgeLoader:
                         knowledge_object.relationships
                     )
 
+                diagnostics.typed_relationships += len(
+                    knowledge_object.typed_relationships
+                )
+
                 registry.add(knowledge_object)
                 diagnostics.registered_objects += 1
 

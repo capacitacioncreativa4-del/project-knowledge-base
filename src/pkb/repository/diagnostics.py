@@ -13,6 +13,7 @@ class LoadDiagnostics:
     objects_with_relationships: int = 0
     declared_relationships: int = 0
     unresolved_relationships: list[str] = field(default_factory=list)
+    typed_relationships: int = 0
 
     @property
     def unresolved_relationship_count(self) -> int:
