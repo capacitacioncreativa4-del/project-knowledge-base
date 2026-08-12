@@ -10,12 +10,20 @@ class LoadDiagnostics:
     registered_objects: int = 0
     rejected_files: int = 0
     objects_without_identifier: int = 0
+
     objects_with_relationships: int = 0
     declared_relationships: int = 0
+    valid_relationships: int = 0
+
     unresolved_relationships: list[str] = field(default_factory=list)
-    typed_relationships: int = 0
+    duplicate_relationships: list[tuple[str, str]] = field(default_factory=list)
 
     @property
     def unresolved_relationship_count(self) -> int:
         """Devuelve la cantidad de relaciones cuyo destino no fue encontrado."""
         return len(self.unresolved_relationships)
+
+    @property
+    def duplicate_relationship_count(self) -> int:
+        """Devuelve la cantidad de relaciones duplicadas detectadas."""
+        return len(self.duplicate_relationships)

@@ -2,6 +2,7 @@ from pkb.knowledge.registry import KnowledgeRegistry
 from pkb.metadata.parser import MetadataParser
 from pkb.repository.diagnostics import LoadDiagnostics
 from pkb.repository.scanner import RepositoryScanner
+from pkb.validation import RelationshipValidator
 
 
 class KnowledgeLoader:
@@ -23,6 +24,9 @@ class KnowledgeLoader:
     ) -> tuple[KnowledgeRegistry, LoadDiagnostics]:
         """
         Carga el repositorio y devuelve el Registry junto con sus diagnósticos.
+
+        La validación de integridad relacional se delega a
+        RelationshipValidator una vez construido el Registry completo.
         """
         registry = KnowledgeRegistry()
         diagnostics = LoadDiagnostics()
@@ -55,10 +59,6 @@ class KnowledgeLoader:
                         knowledge_object.relationships
                     )
 
-                diagnostics.typed_relationships += len(
-                    knowledge_object.typed_relationships
-                )
-
                 registry.add(knowledge_object)
                 diagnostics.registered_objects += 1
 
@@ -66,9 +66,16 @@ class KnowledgeLoader:
                 diagnostics.rejected_files += 1
                 continue
 
-        for obj in registry.all():
-            for related_id in obj.relationships:
-                if registry.get(related_id) is None:
-                    diagnostics.unresolved_relationships.append(related_id)
+        relationship_report = RelationshipValidator(registry).validate()
+
+        diagnostics.unresolved_relationships = [
+            target_id for _, target_id in relationship_report.unresolved_relationships
+        ]
+
+        diagnostics.duplicate_relationships = list(
+            relationship_report.duplicate_relationships
+        )
+
+        diagnostics.valid_relationships = relationship_report.valid_relationships
 
         return registry, diagnostics
