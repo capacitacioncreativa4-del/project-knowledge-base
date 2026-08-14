@@ -35,25 +35,38 @@ class RelationshipValidator:
 
     def validate(self) -> RelationshipValidationReport:
         """
-        Valida todas las relaciones declaradas en el Knowledge Registry.
+        Valida todas las relaciones tipadas declaradas en el Knowledge Registry.
 
-        Cada relación se representa como:
-            (identificador_origen, identificador_destino)
+        La identidad semántica de una relación está determinada por:
+
+            (relation_type, target_id)
+
+        Por tanto, dos relaciones con distinto ``relation_type`` que apunten
+        al mismo objeto no se consideran duplicadas.
         """
         report = RelationshipValidationReport()
 
         for obj in self._registry.all():
-            seen: set[str] = set()
+            seen: set[tuple[str, str]] = set()
 
-            for related_id in obj.relationships:
-                if related_id in seen:
-                    report.duplicate_relationships.append((obj.identifier, related_id))
+            for relationship in obj.typed_relationships:
+                relation_key = (
+                    relationship.relation_type,
+                    relationship.target_id,
+                )
+
+                if relation_key in seen:
+                    report.duplicate_relationships.append(
+                        (obj.identifier, relationship.target_id)
+                    )
                     continue
 
-                seen.add(related_id)
+                seen.add(relation_key)
 
-                if self._registry.get(related_id) is None:
-                    report.unresolved_relationships.append((obj.identifier, related_id))
+                if self._registry.get(relationship.target_id) is None:
+                    report.unresolved_relationships.append(
+                        (obj.identifier, relationship.target_id)
+                    )
                     continue
 
                 report.valid_relationships += 1
