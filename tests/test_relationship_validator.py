@@ -156,3 +156,33 @@ def test_relationship_validator_accepts_registry_without_relationships():
     assert report.valid_relationships == 0
     assert report.unresolved_count == 0
     assert report.duplicate_count == 0
+
+
+def test_relationship_validator_ignores_legacy_relationship_view():
+    registry = build_registry()
+
+    obj = registry.get("REQ-001")
+    obj._relationship_ids.append("ADR-001")
+
+    report = RelationshipValidator(registry).validate()
+
+    assert report.is_valid
+    assert report.valid_relationships == 0
+    assert report.unresolved_count == 0
+    assert report.duplicate_count == 0
+
+
+def test_relationship_validator_uses_typed_relationships_as_source_of_truth():
+    registry = build_registry()
+
+    registry.get("REQ-001").add_relationship(
+        relation_type="derived_from",
+        target_id="ADR-001",
+    )
+
+    report = RelationshipValidator(registry).validate()
+
+    assert report.is_valid
+    assert report.valid_relationships == 1
+    assert report.unresolved_count == 0
+    assert report.duplicate_count == 0
