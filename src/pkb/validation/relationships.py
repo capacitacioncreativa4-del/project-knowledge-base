@@ -8,8 +8,8 @@ class RelationshipValidationReport:
     """Resultado de la validación de integridad relacional."""
 
     valid_relationships: int = 0
-    unresolved_relationships: list[tuple[str, str]] = field(default_factory=list)
-    duplicate_relationships: list[tuple[str, str]] = field(default_factory=list)
+    unresolved_relationships: list[tuple[str, str, str]] = field(default_factory=list)
+    duplicate_relationships: list[tuple[str, str, str]] = field(default_factory=list)
 
     @property
     def is_valid(self) -> bool:
@@ -43,6 +43,10 @@ class RelationshipValidator:
 
         Por tanto, dos relaciones con distinto ``relation_type`` que apunten
         al mismo objeto no se consideran duplicadas.
+
+        Los diagnósticos conservan la identidad completa de la relación:
+
+            (source_id, relation_type, target_id)
         """
         report = RelationshipValidationReport()
 
@@ -55,18 +59,20 @@ class RelationshipValidator:
                     relationship.target_id,
                 )
 
+                diagnostic_key = (
+                    obj.identifier,
+                    relationship.relation_type,
+                    relationship.target_id,
+                )
+
                 if relation_key in seen:
-                    report.duplicate_relationships.append(
-                        (obj.identifier, relationship.target_id)
-                    )
+                    report.duplicate_relationships.append(diagnostic_key)
                     continue
 
                 seen.add(relation_key)
 
                 if self._registry.get(relationship.target_id) is None:
-                    report.unresolved_relationships.append(
-                        (obj.identifier, relationship.target_id)
-                    )
+                    report.unresolved_relationships.append(diagnostic_key)
                     continue
 
                 report.valid_relationships += 1

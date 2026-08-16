@@ -65,7 +65,7 @@ def test_relationship_validator_detects_unresolved_typed_reference():
 
     assert not report.is_valid
     assert report.valid_relationships == 0
-    assert report.unresolved_relationships == [("REQ-001", "ADR-999")]
+    assert report.unresolved_relationships == [("REQ-001", "related", "ADR-999")]
     assert report.unresolved_count == 1
     assert report.duplicate_count == 0
 
@@ -86,7 +86,7 @@ def test_relationship_validator_detects_duplicate_typed_reference():
 
     assert not report.is_valid
     assert report.valid_relationships == 1
-    assert report.duplicate_relationships == [("REQ-001", "ADR-001")]
+    assert report.duplicate_relationships == [("REQ-001", "related", "ADR-001")]
     assert report.duplicate_count == 1
 
 
@@ -138,10 +138,10 @@ def test_relationship_validator_detects_multiple_problems():
 
     assert not report.is_valid
     assert report.valid_relationships == 2
-    assert report.duplicate_relationships == [("REQ-001", "ADR-001")]
+    assert report.duplicate_relationships == [("REQ-001", "related", "ADR-001")]
     assert report.unresolved_relationships == [
-        ("REQ-001", "ADR-999"),
-        ("REQ-001", "REQ-999"),
+        ("REQ-001", "related", "ADR-999"),
+        ("REQ-001", "depends_on", "REQ-999"),
     ]
     assert report.duplicate_count == 1
     assert report.unresolved_count == 2
@@ -186,3 +186,37 @@ def test_relationship_validator_uses_typed_relationships_as_source_of_truth():
     assert report.valid_relationships == 1
     assert report.unresolved_count == 0
     assert report.duplicate_count == 0
+
+
+def test_relationship_validator_preserves_relation_type_in_diagnostics():
+    registry = build_registry()
+
+    registry.get("REQ-001").add_relationship(
+        relation_type="derived_from",
+        target_id="ADR-999",
+    )
+
+    report = RelationshipValidator(registry).validate()
+
+    assert not report.is_valid
+    assert report.unresolved_relationships == [("REQ-001", "derived_from", "ADR-999")]
+    assert report.unresolved_count == 1
+
+
+def test_relationship_validator_preserves_relation_type_in_duplicate_diagnostics():
+    registry = build_registry()
+
+    registry.get("REQ-001").add_relationship(
+        relation_type="derived_from",
+        target_id="ADR-001",
+    )
+    registry.get("REQ-001").add_relationship(
+        relation_type="derived_from",
+        target_id="ADR-001",
+    )
+
+    report = RelationshipValidator(registry).validate()
+
+    assert not report.is_valid
+    assert report.duplicate_relationships == [("REQ-001", "derived_from", "ADR-001")]
+    assert report.duplicate_count == 1
