@@ -68,9 +68,9 @@ class KnowledgeLoader:
 
         relationship_report = RelationshipValidator(registry).validate()
 
-        diagnostics.unresolved_relationships = [
-            target_id for _, target_id in relationship_report.unresolved_relationships
-        ]
+        diagnostics.unresolved_relationships = list(
+            relationship_report.unresolved_relationships
+        )
 
         diagnostics.duplicate_relationships = list(
             relationship_report.duplicate_relationships

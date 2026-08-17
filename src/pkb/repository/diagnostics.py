@@ -15,8 +15,8 @@ class LoadDiagnostics:
     declared_relationships: int = 0
     valid_relationships: int = 0
 
-    unresolved_relationships: list[str] = field(default_factory=list)
-    duplicate_relationships: list[tuple[str, str]] = field(default_factory=list)
+    unresolved_relationships: list[tuple[str, str, str]] = field(default_factory=list)
+    duplicate_relationships: list[tuple[str, str, str]] = field(default_factory=list)
 
     @property
     def unresolved_relationship_count(self) -> int:
