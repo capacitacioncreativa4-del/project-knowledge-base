@@ -31,3 +31,88 @@ def test_validation_service_dependencies_are_available():
     assert ValidationReport is not None
     assert KnowledgeLoader is not None
     assert ValidationEngine is not None
+
+
+def test_validation_service_runs_with_typed_relationship_diagnostics(
+    monkeypatch,
+    capsys,
+):
+    class FakeRelationshipReport:
+        valid_relationships = 1
+        unresolved_relationships = [("REQ-001", "derived_from", "ADR-999")]
+        duplicate_relationships = [("REQ-002", "related", "ADR-001")]
+
+        @property
+        def unresolved_count(self):
+            return len(self.unresolved_relationships)
+
+        @property
+        def duplicate_count(self):
+            return len(self.duplicate_relationships)
+
+        @property
+        def is_valid(self):
+            return False
+
+    class FakeRegistry:
+        def count(self):
+            return 1
+
+    class FakeKnowledgeLoader:
+        @staticmethod
+        def load_repository(_):
+            return FakeRegistry()
+
+    class FakeValidationEngine:
+        def add_rule(self, _):
+            pass
+
+        def validate(self, _):
+            return []
+
+    class FakeRelationshipValidator:
+        def __init__(self, _):
+            pass
+
+        def validate(self):
+            return FakeRelationshipReport()
+
+    class FakeValidationReport:
+        def __init__(self, _):
+            pass
+
+    class FakeConsoleReporter:
+        @staticmethod
+        def render(_):
+            pass
+
+    monkeypatch.setattr(
+        "pkb.services.validation_service.KnowledgeLoader",
+        FakeKnowledgeLoader,
+    )
+    monkeypatch.setattr(
+        "pkb.services.validation_service.ValidationEngine",
+        FakeValidationEngine,
+    )
+    monkeypatch.setattr(
+        "pkb.services.validation_service.RelationshipValidator",
+        FakeRelationshipValidator,
+    )
+    monkeypatch.setattr(
+        "pkb.services.validation_service.ValidationReport",
+        FakeValidationReport,
+    )
+    monkeypatch.setattr(
+        "pkb.services.validation_service.ConsoleReporter",
+        FakeConsoleReporter,
+    )
+
+    ValidationService.run()
+
+    output = capsys.readouterr().out
+
+    assert "REQ-001 - derived_from -> ADR-999" in output
+    assert "REQ-002 - related -> ADR-001" in output
+    assert "Relaciones no resueltas:  1" in output
+    assert "Relaciones duplicadas:    1" in output
+    assert "[RELATIONSHIPS] ERROR" in output

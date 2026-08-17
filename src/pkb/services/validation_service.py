@@ -48,8 +48,12 @@ class ValidationService:
         if relationship_report.unresolved_relationships:
             print("\n[RELATIONSHIPS] Referencias no resueltas:")
 
-            for source_id, target_id in relationship_report.unresolved_relationships:
-                print(f"  - {source_id} -> {target_id}")
+            for (
+                source_id,
+                relation_type,
+                target_id,
+            ) in relationship_report.unresolved_relationships:
+                print(f"  - {source_id} - {relation_type} -> {target_id}")
 
         if relationship_report.duplicate_relationships:
             print("\n[RELATIONSHIPS] Referencias duplicadas:")
