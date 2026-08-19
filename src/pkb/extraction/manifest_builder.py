@@ -7,7 +7,7 @@ RUNTIME_DIRS = {
     "workspace": "runtime/workspace",
     "packages": "runtime/packages",
     "cache": "runtime/cache",
-    "exports": "runtime/exports"
+    "exports": "runtime/exports",
 }
 
 # Patrones de expresiones regulares para identificar entidades dentro del Markdown de conversaciones
@@ -18,8 +18,9 @@ REGEX_PATTERNS = {
     "adr": re.compile(r"ADR-(\d+)"),
     "requirement": re.compile(r"REQ-[A-Z0-9-]+"),
     "standard": re.compile(r"STD-[A-Z0-9-]+"),
-    "document": re.compile(r"DOC-[A-Z0-9-]+")
+    "document": re.compile(r"DOC-[A-Z0-9-]+"),
 }
+
 
 def initialize_runtime_environment():
     """
@@ -38,31 +39,29 @@ def initialize_runtime_environment():
 
 class ManifestBuilder:
     """
-    Clase encargada de escanear archivos Markdown de conversaciones 
+    Clase encargada de escanear archivos Markdown de conversaciones
     y estructurar su correspondiente manifiesto YAML/JSON.
     """
+
     def __init__(self, source_filepath):
         self.source_filepath = source_filepath
         self.metadata = {
             "conversation_id": "CONV-UNKNOWN",
             "knowledge_package": "KP-UNKNOWN",
             "sessions": [],
-            "objects": {
-                "adr": [],
-                "requirement": [],
-                "standard": [],
-                "document": []
-            }
+            "objects": {"adr": [], "requirement": [], "standard": [], "document": []},
         }
 
     def parse(self):
         """Lee el archivo Markdown y extrae todas las entidades que coincidan con los patrones."""
         if not os.path.exists(self.source_filepath):
-            raise FileNotFoundError(f"El archivo fuente no existe: {self.source_filepath}")
+            raise FileNotFoundError(
+                f"El archivo fuente no existe: {self.source_filepath}"
+            )
 
         print(f"[PARSER] Procesando archivo origen: {self.source_filepath}")
 
-        with open(self.source_filepath, 'r', encoding='utf-8') as file:
+        with open(self.source_filepath, "r", encoding="utf-8") as file:
             content = file.read()
 
         # Extraer Identificador de Conversación (con fallback al nombre de archivo)
@@ -74,7 +73,9 @@ class ManifestBuilder:
             filename = os.path.basename(self.source_filepath)
             conv_file_match = REGEX_PATTERNS["conversation_id"].search(filename)
             if conv_file_match:
-                self.metadata["conversation_id"] = f"CONV-{conv_file_match.group(1).zfill(6)}"
+                self.metadata["conversation_id"] = (
+                    f"CONV-{conv_file_match.group(1).zfill(6)}"
+                )
 
         # Extraer Identificador de Paquete de Conocimiento
         kp_match = REGEX_PATTERNS["knowledge_package"].search(content)
@@ -82,43 +83,49 @@ class ManifestBuilder:
             self.metadata["knowledge_package"] = f"KP-{kp_match.group(1).zfill(6)}"
 
         # Extraer Listas de Entidades Coincidentes (eliminando duplicados y ordenando)
-        self.metadata["sessions"] = sorted(list(set(
-            f"SES-{m.zfill(6)}" for m in REGEX_PATTERNS["sessions"].findall(content)
-        )))
+        self.metadata["sessions"] = sorted(
+            list(
+                set(
+                    f"SES-{m.zfill(6)}"
+                    for m in REGEX_PATTERNS["sessions"].findall(content)
+                )
+            )
+        )
 
-        self.metadata["objects"]["adr"] = sorted(list(set(
-            f"ADR-{m.zfill(6)}" for m in REGEX_PATTERNS["adr"].findall(content)
-        )))
+        self.metadata["objects"]["adr"] = sorted(
+            list(
+                set(f"ADR-{m.zfill(6)}" for m in REGEX_PATTERNS["adr"].findall(content))
+            )
+        )
 
-        self.metadata["objects"]["requirement"] = sorted(list(set(
-            REGEX_PATTERNS["requirement"].findall(content)
-        )))
+        self.metadata["objects"]["requirement"] = sorted(
+            list(set(REGEX_PATTERNS["requirement"].findall(content)))
+        )
 
-        self.metadata["objects"]["standard"] = sorted(list(set(
-            REGEX_PATTERNS["standard"].findall(content)
-        )))
+        self.metadata["objects"]["standard"] = sorted(
+            list(set(REGEX_PATTERNS["standard"].findall(content)))
+        )
 
-        self.metadata["objects"]["document"] = sorted(list(set(
-            REGEX_PATTERNS["document"].findall(content)
-        )))
+        self.metadata["objects"]["document"] = sorted(
+            list(set(REGEX_PATTERNS["document"].findall(content)))
+        )
 
         print("[PARSER] Escaneo completado. Entidades encontradas.")
 
     def save_as_yaml(self):
         """
-        Exporta los metadatos recopilados en formato YAML legible 
+        Exporta los metadatos recopilados en formato YAML legible
         dentro de la carpeta runtime/manifests.
         """
         output_filename = f"{self.metadata['conversation_id'].lower()}_manifest.yaml"
         output_filepath = os.path.join(RUNTIME_DIRS["manifests"], output_filename)
 
         print(f"[EXPORT] Escribiendo manifiesto estructurado en: {output_filepath}")
-
         # Generador de YAML personalizado para evitar dependencias externas en entornos limpios
         yaml_lines = [
             f"conversation_id: {self.metadata['conversation_id']}",
             f"knowledge_package: {self.metadata['knowledge_package']}",
-            "sessions:"
+            "sessions:",
         ]
 
         if self.metadata["sessions"]:
@@ -137,7 +144,7 @@ class ManifestBuilder:
             else:
                 yaml_lines.append("      []")
 
-        with open(output_filepath, 'w', encoding='utf-8') as out_file:
+        with open(output_filepath, "w", encoding="utf-8") as out_file:
             out_file.write("\n".join(yaml_lines) + "\n")
 
         print("[SUCCESS] Manifiesto guardado correctamente.\n")
@@ -157,7 +164,7 @@ bajo el estándar legal de condominios STD-CONDOMINIUM-LAW-MORELOS.
 También se aprobó la resolución del conflicto de bases de datos mediante el registro ADR-11.
 Toda la documentación final se consolidará en el documento oficial DOC-MIPSP-CORE-01.
 """
-    with open(demo_path, 'w', encoding='utf-8') as f:
+    with open(demo_path, "w", encoding="utf-8") as f:
         f.write(demo_content)
     print(f"[DEMO] Conversación de prueba creada en: {demo_path}")
     return demo_path

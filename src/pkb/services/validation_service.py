@@ -2,12 +2,12 @@ from pkb.config import PKB_ROOT
 from pkb.reporting import ConsoleReporter, ValidationReport
 from pkb.repository.loader import KnowledgeLoader
 from pkb.validation.engine import ValidationEngine
+from pkb.validation.relationships import RelationshipValidator
 from pkb.validation.rules import (
     BrokenReferenceRule,
     DomainRule,
     DuplicateIdentifierRule,
 )
-from pkb.validation.relationships import RelationshipValidator
 
 
 class ValidationService:

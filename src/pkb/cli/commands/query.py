@@ -1,7 +1,7 @@
 from pkb.config import PKB_ROOT
 from pkb.query import QueryEngine
-from pkb.repository.loader import KnowledgeLoader
 from pkb.reporting import QueryExporter
+from pkb.repository.loader import KnowledgeLoader
 
 
 def run(args) -> None:

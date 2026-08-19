@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 from collections import Counter
-from pkb.validation.result import ValidationResult
+
 from pkb.catalogs.domains import VALID_DOMAINS
+from pkb.validation.result import ValidationResult
 
 
 class ValidationRule(ABC):

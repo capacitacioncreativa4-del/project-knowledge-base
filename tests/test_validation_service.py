@@ -1,4 +1,3 @@
-from pathlib import Path
 
 from pkb.services.validation_service import ValidationService
 from pkb.validation.relationships import RelationshipValidator

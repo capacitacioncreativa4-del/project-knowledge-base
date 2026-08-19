@@ -1,6 +1,4 @@
-from pathlib import Path
 from pkb.config import PKB_ROOT
-
 from pkb.extraction.assembler import KnowledgePackageAssembler
 from pkb.extraction.processor import SemanticProcessor
 
