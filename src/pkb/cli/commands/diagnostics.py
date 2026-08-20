@@ -16,4 +16,26 @@ def run() -> None:
     print(f"Archivos rechazados:       {diagnostics.rejected_files}")
     print(f"Objetos con relaciones:    {diagnostics.objects_with_relationships}")
     print(f"Relaciones declaradas:     {diagnostics.declared_relationships}")
-    print(f"Relaciones no resueltas:   {diagnostics.unresolved_relationship_count}")
+    print(f"Relaciones válidas:        {diagnostics.valid_relationships}")
+    print(
+        f"Relaciones no resueltas:   "
+        f"{diagnostics.unresolved_relationship_count}"
+    )
+    print(
+        f"Relaciones duplicadas:     "
+        f"{diagnostics.duplicate_relationship_count}"
+    )
+
+    if diagnostics.unresolved_relationships:
+        print("\nRelaciones no resueltas:")
+        for source_id, relation_type, target_id in (
+            diagnostics.unresolved_relationships
+        ):
+            print(f"  - {source_id} - {relation_type} -> {target_id}")
+
+    if diagnostics.duplicate_relationships:
+        print("\nRelaciones duplicadas:")
+        for source_id, relation_type, target_id in (
+            diagnostics.duplicate_relationships
+        ):
+            print(f"  - {source_id} - {relation_type} -> {target_id}")
