@@ -13,26 +13,28 @@ class MetadataParser:
     def parse_file(file_path: str) -> Tuple[KnowledgeObject, str]:
         """
         Lee un archivo Markdown, separa el Front Matter (YAML) del contenido
-        y mapea las propiedades a un modelo de dominio explícito
-        KnowledgeObject.
+        y mapea las propiedades a un KnowledgeObject.
 
         Soporta dos representaciones de relaciones:
 
         1. Formato histórico:
+
             relationships:
               - ADR-001
               - DOC-001
 
         2. Formato tipado:
+
             relationships:
               derived_from:
                 - ADR-001
               implemented_by:
                 - DOC-001
 
-        En ambos casos se conserva la representación histórica
-        ``relationships`` y, cuando corresponde, la representación
-        tipada ``typed_relationships``.
+        Ambas representaciones se normalizan internamente hacia
+        ``typed_relationships``.
+
+        El formato histórico utiliza el tipo semántico ``related``.
         """
         try:
             ruta = Path(file_path).resolve()
@@ -86,11 +88,14 @@ class MetadataParser:
             )
 
             if isinstance(relaciones, list):
-                legacy_relationships = [
-                    str(target_id) for target_id in relaciones if target_id is not None
-                ]
+                for target_id in relaciones:
+                    if target_id is None:
+                        continue
 
-                knowledge_object.relationships = legacy_relationships
+                    knowledge_object.add_relationship(
+                        "related",
+                        str(target_id),
+                    )
 
             elif isinstance(relaciones, dict):
                 for relation_type, target_ids in relaciones.items():

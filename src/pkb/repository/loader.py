@@ -53,11 +53,11 @@ class KnowledgeLoader:
                         str(knowledge_object.domain).upper().strip()
                     )
 
-                if knowledge_object.relationships:
+                typed_relationships = knowledge_object.typed_relationships
+
+                if typed_relationships:
                     diagnostics.objects_with_relationships += 1
-                    diagnostics.declared_relationships += len(
-                        knowledge_object.relationships
-                    )
+                    diagnostics.declared_relationships += len(typed_relationships)
 
                 registry.add(knowledge_object)
                 diagnostics.registered_objects += 1

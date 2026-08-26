@@ -58,49 +58,6 @@ class DuplicateIdentifierRule(ValidationRule):
         return resultados
 
 
-class BrokenReferenceRule(ValidationRule):
-    """Detecta referencias hacia objetos inexistentes."""
-
-    def validate(self, registry) -> list[ValidationResult]:
-        resultados: list[ValidationResult] = []
-        errores: list[str] = []
-
-        ids_validos = {
-            obj.identifier for obj in registry.all() if getattr(obj, "identifier", None)
-        }
-
-        for obj in registry.all():
-            relaciones = getattr(obj, "relationships", None)
-
-            if not relaciones:
-                continue
-
-            for ref_id in relaciones:
-                if ref_id not in ids_validos:
-                    errores.append(
-                        f"Referencia rota en '{obj.identifier}': '{ref_id}' no existe."
-                    )
-
-        if errores:
-            resultados.append(
-                ValidationResult(
-                    success=False,
-                    rule=self.name,
-                    field_name="relationships",
-                    errors=errores,
-                )
-            )
-        else:
-            resultados.append(
-                ValidationResult(
-                    success=True,
-                    rule=self.name,
-                )
-            )
-
-        return resultados
-
-
 class DomainRule(ValidationRule):
     """Valida que el dominio pertenezca al catálogo institucional."""
 
@@ -128,37 +85,35 @@ class DomainRule(ValidationRule):
         return resultados
 
 
-class ValidationEngine:
-    """Compatibilidad con la API existente."""
+class MetadataValidationRule(ValidationRule):
+    """Valida los metadatos obligatorios de los objetos de conocimiento."""
 
-    @staticmethod
-    def validate_metadata(metadata) -> ValidationResult:
-        errors = []
+    def validate(self, registry) -> list[ValidationResult]:
+        resultados: list[ValidationResult] = []
+        errores: list[str] = []
 
-        if metadata is None:
-            return ValidationResult(
-                success=False,
-                rule="MetadataValidation",
-                errors=["El archivo no contiene metadatos válidos."],
-            )
-
-        if hasattr(metadata, "identifier"):
+        for obj in registry.all():
             valores = {
-                "id": metadata.identifier,
-                "title": metadata.title,
-                "type": metadata.object_type,
-                "domain": metadata.domain,
-                "status": metadata.status,
+                "id": getattr(obj, "identifier", None),
+                "title": getattr(obj, "title", None),
+                "type": getattr(obj, "object_type", None),
+                "domain": getattr(obj, "domain", None),
             }
-        else:
-            valores = metadata
 
-        for campo in ("id", "title", "type", "domain"):
-            if not valores.get(campo):
-                errors.append(f"Falta el campo obligatorio: '{campo}'")
+            for campo in ("id", "title", "type", "domain"):
+                if not valores.get(campo):
+                    errores.append(
+                        f"Falta el campo obligatorio: '{campo}' "
+                        f"en '{getattr(obj, 'identifier', '<sin-id>')}'"
+                    )
 
-        return ValidationResult(
-            success=(len(errors) == 0),
-            rule="MetadataValidation",
-            errors=errors,
+        resultados.append(
+            ValidationResult(
+                success=(len(errores) == 0),
+                rule=self.name,
+                field_name="metadata",
+                errors=errores,
+            )
         )
+
+        return resultados

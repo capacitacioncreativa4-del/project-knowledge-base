@@ -1,4 +1,4 @@
-from collections.abc import Callable
+﻿from collections.abc import Callable
 
 from pkb.knowledge.object import KnowledgeObject
 from pkb.knowledge.registry import KnowledgeRegistry
@@ -29,13 +29,22 @@ class QueryEngine:
 
         return [
             related
-            for related_id in obj.relationships
-            if (related := self._registry.get(related_id)) is not None
+            for relationship in obj.typed_relationships
+            if (
+                related := self._registry.get(relationship.target_id)
+            ) is not None
         ]
 
     def referenced_by(self, identifier: str) -> list[KnowledgeObject]:
         """Devuelve los objetos que referencian directamente al objeto indicado."""
-        return [obj for obj in self._registry.all() if identifier in obj.relationships]
+        return [
+            obj
+            for obj in self._registry.all()
+            if any(
+                relationship.target_id == identifier
+                for relationship in obj.typed_relationships
+            )
+        ]
 
     def filter(
         self,

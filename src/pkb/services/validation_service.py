@@ -4,9 +4,9 @@ from pkb.repository.loader import KnowledgeLoader
 from pkb.validation.engine import ValidationEngine
 from pkb.validation.relationships import RelationshipValidator
 from pkb.validation.rules import (
-    BrokenReferenceRule,
     DomainRule,
     DuplicateIdentifierRule,
+    MetadataValidationRule,
 )
 
 
@@ -23,7 +23,7 @@ class ValidationService:
 
         engine = ValidationEngine()
         engine.add_rule(DuplicateIdentifierRule())
-        engine.add_rule(BrokenReferenceRule())
+        engine.add_rule(MetadataValidationRule())
         engine.add_rule(DomainRule())
 
         # Ejecutar las reglas de validación existentes.
