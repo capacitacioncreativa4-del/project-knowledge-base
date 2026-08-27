@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 
+
 @dataclass
 class ValidationResult:
     """Modela de forma explícita el resultado de auditoría de un documento."""

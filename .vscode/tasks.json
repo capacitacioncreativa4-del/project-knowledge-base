@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "PKB Install",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "scripts/dev.ps1"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "PKB Test",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "scripts/test.ps1"
+            ],
+            "group": "test"
+        },
+        {
+            "label": "PKB Ruff",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "scripts/check.ps1"
+            ],
+            "group": "test"
+        },
+        {
+            "label": "PKB Clean",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "scripts/clean.ps1"
+            ]
+        }
+    ]
+}

@@ -1,2 +1,9 @@
-from pkb.validation.rules import ValidationEngine, ValidationRule
-from pkb.validation.result import ValidationResult
+from .relationships import (
+    RelationshipValidationReport,
+    RelationshipValidator,
+)
+
+__all__ = [
+    "RelationshipValidationReport",
+    "RelationshipValidator",
+]

@@ -1,8 +1,9 @@
 from dataclasses import dataclass
 
-@dataclass(slots=True)
+
+@dataclass(frozen=True, slots=True)
 class Relationship:
-    """Representa una relación semántica dirigida entre dos objetos de conocimiento."""
-    source: str
-    target: str
+    """Representa una relación semántica entre dos objetos PKB."""
+
     relation_type: str
+    target_id: str

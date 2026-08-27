@@ -1,6 +1,8 @@
 from pathlib import Path
 from typing import List
+
 from pkb.core.exceptions import RepositoryError
+
 
 class RepositoryScanner:
     @staticmethod
@@ -13,7 +15,7 @@ class RepositoryScanner:
             root = Path(root_path).resolve()
             if not root.exists() or not root.is_dir():
                 raise RepositoryError(f"La ruta del repositorio no es válida o no existe: {root_path}")
-            
+
             archivos = []
             # Recorremos de forma iterativa y filtramos carpetas conflictivas
             for path in root.rglob("*.md"):
@@ -21,7 +23,7 @@ class RepositoryScanner:
                 if any(part.startswith(".") or part in ("venv", "env", "build") for part in path.parts):
                     continue
                 archivos.append(path)
-                
+
             return archivos
         except Exception as e:
             if not isinstance(e, RepositoryError):

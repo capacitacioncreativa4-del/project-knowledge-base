@@ -1,9 +1,8 @@
-from .object import KnowledgeObject
-from .relationship import Relationship
-from .registry import KnowledgeRegistry
-from .catalog import KnowledgeCatalog
 from .builder import KnowledgeObjectBuilder
-from .loader import KnowledgeLoader
+from .catalog import KnowledgeCatalog
+from .object import KnowledgeObject
+from .registry import KnowledgeRegistry
+from .relationship import Relationship
 
 __all__ = [
     "KnowledgeObject",
@@ -11,5 +10,4 @@ __all__ = [
     "KnowledgeRegistry",
     "KnowledgeCatalog",
     "KnowledgeObjectBuilder",
-    "KnowledgeLoader"
 ]
