@@ -6,9 +6,17 @@ source:
 increment: MIPSP-INC-000001
 sessions:
   - MIPSP-SES-000001
+  - MIPSP-SES-000005
+  - MIPSP-SES-000006
 knowledge_objects:
   adr:
     - MIPSP-ADR-000001
+  art:
+    - ART-000002
+    - ART-000003
+    - ART-000004
+    - ART-000005
+    - ART-000006
 requirements:
   - MIPSP-REQ-000001
   - MIPSP-REQ-000002
@@ -17,5 +25,5 @@ standards: []
 templates: []
 risks: []
 tasks: []
-relationships: 4
+relationships: 9
 validated: true
