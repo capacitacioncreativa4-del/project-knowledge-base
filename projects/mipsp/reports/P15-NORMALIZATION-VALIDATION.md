@@ -22,7 +22,7 @@ tags:
 |---|---|---|
 | Fuente P15 | `projects/mipsp/ingestion/sources/Lote_1_MIPSP-CONV-0001/MIPSP-CONV-0001-P15.md` | `1BCFC88F7E9CCA746C7895FCD317FF0C527CA4E15C809F7E6C4FF22C5469843E` |
 | Borrador P15 | `projects/mipsp/MIPSP-CONV-0001-P15.normalization-draft.md` | `B71E2B19470A549B45C9EC3DAF0E155F8824A8774A5F1B5780C59FB5B8E3AEC0` |
-| Fuente normalizada P15 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P15.md` | Pendiente de verificación post-escritura |
+ | Fuente normalizada P15 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P15.md` | 17DC1DE9443756394DAF4AE82B61A0FB232E2762E2AEF8B948907980A02AFBFC |
 
 ## Resultado
 

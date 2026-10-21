@@ -20,7 +20,7 @@ tags:
 |---|---|---|
 | Fuente P42 | `projects/mipsp/ingestion/sources/Lote_1_MIPSP-CONV-0001/MIPSP-CONV-0001-P42.md` | `93579A90FBAFD4D907A1D2DAD2DDE3993CC7C4FA69D5FA269F25A6EEEE713309` |
 | Borrador P42 | `projects/mipsp/MIPSP-CONV-0001-P42.normalization-draft.md` | `CEEACBF8E322A2622C71F1B3EA006719481050AB451E0DF39817C6218BC970EC` |
-| Fuente normalizada P42 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P42.md` | Pendiente de verificación post-escritura |
+ | Fuente normalizada P42 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P42.md` | 62044E782EAF5E2161AABE2806B2A6EB2B6D1A4E23B29DFAF22C58764CA403A5 |
 
 ## Resultado
 

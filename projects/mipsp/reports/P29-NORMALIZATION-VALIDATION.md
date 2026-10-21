@@ -20,7 +20,7 @@ tags:
 |---|---|---|
 | Fuente P29 | `projects/mipsp/ingestion/sources/Lote_1_MIPSP-CONV-0001/MIPSP-CONV-0001-P29.md` | `18B3A6CD2EBE4EE65AEB747B03CD33F23BA7AC442D72AEC7FD39D70CC88FA135` |
 | Borrador P29 | `projects/mipsp/MIPSP-CONV-0001-P29.normalization-draft.md` | `1F9A40F67B4C8E8F2AA09772E28EA49CA0354C0633F44865579290C8E3622284` |
-| Fuente normalizada P29 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P29.md` | Pendiente de verificación post-escritura |
+ | Fuente normalizada P29 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P29.md` | 10B6D1ED388753D838E1D15A39023442E9824D0B6C87D4FA9290DBA50B406EFD |
 
 ## Resultado
 

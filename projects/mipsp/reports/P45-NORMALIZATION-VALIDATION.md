@@ -20,7 +20,7 @@ tags:
 |---|---|---|
 | Fuente P45 | `projects/mipsp/ingestion/sources/Lote_1_MIPSP-CONV-0001/MIPSP-CONV-0001-P45.md` | `51835324840A99D3C24FCFC27AC7A0C1197592DA55990FA43DD22353AD013AA7` |
 | Borrador P45 | `projects/mipsp/MIPSP-CONV-0001-P45.normalization-draft.md` | `822E8B36D71C396B53EBDD8DB365421073EFAF7D3AB24D88B689E44DD692EB85` |
-| Fuente normalizada P45 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P45.md` | Pendiente de verificación post-escritura |
+ | Fuente normalizada P45 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P45.md` | FB716EBCC30440B4BF4C5B43F6A0761D6BDEFBB062DF36E5BFA17E5FB2C34A11 |
 
 ## Resultado
 

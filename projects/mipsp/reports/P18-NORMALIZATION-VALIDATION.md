@@ -22,7 +22,7 @@ tags:
 |---|---|---|
 | Fuente P18 | `projects/mipsp/ingestion/sources/Lote_1_MIPSP-CONV-0001/MIPSP-CONV-0001-P18.md` | `B428720DBAC24AC8AF939F6523BAC68E6A92F44E8F529EFF41E2E66863D4DC6B` |
 | Borrador P18 | `projects/mipsp/MIPSP-CONV-0001-P18.normalization-draft.md` | `E88097C913B6B33FFCEBF4236277B564B49DA0E1DBBF01AB93B8AFFA85887E3E` |
-| Fuente normalizada P18 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P18.md` | Pendiente de verificación post-escritura |
+ | Fuente normalizada P18 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P18.md` | 0AFE905D827BA8AFCB3AE2DF12C35815FDB2C277101B201CBD92E7B7BE10FDFA |
 
 ## Resultado
 

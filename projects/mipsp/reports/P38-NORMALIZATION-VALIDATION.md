@@ -20,7 +20,7 @@ tags:
 |---|---|---|
 | Fuente P38 | `projects/mipsp/ingestion/sources/Lote_1_MIPSP-CONV-0001/MIPSP-CONV-0001-P38.md` | `9F848610628DEE4678268C7E99B269841EF680A06249C434318C70728D4609C8` |
 | Borrador P38 | `projects/mipsp/MIPSP-CONV-0001-P38.normalization-draft.md` | `4090C7597EFEB9F77D57B17B9ABA0AEC9DDB108F39487A1FBAD59285F8E8181A` |
-| Fuente normalizada P38 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P38.md` | Pendiente de verificación post-escritura |
+ | Fuente normalizada P38 | `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P38.md` | 29B3B1335222792AB81B3CCB9EEA3183DBC4C7FB0A03F452E7A7A58232AF133F |
 
 ## Resultado
 
