@@ -31,7 +31,9 @@ Este informe documenta la materialización aprobada de la fuente normalizada P02
 | Sesiones | `MIPSP-SES-000005`, `MIPSP-SES-000006` | Referenciadas |
 | Paquete | `KP-000001` | Referenciado |
 
-SHA-256 de la fuente original: `88EB5598D432EF0D9528AAFC71A58DDA8BD6126059EF84347DA216839307B26D`.
+SHA-256 de la fuente canónica vigente: `B3E29DE774416AC66A36CA49DE05DA2A0A1CD8ADA099B3FABB484624F2A28EA1`.
+
+El cuerpo de la fuente canónica vigente coincide con el cuerpo de la copia histórica utilizada en la aprobación anterior. La diferencia física se limita al front matter.
 
 ## Knowledge Objects
 
@@ -57,9 +59,10 @@ Rutas: `projects/mipsp/knowledge/artifacts/ART-000002.md` a `ART-000006.md`.
 ## Limitaciones y discrepancias conocidas
 
 - El worktree contiene cambios preexistentes ajenos a esta operación.
-- La fuente canónica de ingestión P02 ya difería del baseline antes de esta materialización; su hash actual se conserva y no fue modificado.
+- La fuente canónica de ingestión P02 es la identidad vigente declarada por el borrador y el normalizado: `B3E29DE774416AC66A36CA49DE05DA2A0A1CD8ADA099B3FABB484624F2A28EA1`.
+- La copia histórica con hash `88EB5598D432EF0D9528AAFC71A58DDA8BD6126059EF84347DA216839307B26D` se conserva como evidencia de la aprobación anterior.
 - El manifiesto global del repositorio permanece en estado `DRAFT` y no se promovió.
 
 ## Resultado
 
-**PASS — P02 normalizado, cinco ART materializados, registrados y trazables.**
+**PASS — P02 reconciliado con la fuente canónica vigente; cinco ART materializados, registrados y trazables.**

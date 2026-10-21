@@ -154,3 +154,135 @@
 * **Estado:** Normalized
 * **SHA-256 de la fuente original:** `63533F7B726F5BCDF2F744417720FAC28826E2D4D1EA03644F3BCACBC8364D3E`
 * **Revisión humana:** Aprobada
+
+## Fuente Normalizada P26
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P26.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `362521137406EC336CDE1C434D6DA506BB405B0C518C4C968701992D8BECA403`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P27
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P27.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `7C676010DBFE097245607D533B9886BDF8844430F2B0ABBAB13AF1F581A90371`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P28
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P28.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `B5EBE28760911546EF4325A588C29D6607CAC2C92E069FDEFEBAB84DA890B6DD`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P29
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P29.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `18B3A6CD2EBE4EE65AEB747B03CD33F23BA7AC442D72AEC7FD39D70CC88FA135`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P30
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P30.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `90B59C211288EB044C1C29E470303D5D61E9D38716290B2C7A55ABE204282FCD`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P31
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P31.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `652DD76704E88D16D084331B231D212A5BD4ED30A10EE75DAD6D962306523928`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P32
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P32.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `8ABA884957D6CCE7794D0BC5C3FB73507B31115E1ECBDAAEDFE03F4F3A082255`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P33
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P33.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `45BC289FC37544B6664DB2EDA6842F087CA935C47A45D4AD60B76EE434097986`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P34
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P34.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `C3523511FEC7DF823D19D9BE24709E2B689CFAF7CBD32E4CD661A12CDF1B745A`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P35
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P35.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `22E4A80D545610FDA1D38AEDE0511E296ACC637206F7D26C7B50384AC3ED3D58`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P36
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P36.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `BB37AE3B9D5D4CA6C22ABC38FB7E1368159FB0F92B40EA65B039954E5F61FC2E`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P37
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P37.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `718F163733AFCFA67A90962B206C68F904ACF3F1951C1E75C75E77B0BA3C58B8`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P38
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P38.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `9F848610628DEE4678268C7E99B269841EF680A06249C434318C70728D4609C8`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P39
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P39.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `081A14251F3EA1B9D2A3B4F1EFE403E335BF080FA9F3C36936F55039DB3B4448`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P40
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P40.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `52CBA44F94A7C0E202886C8CBD6821550DA454067C2E9C363C38A4DB04EEB486`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P41
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P41.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `EC89D82EC2A22086C8D5D040E100B92B7505734A9EBC6E7594D3423B21E58627`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P42
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P42.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `93579A90FBAFD4D907A1D2DAD2DDE3993CC7C4FA69D5FA269F25A6EEEE713309`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P43
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P43.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `7D746C1A16A6E003EF9527ABD092A2168C47F81C10E81C961CADA7C020FA2474`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P44
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P44.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `AE7A148097BFFF1F684BE726065FD84C41F15B8B7B855E92258EC24DB5F3352E`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P45
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P45.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `51835324840A99D3C24FCFC27AC7A0C1197592DA55990FA43DD22353AD013AA7`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P46
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P46.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `A8B5066D7851C6EFD55873595B098FA28B5CADE13ADAFBEDEF217A4A763C1DF3`
+* **Revisión humana:** Aprobada
+
+## Fuente Normalizada P47
+* **Archivo:** `projects/mipsp/sources/conversations/normalized/MIPSP-CONV-0001-P47.md`
+* **Estado:** Normalized
+* **SHA-256 de la fuente original:** `5E358210056A2247CE97C1B9DFF6022AA1B014232051901305EB439C566372B4`
+* **Revisión humana:** Aprobada
