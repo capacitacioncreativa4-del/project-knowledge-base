@@ -1,7 +1,9 @@
----
-conversation_id: MIPSP-CONV-0001
+﻿---
+id: MIPSP-CONV-0001
 title: Revisión normativa capacitación
 project: MIPSP
+type: SOURCE
+domain: MIPSP
 source: ChatGPT
 status: Original
 created_by: Miguel Angel
