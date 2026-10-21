@@ -65,4 +65,3 @@ La fuente recomienda dejar de trabajar mediante capítulos aislados y construir 
 - No se confirma la versión o cobertura del EC0060.
 - No se crean IDs institucionales nuevos.
 - La solicitud de los cinco documentos se conserva como dependencia pendiente.
-

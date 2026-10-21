@@ -31,4 +31,3 @@ tags:
 - La matriz de riesgo, el AFPO, la trazabilidad normativa y la cobertura del EC0060 quedan pendientes de validación.
 
 **PASS — P36 normalizado y trazable; sin promoción de objetos institucionales.**
-

@@ -31,4 +31,3 @@ tags:
 - Los puntos críticos, modos de falla, KPI y trazabilidad quedan pendientes de validación.
 
 **PASS — P38 normalizado y trazable; sin promoción de objetos institucionales.**
-

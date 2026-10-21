@@ -57,4 +57,3 @@ Los indicadores y metas quedan como propuestas pendientes de definición institu
 P32 recomienda organizar el IARF por familias funcionales de requisitos respaldadas por todas las fuentes aplicables. La siguiente familia propuesta es principios de actuación y conducta profesional del personal operativo. Las estimaciones de fichas y competencias se registran como proyecciones, no como inventario confirmado.
 
 P32 no materializa la ficha como requisito institucional; no crea competencias, indicadores ni objetos derivados; no confirma la interpretación jurídica; no valida la jerarquía sin revisar las cinco fuentes; y no crea IDs institucionales nuevos.
-

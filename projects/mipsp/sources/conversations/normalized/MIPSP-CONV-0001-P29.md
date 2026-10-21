@@ -49,4 +49,3 @@ P29 propone un DTC-SP con definición técnica, fundamentos jurídico y operativ
 P29 no crea UEC, competencias, actividades, indicadores ni instrumentos concretos; no asigna IDs institucionales; no valida jurídicamente la cadena ICBEN, la codificación o el ICO; y no confirma el volumen proyectado del DTC-SP.
 
 La siguiente etapa propuesta es iniciar el IARF con las cinco fuentes normativas, identificar ENF, elaborar FARF y definir competencias, UEC y actividades observables con trazabilidad hacia sus disposiciones de origen.
-

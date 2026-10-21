@@ -31,4 +31,3 @@ tags:
 - ICBEN, UEC, DAO, DTC-SP e ICO quedan registrados como propuestas metodológicas pendientes de validación.
 
 **PASS — P29 normalizado y trazable; sin promoción de objetos institucionales.**
-

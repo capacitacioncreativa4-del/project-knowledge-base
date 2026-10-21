@@ -31,4 +31,3 @@ tags:
 - Los niveles, ponderaciones, umbrales, mapas y reglas de promoción quedan pendientes de validación.
 
 **PASS — P39 normalizado y trazable; sin promoción de objetos institucionales.**
-

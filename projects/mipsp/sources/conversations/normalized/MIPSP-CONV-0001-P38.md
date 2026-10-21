@@ -53,4 +53,3 @@ La evolución posterior contempla procedimientos normalizados completos, escenar
 ## Límites
 
 P38 no materializa PCC, MFO, KPI, procedimientos, cursos, instrumentos ni escenarios; no valida referencias legales o curriculares; no confirma la aplicabilidad uniforme del modelo; y no crea IDs institucionales nuevos.
-

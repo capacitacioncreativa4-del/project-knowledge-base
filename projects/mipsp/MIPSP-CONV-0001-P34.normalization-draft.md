@@ -85,4 +85,3 @@ La siguiente familia propuesta es Identidad Institucional, Presentación Profesi
 - No se confirma la escala de riesgos ni sus consecuencias.
 - No se crean IDs institucionales nuevos.
 - Las relaciones de prerrequisito quedan como hipótesis metodológicas pendientes de validación.
-

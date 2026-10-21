@@ -31,4 +31,3 @@ tags:
 - La función jurídica, el IRF y el Modelo de Madurez Competencial quedan pendientes de validación y especificación.
 
 **PASS — P35 normalizado y trazable; sin promoción de objetos institucionales.**
-

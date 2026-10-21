@@ -77,4 +77,3 @@ La fuente identifica el documento como programa institucional en versión técni
 - No se validan duración, ponderaciones, metas o requisitos frente a las fuentes.
 - No se confirma la vigencia curricular ni la acreditación del instructor.
 - No se crean IDs institucionales nuevos.
-

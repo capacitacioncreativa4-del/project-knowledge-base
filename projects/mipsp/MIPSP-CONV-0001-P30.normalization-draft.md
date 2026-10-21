@@ -100,4 +100,3 @@ La estimación de 180 a 250 fichas y aproximadamente 1,500 páginas se registra 
 - No se valida la clasificación jurídica ni la criticidad propuesta.
 - No se atribuyen artículos o referencias normativas no presentes en la fuente.
 - No se confirma el contenido ni la cobertura del EC0060.
-

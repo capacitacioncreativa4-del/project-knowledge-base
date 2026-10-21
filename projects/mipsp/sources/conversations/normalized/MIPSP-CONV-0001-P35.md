@@ -63,4 +63,3 @@ La propuesta integra trazabilidad jurídica, transformación pedagógica en comp
 La siguiente etapa propuesta aborda control de accesos, vigilancia preventiva, recorridos de inspección y gestión de incidencias.
 
 P35 no materializa competencias, UEC, indicadores, índices ni modelos institucionales; no valida la función jurídica del uniforme o del equipo; no confirma la escala o cálculo del IRF; no define el Modelo de Madurez Competencial; y no crea IDs institucionales nuevos.
-

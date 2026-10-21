@@ -89,4 +89,3 @@ El AFPO se registra como propuesta integradora de análisis jurídico, procesos,
 - No se valida la puntuación del riesgo ni la matriz operativa.
 - No se confirma la trazabilidad normativa ni la cobertura del EC0060.
 - No se crean IDs institucionales nuevos.
-

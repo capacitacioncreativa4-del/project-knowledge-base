@@ -31,4 +31,3 @@ tags:
 - La duración, ponderaciones, metas y paquete documental quedan pendientes de validación y desarrollo.
 
 **PASS — P43 normalizado y trazable; sin promoción de objetos institucionales.**
-

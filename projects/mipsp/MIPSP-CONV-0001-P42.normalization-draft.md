@@ -77,4 +77,3 @@ La priorización se justifica por frecuencia, criticidad operativa y relevancia 
 - No se validan equivalencias con normas, EC0060, CONOCER o modelos ISO.
 - No se confirma el orden de prioridad ni la implementabilidad inmediata.
 - No se crean IDs institucionales nuevos.
-

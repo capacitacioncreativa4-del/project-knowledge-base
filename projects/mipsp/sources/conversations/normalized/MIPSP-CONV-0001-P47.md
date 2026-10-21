@@ -59,4 +59,3 @@ También propone un Sistema Institucional de Gobernanza Documental que determine
 ## Límites
 
 P47 no implementa CCD-MIPSP, SIGD-MIPSP, comités, matrices ni formatos; no clasifica documentos reales ni autoriza cambios; no materializa la Guía del Instructor; no valida niveles, indicadores, roles o flujos; y no crea IDs institucionales nuevos.
-

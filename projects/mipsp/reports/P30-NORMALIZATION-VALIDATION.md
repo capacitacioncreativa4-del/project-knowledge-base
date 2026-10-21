@@ -31,4 +31,3 @@ tags:
 - Las referencias jurídicas exactas y la cobertura del EC0060 quedan pendientes de verificación documental.
 
 **PASS — P30 normalizado y trazable; sin promoción de objetos institucionales.**
-

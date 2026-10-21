@@ -116,4 +116,3 @@ Las estimaciones de volumen incluidas en la fuente —300 a 400 competencias, 1,
 ## 12. Siguiente etapa propuesta
 
 Iniciar el IARF con las cinco fuentes normativas, identificar ENF, elaborar Fichas Analíticas de Requisito Formativo (FARF), definir competencias, UEC y actividades observables, y conservar trazabilidad hacia las disposiciones de origen.
-

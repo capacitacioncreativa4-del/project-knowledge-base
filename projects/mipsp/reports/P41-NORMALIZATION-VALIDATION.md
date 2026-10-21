@@ -31,4 +31,3 @@ tags:
 - La duración curricular, la evaluación y los paquetes documentales quedan pendientes de desarrollo.
 
 **PASS — P41 normalizado y trazable; sin promoción de objetos institucionales.**
-

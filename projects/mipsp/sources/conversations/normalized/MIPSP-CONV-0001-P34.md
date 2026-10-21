@@ -59,4 +59,3 @@ La siguiente familia propuesta es Identidad Institucional, Presentación Profesi
 ## Límites
 
 P34 no materializa fichas, competencias, UEC, indicadores ni programas; no valida jurídicamente las referencias; no confirma la escala de riesgos; no crea IDs institucionales nuevos; y conserva las relaciones de prerrequisito como hipótesis pendientes de validación.
-

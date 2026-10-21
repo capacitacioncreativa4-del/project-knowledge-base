@@ -31,4 +31,3 @@ tags:
 - El modelo sistémico, los riesgos, las capacidades cognitivas y las referencias cruzadas quedan pendientes de validación.
 
 **PASS — P37 normalizado y trazable; sin promoción de objetos institucionales.**
-

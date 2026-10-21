@@ -59,4 +59,3 @@ El AFPO se registra como propuesta integradora de análisis jurídico, procesos,
 ## Límites
 
 P36 no materializa competencias, procesos, UEC, KPI, PCC, MFO ni escenarios; no valida la puntuación del riesgo ni la matriz operativa; no confirma la trazabilidad normativa ni la cobertura del EC0060; y no crea IDs institucionales nuevos.
-

@@ -49,4 +49,3 @@ P46 propone además el Control de Configuración Documental del MIPSP para regis
 ## Límites
 
 P46 no implementa el SICD-MIPSP; no asigna códigos, números, versiones o estados nuevos; no materializa relaciones ni el control de configuración; no crea la Guía del Instructor; y no valida compatibilidad, gobernanza o reglas de aprobación.
-

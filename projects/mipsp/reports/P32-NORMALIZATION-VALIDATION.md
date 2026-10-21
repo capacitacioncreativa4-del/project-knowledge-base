@@ -31,4 +31,3 @@ tags:
 - La jerarquía funcional, los indicadores y la correlación con EC0060 quedan pendientes de validación documental.
 
 **PASS — P32 normalizado y trazable; sin promoción de objetos institucionales.**
-

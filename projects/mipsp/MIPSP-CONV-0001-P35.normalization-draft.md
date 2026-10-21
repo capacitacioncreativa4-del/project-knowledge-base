@@ -74,4 +74,3 @@ La fuente propone avanzar hacia competencias operativas específicas de control 
 - No se confirma la escala ni el cálculo del IRF.
 - No se define el Modelo de Madurez Competencial.
 - No se crean IDs institucionales nuevos.
-

@@ -94,4 +94,3 @@ La estrategia permitiría disponer de cursos completos por competencia principal
 - No se valida la duración ni la ponderación de horas teóricas y prácticas.
 - No se confirma la suficiencia de las tres dimensiones de evaluación.
 - No se crean IDs institucionales nuevos.
-

@@ -78,4 +78,3 @@ La propuesta busca que la colección permita diseñar, implementar, operar, eval
 - No se valida la cobertura de los ordenamientos citados.
 - No se confirma la equivalencia con modelos ISO, estándares de competencia o metodologías externas.
 - No se crean IDs institucionales nuevos.
-

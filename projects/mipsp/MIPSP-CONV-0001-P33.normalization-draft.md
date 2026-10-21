@@ -74,4 +74,3 @@ Esta familia serviría de puente hacia competencias operativas como control de a
 - No se valida jurídicamente la fundamentación integrada.
 - No se confirma la correlación específica con el EC0060.
 - Las metas e indicadores se conservan como propuestas pendientes de validación.
-

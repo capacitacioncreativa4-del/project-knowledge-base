@@ -51,4 +51,3 @@ P41 recomienda construir cada curso como paquete completo con programa, carta de
 ## Límites
 
 P41 no materializa cursos, módulos, códigos, instrumentos, rúbricas ni paquetes; no valida duración ni ponderación de horas; no confirma la suficiencia de las dimensiones de evaluación; y no crea IDs institucionales nuevos.
-

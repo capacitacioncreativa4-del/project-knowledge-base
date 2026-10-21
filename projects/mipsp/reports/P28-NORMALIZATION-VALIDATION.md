@@ -31,4 +31,3 @@ tags:
 - La taxonomía ENF, la escala IDF y la relación con EC0060 quedan como propuestas metodológicas pendientes de validación.
 
 **PASS — P28 normalizado y trazable; sin promoción de objetos institucionales.**
-

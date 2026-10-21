@@ -31,4 +31,3 @@ tags:
 - Los subsistemas, la MTI y la propuesta editorial quedan pendientes de validación e implementación.
 
 **PASS — P40 normalizado y trazable; sin promoción de objetos institucionales.**
-

@@ -31,4 +31,3 @@ tags:
 - La carta, el ETS, los instrumentos y la correspondencia normativa quedan pendientes de desarrollo y validación.
 
 **PASS — P44 normalizado y trazable; sin promoción de objetos institucionales.**
-

@@ -89,4 +89,3 @@ P44 propone anexar un ETS a cada sesión con objetivos alineados con Bloom, mapa
 - No se atribuyen artículos ausentes.
 - No se confirma la equivalencia con estándares de organismos certificadores o universidades corporativas.
 - No se crean IDs institucionales nuevos.
-

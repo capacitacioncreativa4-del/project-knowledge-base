@@ -51,4 +51,3 @@ La propuesta busca que la colección permita diseñar, implementar, operar, eval
 ## Límites
 
 P40 no materializa los nueve subsistemas, matrices, identificadores, competencias, cursos, KPI, procedimientos ni instrumentos; no valida la cobertura normativa; no confirma equivalencias con modelos ISO, estándares o metodologías externas; y no crea IDs institucionales nuevos.
-

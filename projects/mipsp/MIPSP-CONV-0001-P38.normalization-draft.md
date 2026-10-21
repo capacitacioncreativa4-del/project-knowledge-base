@@ -104,4 +104,3 @@ La evolución posterior contempla procedimientos normalizados completos, escenar
 - No se validan las referencias legales o curriculares.
 - No se confirma la aplicabilidad uniforme del modelo.
 - No se crean IDs institucionales nuevos.
-

@@ -31,4 +31,3 @@ tags:
 - La reconstrucción de la base documental queda registrada como dependencia previa.
 
 **PASS — P31 normalizado y trazable; sin promoción de objetos institucionales.**
-

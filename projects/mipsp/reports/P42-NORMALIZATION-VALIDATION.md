@@ -31,4 +31,3 @@ tags:
 - El SDCAF, la BTO, la matriz y la priorización quedan pendientes de desarrollo y validación.
 
 **PASS — P42 normalizado y trazable; sin promoción de objetos institucionales.**
-

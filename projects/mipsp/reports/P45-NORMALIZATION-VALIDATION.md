@@ -31,4 +31,3 @@ tags:
 - El ETS-I, la sesión y el sistema de codificación quedan pendientes de desarrollo y validación.
 
 **PASS — P45 normalizado y trazable; sin promoción de objetos institucionales.**
-

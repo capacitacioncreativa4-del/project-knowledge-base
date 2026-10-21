@@ -49,4 +49,3 @@ El control de cobertura propuesto recorre los estados Identificado, Analizado, C
 La siguiente etapa plantea analizar disposiciones normativas por ejes funcionales, conservar trazabilidad hacia artículos y apartados del EC0060, y evitar duplicidades entre normas.
 
 P28 no crea fichas ENF concretas, no asigna códigos ENF a disposiciones reales, no materializa competencias ni otros IDs institucionales, y no valida jurídicamente la taxonomía, el IDF o las referencias al EC0060.
-

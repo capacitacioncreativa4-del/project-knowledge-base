@@ -31,4 +31,3 @@ tags:
 - El CCD, la gobernanza, los comités y la Guía del Instructor quedan pendientes de implementación y validación.
 
 **PASS — P47 normalizado y trazable; sin promoción de objetos institucionales.**
-

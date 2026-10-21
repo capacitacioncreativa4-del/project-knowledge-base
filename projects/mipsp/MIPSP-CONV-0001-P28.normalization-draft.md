@@ -154,4 +154,3 @@ La reorganización busca construir un sistema curricular coherente, evitar dupli
 - confirmar la fuente y versión aplicable del EC0060;
 - diseñar la trazabilidad entre ENF, competencias, procesos, cursos, evaluaciones y evidencias; y
 - seleccionar las disposiciones normativas que se analizarán primero.
-

@@ -92,4 +92,3 @@ Las estimaciones de 20 a 30 fichas y alrededor de 60 competencias se registran c
 - No se confirma la interpretación jurídica de las disposiciones citadas.
 - No se valida la jerarquía funcional sin revisar las cinco fuentes documentales.
 - No se crean IDs institucionales nuevos.
-

@@ -53,4 +53,3 @@ P44 propone anexar un ETS a cada sesión con objetivos alineados con Bloom, mapa
 ## Límites
 
 P44 no materializa la carta, sesiones, ETS, instrumentos ni códigos; no valida duración, indicadores, correspondencias o acreditación; no atribuye artículos ausentes; no confirma equivalencia con organismos certificadores; y no crea IDs institucionales nuevos.
-

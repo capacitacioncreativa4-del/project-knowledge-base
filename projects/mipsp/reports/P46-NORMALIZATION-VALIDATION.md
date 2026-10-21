@@ -31,4 +31,3 @@ tags:
 - El SICD-MIPSP, sus relaciones y el control de configuración quedan pendientes de implementación y validación.
 
 **PASS — P46 normalizado y trazable; sin promoción de objetos institucionales.**
-

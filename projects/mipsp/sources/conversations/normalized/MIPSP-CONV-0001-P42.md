@@ -55,4 +55,3 @@ La priorización se justifica por frecuencia, criticidad operativa y relevancia 
 ## Límites
 
 P42 no crea cursos, paquetes SDCAF, documentos, BTO, KPI ni matrices; no valida equivalencias con normas, EC0060, CONOCER o modelos ISO; no confirma el orden de prioridad ni la implementabilidad inmediata; y no crea IDs institucionales nuevos.
-

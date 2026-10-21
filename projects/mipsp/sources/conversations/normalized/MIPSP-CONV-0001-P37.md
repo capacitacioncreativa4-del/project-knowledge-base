@@ -55,4 +55,3 @@ El objetivo es construir un Sistema Documental Integrado de Profesionalización 
 ## Límites
 
 P37 no materializa competencias, procesos, riesgos, códigos, KPI, procedimientos ni referencias cruzadas; no valida la armonización con normas ISO, EC0060 o legislación específica; no confirma la aplicabilidad uniforme a todas las instalaciones; y no crea IDs institucionales nuevos.
-

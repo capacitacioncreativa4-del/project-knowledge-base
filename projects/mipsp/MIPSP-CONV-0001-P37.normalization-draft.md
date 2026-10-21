@@ -76,4 +76,3 @@ El objetivo es construir un Sistema Documental Integrado de Profesionalización 
 - No se valida la armonización con normas ISO, EC0060 o legislación específica.
 - No se confirma la aplicabilidad uniforme del modelo a todas las instalaciones.
 - No se crean IDs institucionales nuevos.
-

@@ -57,4 +57,3 @@ La fuente declara que no dispone de los documentos normativos en el contexto de 
 La fuente propone un documento maestro compuesto por el IARF, un Catálogo Maestro de Competencias, un Catálogo Maestro de Procesos Operativos y programas de capacitación derivados. La estimación de 180 a 250 fichas y aproximadamente 1,500 páginas se registra como proyección, no como volumen confirmado.
 
 P30 no materializa el requisito formativo, competencias, subcompetencias, UEC, indicadores ni otros IDs nuevos; no valida la clasificación jurídica o la criticidad; no atribuye artículos ausentes; y no confirma el contenido ni la cobertura del EC0060.
-

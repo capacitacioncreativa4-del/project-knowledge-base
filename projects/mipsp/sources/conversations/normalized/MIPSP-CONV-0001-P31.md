@@ -43,4 +43,3 @@ Las cifras de páginas y extensión total se conservan como estimaciones de alca
 La fuente recomienda construir el documento de forma sistemática sobre los documentos normativos fuente y comenzar el IARF desde la primera disposición relevante una vez disponibles los cinco documentos.
 
 P31 no infiere artículos, fracciones, incisos, páginas ni textos normativos; no crea fichas definitivas, competencias, UEC, procesos, programas, instrumentos, evidencias o indicadores; no confirma la versión o cobertura del EC0060; y no crea IDs institucionales nuevos.
-

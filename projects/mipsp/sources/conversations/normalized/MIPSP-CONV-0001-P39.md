@@ -51,4 +51,3 @@ El mapa se plantea como columna vertebral para conectar requisitos legales, comp
 La colección se proyecta en seis tomos sobre marco jurídico, IARF, CMC, programas y diseño instruccional, evaluación, y gestión, indicadores, auditoría y mejora continua, además de un volumen de apoyo para instructores y recursos didácticos.
 
 P39 no materializa el modelo como política o clasificación institucional; no crea niveles, competencias, mapas, KPI ni reglas de promoción como IDs institucionales; no valida sus relaciones laborales; no define ponderaciones, umbrales ni evidencias mínimas; y no crea IDs institucionales nuevos.
-

@@ -72,4 +72,3 @@ El sistema busca trazabilidad, control documental compatible con calidad y escal
 - No se valida la secuencia didáctica, el diagnóstico o las respuestas esperadas.
 - No se atribuyen artículos normativos específicos.
 - No se implementa el SICD-MIPSP.
-

@@ -61,4 +61,3 @@ El sistema busca trazabilidad, control documental compatible con calidad y escal
 ## Límites
 
 P45 no materializa el ETS-I ni la sesión; no crea códigos, identificadores, instrumentos, listas ni registros nuevos; no valida la secuencia didáctica, el diagnóstico o las respuestas; no atribuye artículos específicos; y no implementa el sistema de codificación.
-

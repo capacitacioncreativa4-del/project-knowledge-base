@@ -49,4 +49,3 @@ La siguiente fase plantea desarrollar la Familia Competencial II: Disciplina Ope
 ## Límites
 
 P33 no materializa fichas, competencias, UEC, indicadores ni programas; no crea IDs institucionales nuevos; no valida jurídicamente la fundamentación integrada; no confirma la correlación específica con el EC0060; y conserva metas e indicadores como propuestas pendientes de validación.
-

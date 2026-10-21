@@ -69,4 +69,3 @@ P46 propone además el Control de Configuración Documental del MIPSP para regis
 - No se materializan relaciones documentales ni el CCD-MIPSP.
 - No se crea la Guía del Instructor.
 - No se validan compatibilidad, gobernanza o reglas de aprobación.
-

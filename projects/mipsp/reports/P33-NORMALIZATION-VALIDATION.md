@@ -31,4 +31,3 @@ tags:
 - La fundamentación integrada, la correlación con EC0060 y los indicadores quedan pendientes de validación.
 
 **PASS — P33 normalizado y trazable; sin promoción de objetos institucionales.**
-

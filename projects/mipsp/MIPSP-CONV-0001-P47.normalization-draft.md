@@ -86,4 +86,3 @@ El SIGD se presenta como capa superior de institucionalización que complementar
 - No se materializa la Guía del Instructor.
 - No se validan niveles, indicadores, roles o flujos.
 - No se crean IDs institucionales nuevos.
-

@@ -31,4 +31,3 @@ tags:
 - La escala de riesgos, indicadores y relaciones de prerrequisito quedan pendientes de validación.
 
 **PASS — P34 normalizado y trazable; sin promoción de objetos institucionales.**
-

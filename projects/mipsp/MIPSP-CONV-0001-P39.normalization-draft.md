@@ -88,4 +88,3 @@ La modularidad para empresas, instructores y responsables de capacitación se pl
 - No se valida la relación entre madurez, certificación, recertificación o funciones laborales.
 - No se definen ponderaciones, umbrales ni evidencias mínimas.
 - No se crean IDs institucionales nuevos.
-

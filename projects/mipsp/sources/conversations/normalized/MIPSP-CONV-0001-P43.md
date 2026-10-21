@@ -53,4 +53,3 @@ La bibliografía propuesta incluye las leyes y reglamentos federal y de Morelos 
 ## Límites
 
 P43 no materializa el curso ni el paquete documental; no crea códigos de curso, competencia, documento, módulo o instrumento; no valida duración, ponderaciones, metas o requisitos; no confirma vigencia curricular ni acreditación del instructor; y no crea IDs institucionales nuevos.
-
