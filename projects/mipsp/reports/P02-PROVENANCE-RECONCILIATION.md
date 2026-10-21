@@ -2,7 +2,7 @@
 id: MIPSP-P02-RECONCILIATION-001
 title: Reconciliación de procedencia P02
 version: 1.0.0
-status: Candidate
+status: Approved
 owner: MIPSP
 created: 2026-10-20
 updated: 2026-10-20
@@ -27,8 +27,8 @@ La fuente canónica actual y la copia histórica utilizada para aprobar P02 tien
 
 ## Propuesta
 
-Reconocer la fuente canónica actual como identidad vigente de P02 y actualizar, después de aprobación, el `source_sha256` del borrador, el normalizado y el reporte de validación. El contenido normalizado y los cinco Knowledge Objects no requieren cambios de contenido.
+Se reconoce la fuente canónica actual como identidad vigente de P02. El `source_sha256` del borrador, el normalizado y el reporte de validación fue actualizado a `B3E29DE774416AC66A36CA49DE05DA2A0A1CD8ADA099B3FABB484624F2A28EA1`. El contenido normalizado y los cinco Knowledge Objects no requieren cambios de contenido.
 
 ## Estado
 
-La propuesta queda como `Candidate`. Hasta recibir aprobación explícita, se conservan intactos el borrador aprobado, el normalizado aprobado, el reporte P02 y los cinco Knowledge Objects.
+La reconciliación queda aprobada. La copia histórica se conserva como evidencia y no se presenta como la identidad vigente de la fuente.
